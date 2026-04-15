@@ -1,0 +1,3 @@
+TODO: ALL CUSTOM OBJECTS ARE BROKEN CURRENTLY, FIX ASAP
+
+TODO: finish importing rm_swedish2 from the noise

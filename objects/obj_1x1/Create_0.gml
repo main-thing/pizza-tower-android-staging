@@ -1,0 +1,2 @@
+outline = false
+gui = false
