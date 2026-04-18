@@ -7,10 +7,13 @@ scr_soundeffect(sfx_collectpizza)
 instance_destroy()
 global.combotime = 60
 var val = heat_calculate(100)
+global.collect += val
+/*
 if (other.object_index == obj_player1)
 	global.collect += val
 else
 	global.collectN += val
+*/
 create_collect(x, y, sprite_index)
 with (instance_create((x + 16), y, obj_smallnumber))
 	number = string(val)

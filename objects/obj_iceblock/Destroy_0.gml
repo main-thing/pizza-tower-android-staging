@@ -12,10 +12,13 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		create_debris((x + 32), (y + 32), spr_icedebris)
 	instance_create((x + 32), (y + 32), obj_parryeffect)
 	var val = heat_calculate(10)
+	global.collect += val
+	/*
 	if (other.object_index == obj_player1)
 		global.collect += val
 	else
 		global.collectN += val
+	*/
 	with (instance_create((x + 16), y, obj_smallnumber))
 		number = string(val)
 	global.heattime += 10
