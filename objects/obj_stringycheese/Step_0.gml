@@ -106,7 +106,7 @@ switch state
 		}
 	case states.hookshot:
 		sprite_index = spr_mrpinch_face2
-		hand_index = spr_mrpinch_hand2
+		hand_index = 0
 		hand_xscale = playerid.xscale
 		handy = playerid.y
 		handx = playerid.x

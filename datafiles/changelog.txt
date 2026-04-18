@@ -10,7 +10,8 @@ Made strongcold destroy Armor
 Fixed cheeseslimes self destructing in strongcold
 Added back christmas skins of collectables and obj_boxofpizza in strongcold
 Unhardcoded the old hud, it can be modified with variables
-Fixed the war timer numbers being offsets
+Fixed the war timer numbers being offset
+Fixed some destroyables not giving score upon breaking
 
 
 #EDITOR
