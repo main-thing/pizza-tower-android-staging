@@ -1,4 +1,4 @@
-// Generated at 2024-05-24 23:09:21 (890ms) for v2.3+
+// Generated at 2025-03-13 00:27:56 (500ms) for v2.3+
 /// @lint nullToAny true
 // Feather disable all
 
@@ -9,7 +9,7 @@ function __lnc__std_gml_NativeTypeHelper_isNumber(l_v){
 
 if(live_enabled)
 function live_preinit_init_funcs(){
-	gml_func_add("gml_pragma(setting, ...)",function(){});
+	live_api_func_add("gml_pragma(setting, ...)",function(){});
 	var l_fm=ds_map_create();
 	var l_fl=ds_list_create();
 	var l_isJS=os_browser!=browser_not_a_browser;
@@ -47,13 +47,13 @@ function live_preinit_init_funcs(){
 				l_jsFunc=l_jsDummy
 			}
 			l_jsIndex++;
-			gml_func_add(l_sig,l_jsFunc);
+			live_api_func_add(l_sig,l_jsFunc);
 		} else {
 			var l_m=l_fm[?l_name];
 			if(l_m==undefined)continue;
 			l_m.used=true;
 			l_func=l_m.func;
-			gml_func_add(l_sig,l_func);
+			live_api_func_add(l_sig,l_func);
 		}
 	}
 	file_text_close(l_lines);
@@ -61,7 +61,7 @@ function live_preinit_init_funcs(){
 		for(var l_i=0,l__g1=ds_list_size(l_fl);l_i<l__g1;l_i++){
 			var l_m=l_fl[|l_i];
 			if(l_m.used)continue;
-			gml_func_add(":::"+l_m.name+"(...):",l_m.func);
+			live_api_func_add(":::"+l_m.name+"(...):",l_m.func);
 		}
 	}
 	ds_map_destroy(l_fm);
@@ -763,7 +763,7 @@ function live_preinit_init_consts(){
 	while(!file_text_eof(l_lines)){
 		var l_name=file_text_read_string(l_lines);
 		file_text_readln(l_lines);
-		gml_const_add(l_name,l_gmlConstValues[++l_index]);
+		live_api_const_add(l_name,l_gmlConstValues[++l_index]);
 	}
 	file_text_close(l_lines);
 }
@@ -771,532 +771,532 @@ function live_preinit_init_consts(){
 if(live_enabled)
 function live_preinit_init_new_consts(){
 	try{
-		gml_const_add("GM_project_filename",GM_project_filename)
+		live_api_const_add("GM_project_filename",GM_project_filename)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("GM_build_type",GM_build_type)
+		live_api_const_add("GM_build_type",GM_build_type)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("GM_is_sandboxed",GM_is_sandboxed)
+		live_api_const_add("GM_is_sandboxed",GM_is_sandboxed)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("_GMLINE_",_GMLINE_)
+		live_api_const_add("_GMLINE_",_GMLINE_)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("_GMFILE_",_GMFILE_)
+		live_api_const_add("_GMFILE_",_GMFILE_)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("_GMFUNCTION_",_GMFUNCTION_)
+		live_api_const_add("_GMFUNCTION_",_GMFUNCTION_)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("ev_pre_create",ev_pre_create)
+		live_api_const_add("ev_pre_create",ev_pre_create)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("ev_draw_normal",ev_draw_normal)
+		live_api_const_add("ev_draw_normal",ev_draw_normal)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("ev_audio_playback_ended",ev_audio_playback_ended)
+		live_api_const_add("ev_audio_playback_ended",ev_audio_playback_ended)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("ev_async_audio_playback_ended",ev_async_audio_playback_ended)
+		live_api_const_add("ev_async_audio_playback_ended",ev_async_audio_playback_ended)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("m_axisx",m_axisx)
+		live_api_const_add("m_axisx",m_axisx)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("m_axisy",m_axisy)
+		live_api_const_add("m_axisy",m_axisy)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("m_axisx_gui",m_axisx_gui)
+		live_api_const_add("m_axisx_gui",m_axisx_gui)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("m_axisy_gui",m_axisy_gui)
+		live_api_const_add("m_axisy_gui",m_axisy_gui)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("m_scroll_up",m_scroll_up)
+		live_api_const_add("m_scroll_up",m_scroll_up)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("m_scroll_down",m_scroll_down)
+		live_api_const_add("m_scroll_down",m_scroll_down)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_min",bm_min)
+		live_api_const_add("bm_min",bm_min)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_reverse_subtract",bm_reverse_subtract)
+		live_api_const_add("bm_reverse_subtract",bm_reverse_subtract)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_eq_add",bm_eq_add)
+		live_api_const_add("bm_eq_add",bm_eq_add)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_eq_max",bm_eq_max)
+		live_api_const_add("bm_eq_max",bm_eq_max)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_eq_subtract",bm_eq_subtract)
+		live_api_const_add("bm_eq_subtract",bm_eq_subtract)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_eq_min",bm_eq_min)
+		live_api_const_add("bm_eq_min",bm_eq_min)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("bm_eq_reverse_subtract",bm_eq_reverse_subtract)
+		live_api_const_add("bm_eq_reverse_subtract",bm_eq_reverse_subtract)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("audio_falloff_inverse_distance_scaled",audio_falloff_inverse_distance_scaled)
+		live_api_const_add("audio_falloff_inverse_distance_scaled",audio_falloff_inverse_distance_scaled)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("audio_falloff_exponent_distance_scaled",audio_falloff_exponent_distance_scaled)
+		live_api_const_add("audio_falloff_exponent_distance_scaled",audio_falloff_exponent_distance_scaled)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("audio_3D",audio_3D)
+		live_api_const_add("audio_3D",audio_3D)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_rgba8unorm",surface_rgba8unorm)
+		live_api_const_add("surface_rgba8unorm",surface_rgba8unorm)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_r16float",surface_r16float)
+		live_api_const_add("surface_r16float",surface_r16float)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_r32float",surface_r32float)
+		live_api_const_add("surface_r32float",surface_r32float)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_rgba4unorm",surface_rgba4unorm)
+		live_api_const_add("surface_rgba4unorm",surface_rgba4unorm)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_r8unorm",surface_r8unorm)
+		live_api_const_add("surface_r8unorm",surface_r8unorm)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_rg8unorm",surface_rg8unorm)
+		live_api_const_add("surface_rg8unorm",surface_rg8unorm)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_rgba16float",surface_rgba16float)
+		live_api_const_add("surface_rgba16float",surface_rgba16float)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("surface_rgba32float",surface_rgba32float)
+		live_api_const_add("surface_rgba32float",surface_rgba32float)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("video_format_rgba",video_format_rgba)
+		live_api_const_add("video_format_rgba",video_format_rgba)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("video_format_yuv",video_format_yuv)
+		live_api_const_add("video_format_yuv",video_format_yuv)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("video_status_closed",video_status_closed)
+		live_api_const_add("video_status_closed",video_status_closed)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("video_status_preparing",video_status_preparing)
+		live_api_const_add("video_status_preparing",video_status_preparing)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("video_status_playing",video_status_playing)
+		live_api_const_add("video_status_playing",video_status_playing)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("video_status_paused",video_status_paused)
+		live_api_const_add("video_status_paused",video_status_paused)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("sprite_add_ext_error_unknown",sprite_add_ext_error_unknown)
+		live_api_const_add("sprite_add_ext_error_unknown",sprite_add_ext_error_unknown)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("sprite_add_ext_error_cancelled",sprite_add_ext_error_cancelled)
+		live_api_const_add("sprite_add_ext_error_cancelled",sprite_add_ext_error_cancelled)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("sprite_add_ext_error_spritenotfound",sprite_add_ext_error_spritenotfound)
+		live_api_const_add("sprite_add_ext_error_spritenotfound",sprite_add_ext_error_spritenotfound)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("sprite_add_ext_error_loadfailed",sprite_add_ext_error_loadfailed)
+		live_api_const_add("sprite_add_ext_error_loadfailed",sprite_add_ext_error_loadfailed)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("sprite_add_ext_error_decompressfailed",sprite_add_ext_error_decompressfailed)
+		live_api_const_add("sprite_add_ext_error_decompressfailed",sprite_add_ext_error_decompressfailed)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("sprite_add_ext_error_setupfailed",sprite_add_ext_error_setupfailed)
+		live_api_const_add("sprite_add_ext_error_setupfailed",sprite_add_ext_error_setupfailed)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("fa_none",fa_none)
+		live_api_const_add("fa_none",fa_none)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("ps_mode_stream",ps_mode_stream)
+		live_api_const_add("ps_mode_stream",ps_mode_stream)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("ps_mode_burst",ps_mode_burst)
+		live_api_const_add("ps_mode_burst",ps_mode_burst)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("os_gdk",os_gdk)
+		live_api_const_add("os_gdk",os_gdk)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("os_gxgames",os_gxgames)
+		live_api_const_add("os_gxgames",os_gxgames)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("tm_systemtiming",tm_systemtiming)
+		live_api_const_add("tm_systemtiming",tm_systemtiming)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_socket_wss",network_socket_wss)
+		live_api_const_add("network_socket_wss",network_socket_wss)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_type_up",network_type_up)
+		live_api_const_add("network_type_up",network_type_up)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_type_up_failed",network_type_up_failed)
+		live_api_const_add("network_type_up_failed",network_type_up_failed)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_type_down",network_type_down)
+		live_api_const_add("network_type_down",network_type_down)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_send_binary",network_send_binary)
+		live_api_const_add("network_send_binary",network_send_binary)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_send_text",network_send_text)
+		live_api_const_add("network_send_text",network_send_text)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_config_websocket_protocol",network_config_websocket_protocol)
+		live_api_const_add("network_config_websocket_protocol",network_config_websocket_protocol)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_config_enable_multicast",network_config_enable_multicast)
+		live_api_const_add("network_config_enable_multicast",network_config_enable_multicast)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_config_disable_multicast",network_config_disable_multicast)
+		live_api_const_add("network_config_disable_multicast",network_config_disable_multicast)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_connect_none",network_connect_none)
+		live_api_const_add("network_connect_none",network_connect_none)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_connect_blocking",network_connect_blocking)
+		live_api_const_add("network_connect_blocking",network_connect_blocking)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_connect_nonblocking",network_connect_nonblocking)
+		live_api_const_add("network_connect_nonblocking",network_connect_nonblocking)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_connect_active",network_connect_active)
+		live_api_const_add("network_connect_active",network_connect_active)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("network_connect_passive",network_connect_passive)
+		live_api_const_add("network_connect_passive",network_connect_passive)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_home",gp_home)
+		live_api_const_add("gp_home",gp_home)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_extra1",gp_extra1)
+		live_api_const_add("gp_extra1",gp_extra1)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_extra2",gp_extra2)
+		live_api_const_add("gp_extra2",gp_extra2)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_extra3",gp_extra3)
+		live_api_const_add("gp_extra3",gp_extra3)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_extra4",gp_extra4)
+		live_api_const_add("gp_extra4",gp_extra4)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_paddler",gp_paddler)
+		live_api_const_add("gp_paddler",gp_paddler)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_paddlel",gp_paddlel)
+		live_api_const_add("gp_paddlel",gp_paddlel)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_paddlerb",gp_paddlerb)
+		live_api_const_add("gp_paddlerb",gp_paddlerb)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_paddlelb",gp_paddlelb)
+		live_api_const_add("gp_paddlelb",gp_paddlelb)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_touchpadbutton",gp_touchpadbutton)
+		live_api_const_add("gp_touchpadbutton",gp_touchpadbutton)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_extra5",gp_extra5)
+		live_api_const_add("gp_extra5",gp_extra5)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("gp_extra6",gp_extra6)
+		live_api_const_add("gp_extra6",gp_extra6)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("texturegroup_status_unloaded",texturegroup_status_unloaded)
+		live_api_const_add("texturegroup_status_unloaded",texturegroup_status_unloaded)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("texturegroup_status_loading",texturegroup_status_loading)
+		live_api_const_add("texturegroup_status_loading",texturegroup_status_loading)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("texturegroup_status_loaded",texturegroup_status_loaded)
+		live_api_const_add("texturegroup_status_loaded",texturegroup_status_loaded)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("texturegroup_status_fetched",texturegroup_status_fetched)
+		live_api_const_add("texturegroup_status_fetched",texturegroup_status_fetched)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtracktype_text",seqtracktype_text)
+		live_api_const_add("seqtracktype_text",seqtracktype_text)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtracktype_particlesystem",seqtracktype_particlesystem)
+		live_api_const_add("seqtracktype_particlesystem",seqtracktype_particlesystem)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtracktype_audioeffect",seqtracktype_audioeffect)
+		live_api_const_add("seqtracktype_audioeffect",seqtracktype_audioeffect)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_left",seqtextkey_left)
+		live_api_const_add("seqtextkey_left",seqtextkey_left)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_center",seqtextkey_center)
+		live_api_const_add("seqtextkey_center",seqtextkey_center)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_right",seqtextkey_right)
+		live_api_const_add("seqtextkey_right",seqtextkey_right)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_justify",seqtextkey_justify)
+		live_api_const_add("seqtextkey_justify",seqtextkey_justify)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_top",seqtextkey_top)
+		live_api_const_add("seqtextkey_top",seqtextkey_top)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_middle",seqtextkey_middle)
+		live_api_const_add("seqtextkey_middle",seqtextkey_middle)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("seqtextkey_bottom",seqtextkey_bottom)
+		live_api_const_add("seqtextkey_bottom",seqtextkey_bottom)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("animcurvetype_bezier",animcurvetype_bezier)
+		live_api_const_add("animcurvetype_bezier",animcurvetype_bezier)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_global",time_source_global)
+		live_api_const_add("time_source_global",time_source_global)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_game",time_source_game)
+		live_api_const_add("time_source_game",time_source_game)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_units_seconds",time_source_units_seconds)
+		live_api_const_add("time_source_units_seconds",time_source_units_seconds)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_units_frames",time_source_units_frames)
+		live_api_const_add("time_source_units_frames",time_source_units_frames)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_expire_nearest",time_source_expire_nearest)
+		live_api_const_add("time_source_expire_nearest",time_source_expire_nearest)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_expire_after",time_source_expire_after)
+		live_api_const_add("time_source_expire_after",time_source_expire_after)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_state_initial",time_source_state_initial)
+		live_api_const_add("time_source_state_initial",time_source_state_initial)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_state_active",time_source_state_active)
+		live_api_const_add("time_source_state_active",time_source_state_active)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_state_paused",time_source_state_paused)
+		live_api_const_add("time_source_state_paused",time_source_state_paused)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("time_source_state_stopped",time_source_state_stopped)
+		live_api_const_add("time_source_state_stopped",time_source_state_stopped)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("audio_bus_main",audio_bus_main)
+		live_api_const_add("audio_bus_main",audio_bus_main)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("AudioEffectType",AudioEffectType)
+		live_api_const_add("AudioEffectType",AudioEffectType)
 	}catch(l__g){
 		
 	}
 	try{
-		gml_const_add("AudioLFOType",AudioLFOType)
+		live_api_const_add("AudioLFOType",AudioLFOType)
 	}catch(l__g){
 		
 	}
@@ -1304,296 +1304,691 @@ function live_preinit_init_new_consts(){
 
 if(live_enabled)
 function live_preinit_init_arrays(){
-	gml_var_add("instance_count*",function(l_set,l_val){
+	live_api_var_add("lexer", function()
+	{
+	    return 
+		{
+	        set: 0, 
+	        name: 1, 
+	        value: 2,
+			keyword: 3,
+			eof: 4
+	    };
+	});
+	
+	live_api_var_add("textkey", function() 
+	{
+		return 
+		{
+			up: 0,
+			left: 1,
+			right: 2,
+			down: 3,
+			forwards: 4,
+			backwards: 5,
+			grab: 6,
+			mach: 7,
+			jump: 8,
+			shoot: 9,
+			taunt: 10,
+			groundpound: 11, // gamepad only
+			superjump: 12 // gamepad only
+		}
+	});
+	
+	live_api_var_add("texteffect", function() 
+	{
+		return 
+		{
+			normal: 0,
+			shake: 1,
+			updown: 2
+		}
+	});
+	
+	live_api_var_add("texttype", function() 
+	{
+		return 
+		{
+			normal: 0,
+			icon: 1,
+			array: 2
+		}
+	});
+	
+	live_api_var_add("tvprompt", function()
+	{
+	    return 
+		{
+	        normal: 0, 
+	        trigger: 1, 
+	        transfo: 2
+	    };
+	});
+	
+	live_api_var_add("particle", function()
+	{
+	    return 
+		{
+			enum_start: 0,
+	        cloudeffect: 1,
+			crazyrunothereffect: 2,
+			highjumpcloud1: 3,
+			highjumpcloud2: 4,
+			jumpdust: 5,
+			balloonpop: 6,
+			shotgunimpact: 7,
+			impact: 8,
+			genericpoofeffect: 9,
+			keyparticles: 10,
+			teleporteffect: 11,
+			landcloud: 12,
+			ratmountballooncloud: 13,
+			groundpoundeffect: 14,
+			antigrav_bubblepop: 15,
+			enum_length: 16
+	    };
+	});
+	
+	live_api_var_add("afterimage", function()
+	{
+	    return 
+		{
+			afterimage: 0,
+			mach3effect: 1,
+			heatattack: 2,
+			firemouth: 3,
+			blue: 4,
+			blur: 5,
+			enemy: 6,
+			fakepep: 7,
+			custom: 8,
+			enum_length: 9
+	    };
+	});
+	
+	live_api_var_add("debris", function()
+	{
+	    return 
+		{
+			normal: 0,
+	        fade: 1
+	    };
+	});
+	
+	live_api_var_add("states", function() 
+	{
+		return 
+		{
+		    normal: 0,
+		    revolver: 1,
+		    dynamite: 2,
+		    boots: 3,
+		    grabbed: 4,
+		    tumble: 5,
+		    finishingblow: 6,
+		    ejected: 7,
+		    transitioncutscene: 8,
+		    fireass: 9,
+		    firemouth: 10,
+		    mort: 11,
+		    mortjump: 12,
+		    mortattack: 13,
+		    morthook: 14,
+		    hook: 15,
+		    ghost: 16,
+		    ghostpossess: 17,
+		    titlescreen: 18,
+		    hookshot: 19,
+		    tacklecharge: 20,
+		    cheeseball: 21,
+		    cheeseballclimbwall: 22,
+		    slap: 23,
+		    cheesepep: 24,
+		    cheesepepstick: 25,
+		    cheesepepjump: 26,
+		    cheesepepfling: 27,
+		    cheesepeplaunch: 28,
+		    cheesepepstickside: 29,
+		    cheesepepstickup: 30,
+		    rideweenie: 31,
+		    motorcycle: 32,
+		    boxxedpep: 33,
+		    boxxedpepspin: 34,
+		    boxxedpepjump: 35,
+		    pistolaim: 36,
+		    climbwall: 37,
+		    knightpepslopes: 38,
+		    portal: 39,
+		    secondjump: 40,
+		    chainsawbump: 41,
+		    handstandjump: 42,
+		    lungeattack: 43,
+		    lungegrab: 44,
+		    dashtumble: 45,
+		    gottreasure: 46,
+		    knightpep: 47,
+		    knightpepattack: 48,
+		    knightpepbump: 49,
+		    meteorpep: 50,
+		    bombpep: 51,
+		    bombgrab: 52,
+		    bombpepside: 53,
+		    bombpepup: 54,
+		    grabbing: 55,
+		    chainsawpogo: 56,
+		    shotgunjump: 57,
+		    pogo: 58,
+		    stunned: 59,
+		    highjump: 60,
+		    chainsaw: 61,
+		    facestomp: 62,
+		    mach4: 63,
+		    timesup: 64,
+		    machroll: 65,
+		    shotgun: 66,
+		    shotguncrouch: 67,
+		    shotguncrouchjump: 68,
+		    shotgunshoot: 69,
+		    shotgundash: 70,
+		    shotgunfreefall: 71,
+		    pistol: 72,
+		    machfreefall: 73,
+		    throwing: 74,
+		    slam: 75,
+		    superslam: 76,
+		    skateboard: 77,
+		    grind: 78,
+		    grab: 79,
+		    punch: 80,
+		    backkick: 81,
+		    uppunch: 82,
+		    shoulder: 83,
+		    backbreaker: 84,
+		    graffiti: 85,
+		    bossdefeat: 86,
+		    pizzathrow: 87,
+		    bossintro: 88,
+		    gameover: 89,
+		    keyget: 90,
+		    tackle: 91,
+		    jump: 92,
+		    ladder: 93,
+		    slipnslide: 94,
+		    comingoutdoor: 95,
+		    smirk: 96,
+		    Sjump: 97,
+		    victory: 98,
+		    Sjumpprep: 99,
+		    crouch: 100,
+		    crouchjump: 101,
+		    crouchslide: 102,
+		    mach1: 103,
+		    mach2: 104,
+		    machslide: 105,
+		    bump: 106,
+		    hurt: 107,
+		    freefall: 108,
+		    hang: 109,
+		    turning: 110,
+		    freefallland: 111,
+		    door: 112,
+		    barrel: 113,
+		    barreljump: 114,
+		    barrelclimbwall: 115,
+		    barrelslide: 116,
+		    current: 117,
+		    boulder: 118,
+		    taxi: 119,
+		    runonball: 120,
+		    mach3: 121,
+		    freefallprep: 122,
+		    Sjumpland: 123,
+		    faceplant: 124,
+		    rage: 125,
+		    idle: 126,
+		    bounce: 127,
+		    charge: 128,
+		    pizzagoblinthrow: 129,
+		    turn: 130,
+		    hitceiling: 131,
+		    hitwall: 132,
+		    unknown_1: 133,
+		    walk: 134,
+		    fall: 135,
+		    land: 136,
+		    hit: 137,
+		    stun: 138,
+		    recovery: 139,
+		    stomped: 140,
+		    chase: 141,
+		    spawnenemy: 142,
+		    arena: 143,
+		    arenaintro: 144,
+		    arenaround: 145,
+		    actor: 146,
+		    parry: 147,
+		    golf: 148,
+		    float: 149,
+		    tube: 150,
+		    unused_2: 151,
+		    policetaxi: 152,
+		    shoulderbash: 153,
+		    pummel: 154,
+		    staggered: 155,
+		    thrown: 156,
+		    boss_supershoulderbash: 157,
+		    boss_superattackstart: 158,
+		    boss_superattackcharge: 159,
+		    boss_superattack: 160,
+		    boss_shoulderturn: 161,
+		    boss_fistmatch: 162,
+		    boss_fistmatchend: 163,
+		    boss_groundpunchstart: 164,
+		    slipbanan: 165,
+		    boss_millionpunch: 166,
+		    boss_skateboardturn: 167,
+		    boss_bombkick: 168,
+		    boss_bombpogo: 169,
+		    boss_jetpackstart: 170,
+		    boss_jetpack: 171,
+		    boss_jetpackcancel: 172,
+		    boss_jetpackspin: 173,
+		    boss_shield: 174,
+		    boss_helicopterhat: 175,
+		    boss_panicjump: 176,
+		    boss_smokebombstart: 177,
+		    boss_smokebombcrawl: 178,
+		    boss_springshoes: 179,
+		    boss_cardboard: 180,
+		    boss_cardboardend: 181,
+		    boss_mockery: 182,
+		    bombdelete: 183,
+		    rocket: 184,
+		    rocketslide: 185,
+		    gotoplayer: 186,
+		    trickjump: 187,
+		    totem: 188,
+		    underground: 189,
+		    ridecow: 190,
+		    ratmount: 191,
+		    ratmountjump: 192,
+		    ratmountattack: 193,
+		    ratmountspit: 194,
+		    ratmountclimbwall: 195,
+		    ratmounthurt: 196,
+		    ratmountgroundpound: 197,
+		    ratmountbounce: 198,
+		    unused_3: 199,
+		    ratmountballoon: 200,
+		    ratmounttumble: 201,
+		    ratmountgrind: 202,
+		    ratmounttrickjump: 203,
+		    ratmountskid: 204,
+		    ratgrabbed: 205,
+		    blockstance: 206,
+		    balloon: 207,
+		    debugstate: 208,
+		    trashjumpprep: 209,
+		    trashjump: 210,
+		    trashroll: 211,
+		    stringfling: 212,
+		    stringjump: 213,
+		    stringfall: 214,
+		    noisejetpack: 215,
+		    spiderweb: 216,
+		    robotidle: 217,
+		    robotintro: 218,
+		    robotroaming: 219,
+		    robotchase: 220,
+		    robotinvestigate: 221,
+		    robotseeking: 222,
+		    flushidle: 223,
+		    flushtransition: 224,
+		    animatronic: 225,
+		    pizzaface_moustache: 226,
+		    pizzaface_mouth: 227,
+		    pizzaface_eyes: 228,
+		    pizzaface_nose: 229,
+		    pizzaface_ram: 230,
+		    pizzaface_phase2transition: 231,
+		    pizzahead_look: 232,
+		    pizzahead_fishing: 233,
+		    unused_4: 234,
+		    pizzahead_bombrun: 235,
+		    pizzahead_npcthrow: 236,
+		    pizzahead_portraitthrow: 237,
+		    pizzahead_enguarde: 238,
+		    pizzahead_sexypicture: 239,
+		    pizzahead_pullinglevel: 240,
+		    pizzahead_eat: 241,
+		    pizzahead_surprisebox: 242,
+		    pizzahead_spinningrun: 243,
+		    pizzahead_spinningkick: 244,
+		    pizzahead_spinningpunch: 245,
+		    pizzahead_groundpunch: 246,
+		    pizzahead_bigkick: 247,
+		    pizzahead_slamhead: 248,
+		    pizzahead_slamhead2: 249,
+		    tv_whitenoise: 250,
+		    tv_expression: 251,
+		    playersuperattack: 252,
+		    unused_5: 253,
+		    jetpackjump: 254,
+		    unused_6: 255,
+		    unused_7: 256,
+		    bee: 257,
+		    unused_8: 258,
+		    ratmountpunch: 259,
+		    ratmountcrouch: 260,
+		    ratmountladder: 261,
+		    unused_9: 262,
+		    unused_10: 263,
+		    magnet: 264,
+		    antigrav: 265,
+		    secret: 266,
+		    grabdash: 267,
+		    grabthrow: 268,
+		    deformed: 269,
+		    pizzaheadjump: 270,
+		    KO: 271,
+		    supergrab: 272,
+		    phase1hurt: 273,
+		    transition: 274,
+		    animation: 275,
+		    duel: 276
+		};
+	});
+	live_api_var_add("instance_count*",function(l_set,l_val){
 		return instance_count
 	});
-	gml_var_add("room_speed",function(l_set,l_val){
+	live_api_var_add("room_speed",function(l_set,l_val){
 		if(l_set){
 			room_speed=l_val;
 			return undefined;
 		} else return room_speed
 	});
-	gml_var_add("fps*",function(l_set,l_val){
+	live_api_var_add("fps*",function(l_set,l_val){
 		return fps
 	});
-	gml_var_add("fps_real*",function(l_set,l_val){
+	live_api_var_add("fps_real*",function(l_set,l_val){
 		return fps_real
 	});
-	gml_var_add("current_time*",function(l_set,l_val){
+	live_api_var_add("current_time*",function(l_set,l_val){
 		return current_time
 	});
-	gml_var_add("current_year*",function(l_set,l_val){
+	live_api_var_add("current_year*",function(l_set,l_val){
 		return current_year
 	});
-	gml_var_add("current_month*",function(l_set,l_val){
+	live_api_var_add("current_month*",function(l_set,l_val){
 		return current_month
 	});
-	gml_var_add("current_day*",function(l_set,l_val){
+	live_api_var_add("current_day*",function(l_set,l_val){
 		return current_day
 	});
-	gml_var_add("current_weekday*",function(l_set,l_val){
+	live_api_var_add("current_weekday*",function(l_set,l_val){
 		return current_weekday
 	});
-	gml_var_add("current_hour*",function(l_set,l_val){
+	live_api_var_add("current_hour*",function(l_set,l_val){
 		return current_hour
 	});
-	gml_var_add("current_minute*",function(l_set,l_val){
+	live_api_var_add("current_minute*",function(l_set,l_val){
 		return current_minute
 	});
-	gml_var_add("current_second*",function(l_set,l_val){
+	live_api_var_add("current_second*",function(l_set,l_val){
 		return current_second
 	});
-	gml_var_add("room",function(l_set,l_val){
+	live_api_var_add("room",function(l_set,l_val){
 		if(l_set){
 			room=l_val;
 			return undefined;
 		} else return room
 	});
-	gml_var_add("room_first*",function(l_set,l_val){
+	live_api_var_add("room_first*",function(l_set,l_val){
 		return room_first
 	});
-	gml_var_add("room_last*",function(l_set,l_val){
+	live_api_var_add("room_last*",function(l_set,l_val){
 		return room_last
 	});
-	gml_var_add("room_width*",function(l_set,l_val){
+	live_api_var_add("room_width*",function(l_set,l_val){
 		return room_width
 	});
-	gml_var_add("room_height*",function(l_set,l_val){
+	live_api_var_add("room_height*",function(l_set,l_val){
 		return room_height
 	});
-	gml_var_add("room_persistent",function(l_set,l_val){
+	live_api_var_add("room_persistent",function(l_set,l_val){
 		if(l_set){
 			room_persistent=l_val;
 			return undefined;
 		} else return room_persistent
 	});
-	gml_var_add("score",function(l_set,l_val){
+	live_api_var_add("score",function(l_set,l_val){
 		if(l_set){
 			score=l_val;
 			return undefined;
 		} else return score
 	});
-	gml_var_add("lives",function(l_set,l_val){
+	live_api_var_add("lives",function(l_set,l_val){
 		if(l_set){
 			lives=l_val;
 			return undefined;
 		} else return lives
 	});
-	gml_var_add("health",function(l_set,l_val){
+	live_api_var_add("health",function(l_set,l_val){
 		if(l_set){
 			health=l_val;
 			return undefined;
 		} else return health
 	});
-	gml_var_add("event_type*",function(l_set,l_val){
+	live_api_var_add("event_type*",function(l_set,l_val){
 		return event_type
 	});
-	gml_var_add("event_number*",function(l_set,l_val){
+	live_api_var_add("event_number*",function(l_set,l_val){
 		return event_number
 	});
-	gml_var_add("event_object*",function(l_set,l_val){
+	live_api_var_add("event_object*",function(l_set,l_val){
 		return event_object
 	});
-	gml_var_add("event_action*",function(l_set,l_val){
+	live_api_var_add("event_action*",function(l_set,l_val){
 		return event_action
 	});
-	gml_var_add("application_surface*",function(l_set,l_val){
+	live_api_var_add("application_surface*",function(l_set,l_val){
 		return application_surface
 	});
-	gml_var_add("debug_mode*",function(l_set,l_val){
+	live_api_var_add("debug_mode*",function(l_set,l_val){
 		return debug_mode
 	});
-	gml_var_add("font_texture_page_size",function(l_set,l_val){
+	live_api_var_add("font_texture_page_size",function(l_set,l_val){
 		if(l_set){
 			font_texture_page_size=l_val;
 			return undefined;
 		} else return font_texture_page_size
 	});
-	gml_var_add("keyboard_key",function(l_set,l_val){
+	live_api_var_add("keyboard_key",function(l_set,l_val){
 		if(l_set){
 			keyboard_key=l_val;
 			return undefined;
 		} else return keyboard_key
 	});
-	gml_var_add("keyboard_lastkey",function(l_set,l_val){
+	live_api_var_add("keyboard_lastkey",function(l_set,l_val){
 		if(l_set){
 			keyboard_lastkey=l_val;
 			return undefined;
 		} else return keyboard_lastkey
 	});
-	gml_var_add("keyboard_lastchar",function(l_set,l_val){
+	live_api_var_add("keyboard_lastchar",function(l_set,l_val){
 		if(l_set){
 			keyboard_lastchar=l_val;
 			return undefined;
 		} else return keyboard_lastchar
 	});
-	gml_var_add("keyboard_string",function(l_set,l_val){
+	live_api_var_add("keyboard_string",function(l_set,l_val){
 		if(l_set){
 			keyboard_string=l_val;
 			return undefined;
 		} else return keyboard_string
 	});
-	gml_var_add("mouse_x*",function(l_set,l_val){
+	live_api_var_add("mouse_x*",function(l_set,l_val){
 		return mouse_x
 	});
-	gml_var_add("mouse_y*",function(l_set,l_val){
+	live_api_var_add("mouse_y*",function(l_set,l_val){
 		return mouse_y
 	});
-	gml_var_add("mouse_button",function(l_set,l_val){
+	live_api_var_add("mouse_button",function(l_set,l_val){
 		if(l_set){
 			mouse_button=l_val;
 			return undefined;
 		} else return mouse_button
 	});
-	gml_var_add("mouse_lastbutton",function(l_set,l_val){
+	live_api_var_add("mouse_lastbutton",function(l_set,l_val){
 		if(l_set){
 			mouse_lastbutton=l_val;
 			return undefined;
 		} else return mouse_lastbutton
 	});
-	gml_var_add("cursor_sprite",function(l_set,l_val){
+	live_api_var_add("cursor_sprite",function(l_set,l_val){
 		if(l_set){
 			cursor_sprite=l_val;
 			return undefined;
 		} else return cursor_sprite
 	});
-	gml_var_add("background_colour£",function(l_set,l_val){
+	live_api_var_add("background_colour£",function(l_set,l_val){
 		if(l_set){
 			background_colour=l_val;
 			return undefined;
 		} else return background_colour
 	});
-	gml_var_add("background_showcolour£",function(l_set,l_val){
+	live_api_var_add("background_showcolour£",function(l_set,l_val){
 		if(l_set){
 			background_showcolour=l_val;
 			return undefined;
 		} else return background_showcolour
 	});
-	gml_var_add("background_color$",function(l_set,l_val){
+	live_api_var_add("background_color$",function(l_set,l_val){
 		if(l_set){
 			background_color=l_val;
 			return undefined;
 		} else return background_color
 	});
-	gml_var_add("background_showcolor$",function(l_set,l_val){
+	live_api_var_add("background_showcolor$",function(l_set,l_val){
 		if(l_set){
 			background_showcolor=l_val;
 			return undefined;
 		} else return background_showcolor
 	});
-	gml_var_add("view_enabled",function(l_set,l_val){
+	live_api_var_add("view_enabled",function(l_set,l_val){
 		if(l_set){
 			view_enabled=l_val;
 			return undefined;
 		} else return view_enabled
 	});
-	gml_var_add("view_current*",function(l_set,l_val){
+	live_api_var_add("view_current*",function(l_set,l_val){
 		return view_current
 	});
-	gml_var_add("view_visible[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_visible[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_visible[l_ind] = l_val;
 			return undefined;
 		} else return view_visible[l_ind];
 	});
-	gml_var_add("view_xport[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_xport[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_xport[l_ind] = l_val;
 			return undefined;
 		} else return view_xport[l_ind];
 	});
-	gml_var_add("view_yport[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_yport[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_yport[l_ind] = l_val;
 			return undefined;
 		} else return view_yport[l_ind];
 	});
-	gml_var_add("view_wport[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_wport[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_wport[l_ind] = l_val;
 			return undefined;
 		} else return view_wport[l_ind];
 	});
-	gml_var_add("view_hport[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_hport[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_hport[l_ind] = l_val;
 			return undefined;
 		} else return view_hport[l_ind];
 	});
-	gml_var_add("view_surface_id[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_surface_id[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_surface_id[l_ind] = l_val;
 			return undefined;
 		} else return view_surface_id[l_ind];
 	});
-	gml_var_add("view_camera[]",function(l_set,l_val,l_ind){
+	live_api_var_add("view_camera[]",function(l_set,l_val,l_ind){
 		if(l_ind<0||l_ind>7)return gml_thread_error("Index ("+string(l_ind)+") is out of range [0..7]");
 		if(l_set){
 			view_camera[l_ind] = l_val;
 			return undefined;
 		} else return view_camera[l_ind];
 	});
-	gml_var_add("game_id*",function(l_set,l_val){
+	live_api_var_add("game_id*",function(l_set,l_val){
 		return game_id
 	});
-	gml_var_add("game_display_name*",function(l_set,l_val){
+	live_api_var_add("game_display_name*",function(l_set,l_val){
 		return game_display_name
 	});
-	gml_var_add("game_project_name*",function(l_set,l_val){
+	live_api_var_add("game_project_name*",function(l_set,l_val){
 		return game_project_name
 	});
-	gml_var_add("game_save_id*",function(l_set,l_val){
+	live_api_var_add("game_save_id*",function(l_set,l_val){
 		return game_save_id
 	});
-	gml_var_add("working_directory*",function(l_set,l_val){
+	live_api_var_add("working_directory*",function(l_set,l_val){
 		return working_directory
 	});
-	gml_var_add("temp_directory*",function(l_set,l_val){
+	live_api_var_add("temp_directory*",function(l_set,l_val){
 		return temp_directory
 	});
-	gml_var_add("cache_directory*",function(l_set,l_val){
+	live_api_var_add("cache_directory*",function(l_set,l_val){
 		return cache_directory
 	});
-	gml_var_add("program_directory*",function(l_set,l_val){
+	live_api_var_add("program_directory*",function(l_set,l_val){
 		return program_directory
 	});
-	gml_var_add("browser_width*",function(l_set,l_val){
+	live_api_var_add("browser_width*",function(l_set,l_val){
 		return browser_width
 	});
-	gml_var_add("browser_height*",function(l_set,l_val){
+	live_api_var_add("browser_height*",function(l_set,l_val){
 		return browser_height
 	});
-	gml_var_add("os_type*",function(l_set,l_val){
+	live_api_var_add("os_type*",function(l_set,l_val){
 		return os_type
 	});
-	gml_var_add("os_device*",function(l_set,l_val){
+	live_api_var_add("os_device*",function(l_set,l_val){
 		return os_device
 	});
-	gml_var_add("os_browser*",function(l_set,l_val){
+	live_api_var_add("os_browser*",function(l_set,l_val){
 		return os_browser
 	});
-	gml_var_add("os_version*",function(l_set,l_val){
+	live_api_var_add("os_version*",function(l_set,l_val){
 		return os_version
 	});
-	gml_var_add("display_aa*",function(l_set,l_val){
+	live_api_var_add("display_aa*",function(l_set,l_val){
 		return display_aa
 	});
-	gml_var_add("async_load*",function(l_set,l_val){
+	live_api_var_add("async_load*",function(l_set,l_val){
 		return async_load
 	});
-	gml_var_add("delta_time*",function(l_set,l_val){
+	live_api_var_add("delta_time*",function(l_set,l_val){
 		return delta_time
 	});
-	gml_var_add("webgl_enabled*",function(l_set,l_val){
+	live_api_var_add("webgl_enabled*",function(l_set,l_val){
 		return webgl_enabled
 	});
-	gml_var_add("event_data*",function(l_set,l_val){
+	live_api_var_add("event_data*",function(l_set,l_val){
 		return event_data
 	});
 }

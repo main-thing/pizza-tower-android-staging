@@ -1,6 +1,6 @@
 function scr_bosscontroller_particle_hp(_a0, _a1, _a2, _a3, _a4, _a5, _a6, _a7 = noone) //gml_Script_scr_bosscontroller_particle_hp
 {
-    with (obj_bosscontroller)
+    with (obj_bosscontroller_1)
     {
         var q = 
         {
@@ -27,7 +27,7 @@ function scr_bosscontroller_particle_anim(_a0, _a1, _a2, _a3, _a4, _a5, _a6) //g
         _a5 = 707
     if ((_a6 == undefined))
         _a6 = 0
-    with (obj_bosscontroller)
+    with (obj_bosscontroller_1)
     {
         var q = 
         {
@@ -310,7 +310,7 @@ function scr_collect_hat(_a0) //gml_Script_scr_collect_hat
 {
     if ((_a0 == undefined))
         _a0 = false
-    with (obj_bosscontroller)
+    with (obj_bosscontroller_1)
     {
         if (((player_hp + instance_number(obj_hpeffect)) < player_maxhp))
         {

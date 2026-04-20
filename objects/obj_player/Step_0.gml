@@ -832,13 +832,19 @@ if (object_index == obj_player1)
 	{
 		global.previouscombo = global.combo
 		if ((global.combo % 5) == 0 && global.combo != 0)
-		{
-			with (instance_create(x, (y - 80), obj_combotitle))
-			{
-				title = floor((global.combo / 5))
-				title = clamp(title, 0, floor((sprite_get_number(spr_comboend_title1) / 5)))
-			}
-		}
+        {
+            with (instance_create(x, y - 80, obj_combotitle))
+            {
+				title = floor(global.combo / 5);
+				if(title > (sprite_get_number(spr_comboend_title1) / 2))
+				{
+					title -= (sprite_get_number(spr_comboend_title1) / 2);
+					very = true;
+				}
+				if(global.combo >= 80)
+					very = true;
+            }
+        }
 	}
 	if (!((state == states.door or state == states.tube or state == states.taxi or state == states.gottreasure or state == states.victory or state == states.gottreasure or state == states.actor or state == states.comingoutdoor or (state == states.knightpep && (sprite_index == spr_knightpepstart or sprite_index == spr_knightpepthunder)) or instance_exists(obj_fadeout) or place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretportalstart))))
 	{

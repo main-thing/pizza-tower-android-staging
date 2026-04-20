@@ -16,7 +16,8 @@ depth = 1
 global.afterimage_list = ds_list_create()
 alpha = array_create(afterimage.enum_length, 1)
 alpha[afterimage.heatattack] = 0.5
-if(global.usecustomafterimageshaders){
+if(global.usecustomafterimageshaders)
+{
 	//_uniformcolor = shader_get_uniform(shd_custom_afterimage, "u_imagecolor");
 }
 if(global.usefiremouthshaders){

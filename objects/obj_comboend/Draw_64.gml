@@ -1,4 +1,5 @@
-if(!global.oldsprites){
+if(!global.oldsprites)
+{
 	/*if (!global.option_hud || (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud))
 		exit;*/
 	var xx = x;

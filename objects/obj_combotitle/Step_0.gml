@@ -1,4 +1,5 @@
-if (global.oldsprites) {
+if (global.oldsprites) 
+{
 	title_index += 0.35
 	if (title_index >= 2) title_index = frac(title_index)
 	image_index = ((title * 2) + title_index)
@@ -10,7 +11,9 @@ if (global.oldsprites) {
 		alpha -= 0.05
 	else 
 		instance_destroy()
-} else {
+} 
+else 
+{
 	title_index += 0.35;
 	if (title_index >= 2) title_index = frac(title_index);
 	image_index = (title * 2) + title_index;
