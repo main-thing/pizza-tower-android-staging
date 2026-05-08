@@ -1,6 +1,6 @@
-function get_dark(_color, _a1)
+function get_dark(_color, _a0)
 {
-	if _a1
+	if _a0
 	{
 		var d = (room_width * room_height)
 		var b = d
