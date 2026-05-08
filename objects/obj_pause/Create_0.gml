@@ -20,6 +20,8 @@ toppin_sprite[4] = spr_toppintomato
 
 step_sound = sfx_step;
 return_sound = sfx_enemyprojectile;
+draw_y = 96;
+draw_ypad = 48;
 
 // Everytime this is run, a new bunch of function references are created.
 // Do they get destroyed? no idea cause this is a new runner.

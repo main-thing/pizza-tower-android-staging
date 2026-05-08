@@ -1,15 +1,14 @@
 if pause
 {
-	var pad = 48
 	draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, 0)
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	var xx = 490
-	var yy = 48
+	var yy = draw_y
 	for (var i = 0; i < array_length(pause_menu); i++)
 	{
 		var c = c_gray
-		yy = (96 + (pad * i))
+		yy = (draw_y + (draw_ypad * i))
 		if (selected == i)
 		{
 			c = c_white
@@ -52,7 +51,7 @@ if pause
 		rank = "S"
 	xx = 172
 	yy = 404
-	pad = 40
+	var pad = 40
 	for (i = 0; i < array_length(toppin_sprite); i++)
 		draw_sprite_ext(toppin_sprite[i], toppin_index[i], (xx + (pad * i)), yy, 1, 1, 0, c_white, (toppin_has[i] ? 1 : 0.5))
 }

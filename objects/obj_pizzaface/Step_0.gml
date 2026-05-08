@@ -54,5 +54,5 @@ if (place_meeting(x, y, playerid) && (!playerid.cutscene) && playerid.state != s
 	}
 	instance_destroy()
 }
-if (maxspeed < 3 && image_alpha == 1)
+if (maxspeed < speedupspeed && image_alpha == 1)
 	maxspeed += 0.01
