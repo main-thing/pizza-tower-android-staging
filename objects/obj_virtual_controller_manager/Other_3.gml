@@ -1,1 +1,1 @@
-keyboard_clear(vk_shift)
+io_clear();

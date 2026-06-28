@@ -1,3 +1,7 @@
-TODO: ALL CUSTOM OBJECTS ARE BROKEN CURRENTLY, FIX ASAP
-
-TODO: finish importing rm_swedish2 from the noise
+TODO:
+- Update some virtual controller debug commands.
+- Add backwards compatibility for old controls.
+- Update obj_mainmenu a bit
+- Import some fonts
+- Improve level editor ui
+- Update the public virtual controller package 

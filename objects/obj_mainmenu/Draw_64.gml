@@ -1,4 +1,77 @@
-if(live_call()) return live_result
+live_auto_call;
+
+if(page != noone)
+{
+	var _option = text_arr[page];
+	
+	with(_option)
+	{
+		if(page_draw_func != noone)
+		{
+			var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
+			var _exec = is_struct(page_draw_func) ? _snip : script_execute;
+				
+			_exec(page_draw_func);
+		}
+	}
+	exit;
+}
+
+
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_set_font(subtextfont);
+draw_text(10, 520, "V" + GM_version + " BETA");
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_font(titlefont);
+
+var current_option = text_arr[selected_option];
+var cursoroffset = current_option.x - (string_width(current_option.title) / 2) - string_width("WW");
+for(var i = 0; i < array_length(text_arr); i++)
+{
+	current_option = text_arr[i];
+	draw_set_color((selected_option == i) ? c_white : c_gray);
+	draw_text(current_option.x, current_option.y, current_option.title);
+}
+
+draw_set_color(c_white)
+cursorindex += 0.35
+if cursorindex > sprite_get_number(spr_cursor)
+	cursorindex = frac(cursorindex)
+draw_sprite(spr_cursor, cursorindex, cursoroffset, (350 + (selected_option * 40)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 if(newstuff){
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_left)
@@ -25,20 +98,6 @@ if(newstuff){
 }
 // TODO: replace with new credits
 if(credits){
-	/*
-	draw_set_halign(fa_center)
-	draw_set_valign(fa_left)
-	draw_set_color(c_white)
-	draw_set_font(titlefont)
-	draw_text(display_get_gui_width() / 2, 50 + stringoffset, "CREDITS")
-	draw_set_font(subtextfont2)
-	draw_text(display_get_gui_width() / 2, 140, "TOUR DE PIZZA: FOR PIZZA TOWER")
-	draw_sprite(mcpigicon, 0, display_get_gui_width() / 2 - sprite_get_width(mcpigicon) + mcpigiconoffsetx, 140 + mcpigiconoffsety)
-	draw_text(display_get_gui_width() / 2, 220, "TNG: SUGGESTIONS ASSETS AND LOGO")
-	draw_sprite(tngicon, 0, display_get_gui_width() / 2 - sprite_get_width(tngicon) + tngiconoffsetx, 220 + tngiconoffsety)
-	draw_text(display_get_gui_width() / 2, 300, "THE COMMUNITY: FOR SUPPORTING THIS PROJECT")
-	draw_sprite(communityicon, 0, display_get_gui_width() / 2 - sprite_get_width(communityicon) + communityiconoffsetx, 300 + communityiconoffsety)
-	*/
 	draw_set_alpha(0.8)
 	draw_set_color(c_black)
 	//left
@@ -89,27 +148,4 @@ concepts.")
 	draw_text(2356 * 0.27, 1080 * 0.22, "For the shader fix aswell.")
 	//draw_text(2356 * 0.27, 1080 * 0.39, "For supporting the project.")
 	exit;	
-}
-draw_set_color(c_white)
-draw_set_halign(fa_left)
-draw_set_valign(fa_middle)
-draw_set_font(subtextfont)
-draw_text(10, 520, "V" + GM_version + " BETA")
-draw_set_halign(fa_center)
-draw_set_valign(fa_middle)
-draw_set_font(titlefont)
-
-var current_option = text_arr[selected_option]
-var cursoroffset = current_option[0] - (string_width(current_option[2]) / 2) - string_width("WW")
-for(var i = 0; i < array_length(text_arr); i++)
-{
-	current_option = text_arr[i]
-	draw_set_color((selected_option == i) ? c_white : c_gray)
-	draw_text(current_option[0], current_option[1], current_option[2])
-}
-
-draw_set_color(c_white)
-cursorindex += 0.35
-if cursorindex > sprite_get_number(spr_cursor)
-	cursorindex = frac(cursorindex)
-draw_sprite(spr_cursor, cursorindex, cursoroffset, (350 + (selected_option * 40)))
+}*/

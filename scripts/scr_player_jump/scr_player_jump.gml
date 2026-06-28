@@ -279,7 +279,8 @@ function state_player_jump()
 			image_index = 0
 			state = states.freefall
 			vsp = -11
-			if(global.oldsprites){
+			if(!finalmoveset)
+			{
 				with (instance_create((x + (xscale * 30)), (y + 60), obj_shotgunbullet))
 				{
 					image_xscale = other.xscale
@@ -304,7 +305,9 @@ function state_player_jump()
 					spd = -5
 					shotgun = 1
 				}
-			} else{
+			} 
+			else
+			{
 				with (instance_create(x, y, obj_shotgunblast))
 				{
 					sprite_index = spr_shotgunblastdown;

@@ -192,6 +192,7 @@ suplexhavetomash = 0
 anger = 0
 angry = 0
 baddiegrabbedID = 0
+baddie_scare_states = ds_list_create()
 spr_palette = spr_peppalette
 character = "P"
 tauntsound = sfx_taunt
@@ -360,7 +361,7 @@ farmerpos = 0
 clowntimer = 0
 knightmiddairstop = 0
 knightmove = -1
-if (!variable_global_exists("saveroom"))
+if(!variable_global_exists("saveroom"))
 {
 	global.combodropped = 0
 	global.saveroom = ds_list_create()
@@ -457,7 +458,7 @@ if (!variable_global_exists("saveroom"))
 	global.gerome = 0
 	global.bullet = 0
 	global.fuel = 3
-	global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
+	global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ!¡¿?.1234567890:ÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÒÚÙÛÜç+_", 1, 0)
 	global.collectfont = font_add_sprite_ext(spr_font_collect, "0123456789", 1, 0)
 	global.combofont = font_add_sprite_ext(spr_font_combo, "0123456789/:", 1, 0)
 	global.combofont2 = font_add_sprite_ext(spr_tv_combobubbletext, "0123456789", 1, 0)

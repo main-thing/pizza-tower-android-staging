@@ -162,7 +162,8 @@ if global.panic
 	draw_sprite(spr_timer_bar, -1, timer_x, timer_y)
 	draw_sprite(johnface_sprite, johnface_index, ((timer_x + 13) + _barpos), (timer_y + 20))
 	draw_sprite(pizzaface_sprite, pizzaface_index, (timer_x + 320), (timer_y + 10))
-	if(global.oldsprites == false){
+	if(global.oldsprites == false)
+	{
 		var minutes = 0;
 		for (var seconds = ceil(global.fill / 12); seconds > 59; seconds -= 60)
 			minutes++;

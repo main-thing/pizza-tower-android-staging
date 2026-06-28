@@ -27,11 +27,12 @@ Fixed a bug that made swipe mode persist in play mode
 Fixed a bug that made it incredibly difficult to exit the key config in the
 pause menu
 Added a new port options menu in the pause menu
-Replaced the internal GML command processor (N String Parser) 
+Replaced the internal GML command processor (N String Parser)
 with GMLive (adds more features to the gml command)
+Updated N String Parser to support multiline text and formatting, 
+courtesy of @thesoysauce1
 Added obj_custom_object_ext which includes more events that can be used in gml 
 commands
 Added the togglefps command to debug to show FPS ingame
 Replaced the font here with an smallfont, courtesy of @primary_thing
 Made obj_doorchoose have text autocompletion (for Enemy Test)
-

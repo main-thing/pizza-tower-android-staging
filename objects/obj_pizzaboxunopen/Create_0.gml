@@ -6,6 +6,7 @@ if (obj_player.character == "S"){
 	instance_destroy()
 }
 depth = 104
-if (!global.oldsprites){
+if(!global.oldsprites)
+{
 	sprite_index = spr_pizzaboxunopen_1
 }

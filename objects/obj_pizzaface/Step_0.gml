@@ -45,11 +45,7 @@ if (place_meeting(x, y, playerid) && (!playerid.cutscene) && playerid.state != s
 			sprite_index = spr_Timesup
 			image_index = 0
 			audio_stop_all()
-			if (global.oldsprites == true) {
-				scr_soundeffect(mu_timesup)
-			} else {
-				scr_soundeffect(mu_Your_Fat_Ass_Slows_You_Down)
-			}
+			scr_soundeffect(global.oldsprites == true ? mu_timesup : mu_Your_Fat_Ass_Slows_You_Down);
 		}
 	}
 	instance_destroy()

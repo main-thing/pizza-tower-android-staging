@@ -6,6 +6,7 @@ x = obj_player1.x
 y = obj_player1.y
 alarm[1] = 10
 image_alpha = 0
-if (!global.oldsprites) {
+if (!global.oldsprites) 
+{
 	sprite_index = spr_pizzaface_1
 }

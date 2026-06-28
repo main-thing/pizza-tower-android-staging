@@ -439,7 +439,8 @@ function scr_characterspr() {
 		combobubblefillspr = spr_tv_combobubblefill
 		canbreakdance = true
 		cansupertaunt = true
-		baddie_scare_states = [states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes]
+		ds_list_clear(baddie_scare_states);
+		ds_list_add(baddie_scare_states, states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes)
 	}
 	if (character == "N"
 		or(character == "P" && (!ispeppino))) {
@@ -796,7 +797,8 @@ function scr_characterspr() {
 		combobubblefillspr = spr_tv_combobubblefill
 		canbreakdance = true
 		cansupertaunt = true
-		baddie_scare_states = [states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes]
+		ds_list_clear(baddie_scare_states);
+		ds_list_add(baddie_scare_states, states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes)
 	}
 	if (character == "V") {
 		spr_idle = spr_playerV_idle
@@ -1079,7 +1081,8 @@ function scr_characterspr() {
 		combobubblefillspr = spr_tv_combobubblefill
 		canbreakdance = false
 		cansupertaunt = true
-		baddie_scare_states = [states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes]
+		ds_list_clear(baddie_scare_states);
+		ds_list_add(baddie_scare_states, states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes)
 	}
 	if (character == "M") {
 		spr_idle = spr_pepperman_idle
@@ -1358,7 +1361,8 @@ function scr_characterspr() {
 		combobubblefillspr = spr_tv_combobubblefill
 		canbreakdance = true
 		cansupertaunt = true
-		baddie_scare_states = [states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes]
+		ds_list_clear(baddie_scare_states);
+		ds_list_add(baddie_scare_states, states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes)
 	}
 	if (character == "S") {
 		spr_idle = spr_snick_idle
@@ -1587,7 +1591,8 @@ function scr_characterspr() {
 		combobubblefillspr = spr_tv_combobubblefill
 		canbreakdance = false
 		cansupertaunt = true
-		baddie_scare_states = [states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes]
+		ds_list_clear(baddie_scare_states);
+		ds_list_add(baddie_scare_states, states.chainsawbump, states.mach3, states.rideweenie,  states.rocket, states.tacklecharge, states.knightpepslopes)
 	}
 	exit;
 }

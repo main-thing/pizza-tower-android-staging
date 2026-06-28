@@ -1,7 +1,10 @@
 with (instance_create(x, y, obj_shakeanddie)){
-	if (global.oldsprites) {
+	if (global.oldsprites) 
+	{
 		sprite_index = other.sprite_index
-	} else {
+	} 
+	else 
+	{
 		sprite_index = spr_pizzahead_intro1
 	}
 }

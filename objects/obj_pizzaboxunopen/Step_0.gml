@@ -182,16 +182,23 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen) || (p
 			vsp = -5
 		}
 	}
-	if(global.oldsprites){
-	sprite_index = spr_pizzaboxopen
-	} else{
+	if(global.oldsprites)
+	{
+		sprite_index = spr_pizzaboxopen
+	} 
+	else
+	{
 		instance_destroy()
 	}
 }
-if(global.oldsprites){
-if (sprite_index == spr_pizzaboxopen && floor(image_index) == 16)
-	instance_destroy()
-} else{
+
+if(global.oldsprites)
+{
+	if (sprite_index == spr_pizzaboxopen && floor(image_index) == 16)
+		instance_destroy()
+} 
+else
+{
 	subimg += 0.35;
 	if (subimg > (sprite_get_number(spr_toppinhelp) - 1))
 	{

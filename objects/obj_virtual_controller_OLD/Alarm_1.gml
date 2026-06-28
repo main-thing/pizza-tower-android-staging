@@ -1,4 +1,5 @@
-if(!global.oldsprites){
+if(!global.oldsprites)
+{
 	var lay_id = layer_get_id("Backgrounds_scroll")
 	var back_id = layer_background_get_id(lay_id)
 	if(layer_background_get_sprite(back_id) == bg_secret) {

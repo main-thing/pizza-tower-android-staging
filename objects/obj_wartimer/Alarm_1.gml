@@ -9,11 +9,8 @@ if (room != rank_room)
 		sprite_index = spr_Timesup
 		image_index = 0
 		audio_stop_all()
-		if (global.oldsprites == true) {
-			scr_soundeffect(mu_timesup)
-		} else {
-			scr_soundeffect(mu_Your_Fat_Ass_Slows_You_Down)
-		}
+		scr_soundeffect(global.oldsprites ? mu_timesup : mu_Your_Fat_Ass_Slows_You_Down);
+
 	}
 	instance_create(0, 0, obj_timesupwar)
 	instance_destroy()
