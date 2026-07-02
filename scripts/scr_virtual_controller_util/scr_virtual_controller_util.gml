@@ -6,7 +6,7 @@ function processcommand(commandstring, silentcommand = false, is_trigger = false
 		var _string = _string_trim(commandstring);
 		if(ENABLE_STARTUP_COMMANDS)
 		{
-			if(string_pos("startupcommand", _string) == 1)
+			if(string_pos("startupcommand", _string) == 1 || string_pos("gml", _string) == 1)
 				return docommand(_string, silentcommand, is_trigger)
 		}
 		
@@ -24,7 +24,7 @@ function processcommand(commandstring, silentcommand = false, is_trigger = false
 		var _string = string_trim(commandstring);
 		if(ENABLE_STARTUP_COMMANDS)
 		{
-			if(string_pos("startupcommand", _string) == 1)
+			if(string_pos("startupcommand", _string) == 1 || string_pos("gml", _string) == 1)
 				return docommand(_string, silentcommand, is_trigger)
 		}
 		

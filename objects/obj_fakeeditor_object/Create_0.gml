@@ -15,7 +15,6 @@ fake_ed_debug = false
 fake_ed_tile_string = 0
 fake_ed_cursor_pos_x = 0
 fake_ed_cursor_pos_y = 0
-if(!variable_global_exists("fake_ed_remove_vars")){
+if(!variable_global_exists("fake_ed_remove_vars"))
 	global.fake_ed_remove_vars = variable_instance_get_names(id)
-}
 image_speed = 0.3
