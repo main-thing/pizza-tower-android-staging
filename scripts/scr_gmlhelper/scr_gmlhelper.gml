@@ -346,7 +346,6 @@ fx_create("_effect_blend");
 fx_create("_effect_blend_ext");
 fx_create("_effect_glow");
 fx_create("_effect_recursive_blur");
-fx_create("_effect_windblown_particles"); 
 // replace all instances of "particle." with "_particle." and "var particle =" with "var _particle ="
 // located in C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2023.11.1.160\bin\FiltersAndEffects\_effect_windblown_particles\project\scripts\_effect_windblown_particles_script
 fx_create("_filter_blocks");
