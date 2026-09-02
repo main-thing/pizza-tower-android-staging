@@ -780,7 +780,7 @@ function fakeeditor_create_scale_buttons()
 {
 	with(obj_fakeeditor_scale) 
 	{
-		instance_destroy()
+		instance_destroy();
 	}
 	with(instance_create(x + sprite_width - sprite_xoffset, y + (sprite_height / 2) - sprite_yoffset, obj_fakeeditor_scale))
 	{

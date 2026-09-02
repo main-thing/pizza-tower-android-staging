@@ -100,7 +100,7 @@ function scr_ptem_debug_commands()
 	        }
         
 	        if (string_starts_with(_input, "states."))
-	            _input = string_delete(_input, 0, 7);
+	            _input = string_delete(_input, 1, 7);
         
 	        var _state = variable_struct_get(states, _input);
         
@@ -200,7 +200,7 @@ function scr_ptem_debug_commands()
 	{
 		if(os_type == os_windows)
 		{
-		    var file = get_open_filename("PTEM Commands File|*.txt;*png;*gml;" + (global.peter ? "|Here's to the ones that we got, Cheers to the wish you were here, but you're not|herestotheonesthatwegotcheerstothewishyouwereherebutyourenot" : ""), "");
+		    var file = get_open_filename("PTEM Commands File|*.txt;*png;*gml;", "");
         
 		    if (file != "")
 		    {

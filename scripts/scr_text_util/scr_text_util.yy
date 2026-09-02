@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_compile_icon_text",
+  "name": "scr_text_util",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

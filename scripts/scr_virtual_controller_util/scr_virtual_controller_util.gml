@@ -97,9 +97,11 @@ function asset_get_index_vkey(name)
 	return sprite_exists(_spr) ? _spr : spr_button_z_big;
 }
 
+
 function createvbutton(loadedbutton)
 {
 	var orig_loadedbutton = loadedbutton;
+	var _keycodes_compat = [];
 	for(var i = 0, _vars = variable_struct_get_names(loadedbutton); i < array_length(_vars); i++)
 	{
 		var _var = _vars[i];
@@ -108,12 +110,18 @@ function createvbutton(loadedbutton)
 			show_debug_message("[VIRTUAL_CONTROLLER] Trimming invalid variable: " + _var);
 			variable_struct_remove(loadedbutton, _var);
 		}
+		
+		process_old_vkey_vars(_var, loadedbutton, _keycodes_compat);
 	}
+	
+	if(array_length(_keycodes_compat) > 0)
+		loadedbutton[$ "keycodes"] = _keycodes_compat;
+	
 	
 	loadedbutton[$ "sprite"] = loadedbutton[$ "sprite"] == undefined ? spr_button_z_big : asset_get_index_vkey(loadedbutton[$ "sprite"]);
 	loadedbutton[$ "sprite_index"] = loadedbutton[$ "sprite_index"] == undefined ? spr_button_z_big : asset_get_index_vkey(loadedbutton[$ "sprite_index"]);
 	loadedbutton[$ "spr_pressed"] = loadedbutton[$ "spr_pressed"]  == undefined ? loadedbutton[$ "sprite"] : asset_get_index_vkey(loadedbutton[$ "spr_pressed"]);
-	loadedbutton[$ "keycodes"] = typeof(loadedbutton[$ "keycodes"]) != "array" ? [VKEYUI_KEY_TYPES.NONE] : loadedbutton[$ "keycodes"];
+	loadedbutton[$ "keycodes"] = !is_array(loadedbutton[$ "keycodes"]) ? [VKEYUI_KEY_TYPES.NONE] : loadedbutton[$ "keycodes"];
 	loadedbutton[$ "keycodes"][0] = VKEYUI_KEY_TYPES[$ loadedbutton[$ "keycodes"][0]];
 	
 	

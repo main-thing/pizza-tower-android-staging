@@ -21,7 +21,7 @@ if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id)
 			instance_destroy(transfotip)
 		transfotip = instance_create(0 ,0, obj_transfotip)
 		with(transfotip) 
-			text = ("SELECTED " + string_upper(object_get_name(other.selectedent.fake_ed_content)))
+			text = ("{u}SELECTED " + string_upper(object_get_name(other.selectedent.fake_ed_content)) + "/")
 	}
 }
 if(obj_fakeeditor.selectedent == id)
