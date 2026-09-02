@@ -18,5 +18,5 @@ spr_idle_strongcold = sprite_index
 xprev = x
 yprev = y
 with (playerid) {
-	tv_do_expression(self._spr_tv_exprcollect)
+	tv_do_expression(self.tv_exprcollect)
 }

@@ -93,6 +93,6 @@
   },
   "parent": {
     "name": "Ruin",
-    "path": "folders/Sprites/Backgrounds/Ruin.yy",
+    "path": "folders/Sprites/Tilesets/Ruin.yy",
   },
 }

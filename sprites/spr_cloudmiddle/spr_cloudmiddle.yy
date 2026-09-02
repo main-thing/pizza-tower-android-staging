@@ -74,7 +74,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Secret",
-    "path": "folders/Sprites/Backgrounds/Secret.yy",
+    "name": "Platform clouds",
+    "path": "folders/Sprites/Decorations/Platform clouds.yy",
   },
 }

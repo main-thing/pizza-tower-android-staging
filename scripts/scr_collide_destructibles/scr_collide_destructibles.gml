@@ -220,6 +220,14 @@ function scr_collide_destructibles()
 						instance_destroy()
 				}
 			}
+			if (state == states.Sjump)
+			{
+				if (place_meeting(x, (y - 1), obj_metalblock))
+				{
+					with (instance_place(x, (y - 1), obj_metalblock))
+						instance_destroy()
+				}
+			}
 			if (state == states.crouchslide or state == states.machroll or state == states.mach2 or state == states.punch)
 			{
 				with (obj_destructibles)

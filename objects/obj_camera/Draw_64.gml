@@ -69,7 +69,7 @@ if(global.oldhud){
 				headspr = (obj_player1.sprite_index == obj_player1.spr_bombpepintro || obj_player.sprite_index == obj_player1.spr_bombpeprunabouttoexplode || obj_player.sprite_index == obj_player1.spr_bombpeprun) ? obj_player1.spr_HUDscream : obj_player1.spr_HUDhurt
 			break
 			case states.bossintro:
-				headspr = (obj_player1.sprite_index == obj_player1.spr_levelcomplete) ? obj_player1.spr_HUDhurt : obj_player1.spr_HUDhappy
+				headspr = (obj_player1.sprite_index == obj_player1.spr_idle) ? obj_player1.spr_HUDhappy : obj_player1.spr_HUDhurt
 			break
 			case states.keyget:
 			case states.smirk:

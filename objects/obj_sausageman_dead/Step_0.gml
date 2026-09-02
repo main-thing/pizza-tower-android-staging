@@ -1,4 +1,7 @@
-if (vsp < 20)
+var _vsp = 20
+if (sprite_index == spr_enemyblockdead)
+	_vsp = 30
+if (vsp < _vsp)
 	vsp += grav
 if (buffer > 0)
 	buffer--

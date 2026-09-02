@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Kung Fu",
-    "path": "folders/Sprites/Backgrounds/Kung Fu.yy",
+    "path": "folders/Sprites/Tilesets/Kung Fu.yy",
   },
 }

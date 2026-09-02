@@ -467,7 +467,7 @@ function state_player_jump()
 	}
 	switch character
 	{
-		case "P":
+		default:
 			if (key_attack && grounded && fallinganimation < 40)
 			{
 				sprite_index = spr_mach1
@@ -494,8 +494,9 @@ function state_player_jump()
 				{
 					sprite_index = spr_mach1
 					image_index = 0
-					movespeed = 6
-					state = states.mach1
+					state = states.mach2
+					if (movespeed < 6)
+						movespeed = 6
 				}
 				else
 				{
@@ -504,37 +505,10 @@ function state_player_jump()
 					state = states.mach3
 				}
 			}
-			if (key_shoot2 && (!instance_exists(dynamite_inst)))
-			{
-				sprite_index = spr_playerV_dynamitethrow
-				image_index = 0
-				if (move == 0)
-					movespeed = 0
-				state = states.dynamite
-				with (instance_create(x, y, obj_dynamite))
-				{
-					image_xscale = other.xscale
-					other.dynamite_inst = id
-					playerid = other.id
-					movespeed = 6
-					vsp = -6
-				}
-			}
 			if (sprite_index == spr_playerV_superjump && floor(image_index) == (image_number - 1))
 				create_particle(x, (y + 25), states.ejected, 0)
-			if key_slap2
-			{
-				sprite_index = spr_playerV_airrevolver
-				image_index = 0
-				vsp = -5
-				state = states.revolver
-				with (instance_create((x + (xscale * 20)), (y + 20), obj_shotgunbullet))
-				{
-					is_solid = 0
-					image_xscale = other.xscale
-				}
-				scr_soundeffect(sfx_killingblow)
-			}
+			scr_dynamite()
+			scr_airrevolver()
 			break
 		case "N":
 			if (key_attack2 && (pogochargeactive or pizzapepper > 0))

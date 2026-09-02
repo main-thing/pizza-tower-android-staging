@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Saloon and Pinball",
-    "path": "folders/Sprites/Backgrounds/Saloon and Pinball.yy",
+    "name": "Pinball",
+    "path": "folders/Sprites/Tilesets/Pinball.yy",
   },
 }

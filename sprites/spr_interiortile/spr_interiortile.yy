@@ -93,6 +93,6 @@
   },
   "parent": {
     "name": "Street",
-    "path": "folders/Sprites/Backgrounds/Street.yy",
+    "path": "folders/Sprites/Tilesets/Street.yy",
   },
 }

@@ -158,7 +158,7 @@ function scr_player_mach3()
 		image_speed = 0.4
 	if key_jump && !finalmoveset
 		input_buffer_jump = 0
-	if (((!key_attack) && fightball == 0 && (!launched) && sprite_index != spr_dashpadmach && grounded && (character == "P" || character == "N"  || character == "V")) || (character == "S" && (move == 0 || move != xscale) && grounded && fightball == 0))
+	if (((!key_attack) && fightball == 0 && (!launched) && sprite_index != spr_dashpadmach && grounded && (character == "P" || character == "N"  || character == "V" || character == "PZ")) || (character == "S" && (move == 0 || move != xscale) && grounded && fightball == 0))
 	{
 		sprite_index = spr_machslidestart
 		scr_soundeffect(sfx_break)
@@ -166,7 +166,7 @@ function scr_player_mach3()
 		image_index = 0
 		launched = 0
 	}
-	if (move == (-xscale) && grounded && (!launched) && (character == "P" || character == "N" || character == "V") && fightball == 0 && sprite_index != spr_dashpadmach)
+	if (move == (-xscale) && grounded && (!launched) && (character == "P" || character == "N" || character == "V" || character == "PZ") && fightball == 0 && sprite_index != spr_dashpadmach)
 	{
 		scr_soundeffect(sfx_machslideboost)
 		sprite_index = spr_mach3boost
@@ -270,30 +270,8 @@ function scr_player_mach3()
 	}
 	if(character == "V")
 	{
-		if (key_shoot2 && (!instance_exists(dynamite_inst)))
-		{
-			if (move == 0)
-				movespeed = 0
-			state = states.dynamite
-			sprite_index = spr_playerV_dynamitethrow
-			image_index = 0
-			with (instance_create(x, y, obj_dynamite))
-			{
-				image_xscale = other.xscale
-				movespeed = 6
-				vsp = -6
-				other.dynamite_inst = id
-				playerid = other.id
-			}
-		}
-		if key_slap2
-		{
-			if (move == 0)
-				movespeed = 0
-			sprite_index = spr_playerV_revolverstart
-			image_index = 0
-			state = states.revolver
-		}
+		scr_airdynamite()
+		scr_airrevolver()
 	}
 	if (scr_solid((x + sign(hsp)), y) && (!(place_meeting((x + sign(hsp)), y, obj_mach3solid))) && (!scr_slope()) && (scr_solid_slope((x + sign(hsp)), y) || place_meeting((x + sign(hsp)), y, obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock) && character != "V")) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_climbablewall))) && grounded)
 	{
@@ -388,7 +366,7 @@ function scr_player_mach3()
 		image_speed = 0.4
 	else
 		image_speed = 0.4
-	if (key_up && fightball == 0 && (character == "P" || character == "S" || character == "N") && grounded && sprite_index != spr_dashpadmach && (!(place_meeting(x, y, obj_dashpad))))
+	if (key_up && fightball == 0 && (character == "P" || character == "S" || character == "N" || character == "PZ") && grounded && sprite_index != spr_dashpadmach && (!(place_meeting(x, y, obj_dashpad))))
 	{
 		sprite_index = spr_superjumpprep
 		state = states.Sjumpprep

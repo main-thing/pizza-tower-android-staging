@@ -30,9 +30,18 @@ if (player == 0 && place_meeting(x, y, obj_player))
 					vsp = 0
 					if (!other.got)
 					{
-						other.alarm[0] = 150
 						state = states.gottreasure
-						scr_soundeffect(sfx_secretfound)
+						with (other){
+							if (!oldblock){
+								scr_soundeffect(sfx_secretfound)
+								alarm[0] = 150
+							}
+							else {
+								scr_soundeffect(sfx_level100percent)
+								alarm[0] = 300
+								image_speed = 0
+							}
+						}
 					}
 					other.got = 1
 					other.x = (x - 18)

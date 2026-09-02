@@ -86,7 +86,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Freezer",
-    "path": "folders/Sprites/Backgrounds/Freezer.yy",
+    "name": "Decorations",
+    "path": "folders/Sprites/Decorations.yy",
   },
 }

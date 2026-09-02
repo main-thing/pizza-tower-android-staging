@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Golf",
-    "path": "folders/Sprites/Backgrounds/Golf.yy",
+    "path": "folders/Sprites/Decorations/Golf.yy",
   },
 }

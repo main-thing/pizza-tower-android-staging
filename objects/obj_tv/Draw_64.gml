@@ -9,8 +9,8 @@ if(instance_exists(obj_player1)){
 	tv_y = obj_player1.tv_hud_y
 	fake_tv_x = obj_player1.fake_tv_hud_x
 	fake_tv_y = obj_player1.fake_tv_hud_y
-	tv_bg_sprite = obj_player1._spr_tv_bg
-	tv_overlay_sprite = obj_player1._spr_tv_empty
+	tv_bg_sprite = obj_player1.tv_bg
+	tv_overlay_sprite = obj_player1.tv_empty
 	timer_xstart = obj_player1.escapetimer_x
 	timer_ystart = obj_player1.escapetimer_y
 }
@@ -33,8 +33,7 @@ if global.use_temperature
 	draw_sprite(spr_temperature_meter, 0, 864, 192)
 }
 if(global.oldhud){
-	font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
-	draw_set_font(font)
+	draw_set_font(global.bigfont)
 	draw_set_halign(fa_center)
 	draw_set_color(c_white)
 	draw_sprite_ext(tvsprite, -1, 832, 74, 1, 1, 1, c_white, alpha)
@@ -60,7 +59,8 @@ if(global.oldhud){
 		var sw = sprite_get_width(spr_barpop)
 		var sh = sprite_get_height(spr_barpop)
 		var b = global.combotime / 61
-		draw_sprite_part(spr_barpop, 1, 0, 0, (sw * b), sh, (832 + barxx), (250 + baryy))
+		if (global.combo)
+			draw_sprite_part(spr_barpop, 1, 0, 0, (sw * b), sh, (832 + barxx), (250 + baryy))
 	}
 	
 	if(show_golf)
@@ -99,13 +99,13 @@ if (room != strongcold_endscreen)
 		shader_set(global.Pal_Shader)
 		pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false)
 		draw_sprite_ext(sprite_index, image_index, (tv_x + collect_x), ((tv_y + collect_y) + hud_posY), obj_player1.tv_hud_xscale, obj_player1.tv_hud_yscale, 0, c_white, alpha)
-		if(obj_player1.faketv && sprite_index != obj_player1._spr_tv_open && sprite_index != obj_player1._spr_tv_off){
+		if(obj_player1.faketv && sprite_index != obj_player1.tv_open && sprite_index != obj_player1.tv_off){
 			draw_sprite_ext(tv_overlay_sprite, 0, (fake_tv_x + collect_x), ((fake_tv_y + collect_y) + hud_posY), obj_player1.fake_tv_hud_xscale, obj_player1.fake_tv_hud_yscale, 0, c_white, alpha)
 		}
 		shader_reset()
 	} else{
 		draw_sprite_ext(sprite_index, image_index, (tv_x + collect_x), ((tv_y + collect_y) + hud_posY), obj_player1.tv_hud_xscale, obj_player1.tv_hud_yscale, 0, c_white, alpha)
-		if(obj_player1.faketv && sprite_index != obj_player1._spr_tv_open && sprite_index != obj_player1._spr_tv_off){
+		if(obj_player1.faketv && sprite_index != obj_player1.tv_open && sprite_index != obj_player1.tv_off){
 			draw_sprite_ext(tv_overlay_sprite, 0, (fake_tv_x + collect_x), ((fake_tv_y + collect_y) + hud_posY), obj_player1.fake_tv_hud_xscale, obj_player1.fake_tv_hud_yscale, 0, c_white, alpha)
 		}
 	}
@@ -120,12 +120,12 @@ draw_clear_alpha(c_black, 0)
 draw_set_font(bubblefont)
 draw_set_halign(fa_left)
 draw_set_valign(fa_middle)
-if (bubblespr == _spr_tv_bubble)
+if (bubblespr == tv_bubble)
 {
 	promptx -= promptspd
-	if (bubblespr != _spr_tv_bubbleclose && promptx < (350 - string_width(prompt)))
+	if (bubblespr != tv_bubbleclose && promptx < (350 - string_width(prompt)))
 	{
-		bubblespr = _spr_tv_bubbleclose
+		bubblespr = tv_bubbleclose
 		bubbleindex = 0
 	}
 	draw_text_color((promptx - 350), 50, prompt, c_black, c_black, c_black, c_black, 1)

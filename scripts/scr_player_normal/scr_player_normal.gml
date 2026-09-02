@@ -31,6 +31,15 @@ function state_player_normal()
 			with (instance_create(x, y, obj_beatbox)){
 				vsp = -11
 				targetplayer = other.object_index
+				switch (other.character)
+				{
+					default:
+						sprite_index = spr_beatbox
+					break
+					case "PZ":
+						sprite_index = spr_player_PZ_breakDanceBox
+					break
+				}
 			}
 		}
 		notecreate--
@@ -94,7 +103,7 @@ function state_player_normal()
 		if (floor(image_index) != 3 && floor(image_index) != 8)
 			steppy = 0
 	}
-	else
+	else if (sprite_index != spr_playerV_revolverend or (sprite_index == spr_facehurtup && character == "PZ"))
 	{
 		if (sprite_index == spr_breakdance)
 			image_speed = breakdance_speed
@@ -140,8 +149,8 @@ function state_player_normal()
 						sprite_index = spr_player_pistolidle
 					else if mort
 						sprite_index = spr__mortidle
-					else if((taunt_key)){
-							if(canbreakdance && !shotgunAnim){
+					else if(taunt_key && canbreakdance){
+							if(!shotgunAnim){
 								sprite_index = spr_breakdance
 						}
 					}	
@@ -257,6 +266,9 @@ function state_player_normal()
 				break
 			case spr_shotgunshoot:
 				sprite_index = spr_shotgunidle
+				break
+			case spr_facehurtup:
+				sprite_index = spr_facehurt
 				break
 		}
 	}
@@ -415,7 +427,7 @@ function state_player_normal()
 	}
 	switch character
 	{
-		case "P":
+		default:
 			if (key_attack && state != states.handstandjump && (!(place_meeting((x + xscale), y, obj_solid))) && ((!(place_meeting(x, (y + 1), obj_iceblockslope))) or (!(place_meeting((x + (xscale * 5)), y, obj_solid)))) && (!global.kungfu))
 			{
 				sprite_index = spr_mach1
@@ -472,11 +484,11 @@ function state_player_normal()
 			{
 				if (pizzapepper == 0)
 				{
-					movespeed = 6
 					sprite_index = spr_mach1
 					image_index = 0
-					jumpAnim = 1
-					state = states.mach1
+					state = states.mach2
+					if (movespeed < 6)
+						movespeed = 6
 				}
 				else
 				{
@@ -487,30 +499,8 @@ function state_player_normal()
 					movespeed = 20
 				}
 			}
-			if (key_shoot2 && (!instance_exists(dynamite_inst)))
-			{
-				if (move == 0)
-					movespeed = 0
-				state = states.dynamite
-				sprite_index = spr_playerV_dynamitethrow
-				image_index = 0
-				with (instance_create(x, y, obj_dynamite))
-				{
-					image_xscale = other.xscale
-					movespeed = 6
-					vsp = -6
-					other.dynamite_inst = id
-					playerid = other.id
-				}
-			}
-			if key_slap2
-			{
-				if (move == 0)
-					movespeed = 0
-				sprite_index = spr_playerV_revolverstart
-				image_index = 0
-				state = states.revolver
-			}
+			scr_dynamite()
+			scr_revolver()
 			break
 	}
 

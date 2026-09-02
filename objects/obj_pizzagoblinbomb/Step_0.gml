@@ -15,7 +15,8 @@ switch state
 		hsp = (movespeed * image_xscale)
 		if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
 			image_xscale *= -1
-		if (place_meeting((x + hsp), y, obj_ratblock) or place_meeting(x, (y + vsp), obj_ratblock))
+		if (place_meeting((x + hsp), y, obj_ratblock) or place_meeting(x, (y + vsp), obj_ratblock) or
+		place_meeting((x + hsp), y, obj_bombblock) or place_meeting(x, (y + vsp), obj_bombblock))
 			instance_destroy()
 		if (scr_solid((x + 1), y) or scr_solid((x - 1), y))
 			drop = 1

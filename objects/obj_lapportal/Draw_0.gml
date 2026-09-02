@@ -11,7 +11,7 @@ if (sprite_index != spr_pizzaportal)
 }
 else{
 	draw_self()
-	if(!global.oldsprites){
-		draw_sprite(spr_lap2warning, 0, x, y + Wave(-5, 5, 0.5, 5));
+	if(hasicon){
+		draw_sprite(warningspr, 0, x, y + Wave(-5, 5, 0.5, 5));
 	}
 }

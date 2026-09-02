@@ -154,7 +154,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Kids Party",
-    "path": "folders/Sprites/Backgrounds/Kids Party.yy",
+    "name": "Factory",
+    "path": "folders/Sprites/Decorations/Factory.yy",
   },
 }

@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Forest",
-    "path": "folders/Sprites/Backgrounds/Forest.yy",
+    "path": "folders/Sprites/Tilesets/Forest.yy",
   },
 }

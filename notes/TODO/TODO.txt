@@ -4,4 +4,7 @@ TODO:
 - Update obj_mainmenu a bit
 - Import some fonts
 - Improve level editor ui
-- Update the public virtual controller package 
+- Update the public virtual controller package
+
+- fix obj_secrettile not liking being stretched out of bounds
+- scr_gmlhelper windblown stuff fix

@@ -25,7 +25,7 @@ if (round_timer <= 0)
 			if (global.oldsprites == true) {
 				scr_soundeffect(mu_timesup)
 			} else {
-				scr_soundeffect(mu_Your_Fat_Ass_Slows_You_Down)
+				scr_soundeffect(mu_fatass)
 			}
 		}
 	}

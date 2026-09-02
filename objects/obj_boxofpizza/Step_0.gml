@@ -101,3 +101,5 @@ if (place_meeting(x, (y + 1), obj_doorE) or place_meeting(x, (y - 1), obj_doorE)
 	targetDoor = "E"
 if (place_meeting(x, (y + 1), obj_doorF) or place_meeting(x, (y - 1), obj_doorF))
 	targetDoor = "F"
+if (place_meeting(x, (y + 1), obj_doorG) or place_meeting(x, (y - 1), obj_doorG))
+	targetDoor = "G"

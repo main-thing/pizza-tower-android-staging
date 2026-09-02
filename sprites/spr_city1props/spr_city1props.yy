@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Street",
-    "path": "folders/Sprites/Backgrounds/Street.yy",
+    "name": "Factory",
+    "path": "folders/Sprites/Tilesets/Factory.yy",
   },
 }

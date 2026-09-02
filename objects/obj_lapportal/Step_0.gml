@@ -62,3 +62,8 @@ if global.panic || forceshow
 }
 else
 	image_alpha = 0.5
+
+if(!global.oldsprites)
+	hasicon = 1;
+else
+	hasicon = 0;

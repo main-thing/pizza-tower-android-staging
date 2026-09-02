@@ -7,3 +7,4 @@ if (obj_player.character == "S")
 platformid = -4
 hsp_carry = 0
 vsp_carry = 0
+use_collision = 1

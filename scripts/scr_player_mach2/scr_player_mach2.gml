@@ -181,8 +181,6 @@ function scr_player_mach2()
 			}
 			else
 				sprite_index = spr_machroll
-			if (character == "V")
-				sprite_index = spr_machroll
 		}
 	}
 	if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && character == "S" && grounded)
@@ -269,34 +267,10 @@ function scr_player_mach2()
 		state = states.normal
 		instance_create(x, y, obj_genericpoofeffect)
 	}
-	if (key_slap2 && character == "V")
+	if (character == "V")
 	{
-		vsp = -5
-		state = states.revolver
-		image_index = 0
-		sprite_index = spr_playerV_airrevolver
-		image_index = 0
-		with (instance_create((x + (xscale * 20)), (y + 20), obj_shotgunbullet))
-		{
-			is_solid = 0
-			image_xscale = other.xscale
-		}
-		scr_soundeffect(sfx_killingblow)
-	}
-	if (key_shoot2 && character == "V" && (!instance_exists(dynamite_inst)))
-	{
-		vsp = -5
-		state = states.dynamite
-		image_index = 0
-		sprite_index = spr_playerV_dynamitethrow
-		with (instance_create(x, y, obj_dynamite))
-		{
-			image_xscale = other.xscale
-			other.dynamite_inst = id
-			playerid = other.id
-			movespeed = (other.movespeed + 4)
-			vsp = -6
-		}
+		scr_airrevolver()
+		scr_airdynamite()
 	}
 	if (sprite_index == spr_rollgetup or sprite_index == spr_suplexdash)
 		image_speed = 0.4

@@ -19,6 +19,6 @@ with (instance_create((x + 16), y, obj_smallnumber))
 	number = string(val)
 with (obj_player) {
 		if (check_player_coop()) {
-			tv_do_expression(self._spr_tv_exprcollect)
+			tv_do_expression(self.tv_exprcollect)
 		}
 }

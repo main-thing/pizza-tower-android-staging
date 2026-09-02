@@ -7,7 +7,7 @@ function tv_set_idle()
 		{
 			if (check_player_coop())
 			{
-				other.sprite_index = self._spr_tv_idle
+				other.sprite_index = self.tv_idle
 			}
 		}
 	}
@@ -22,7 +22,7 @@ function tv_reset()
 		{
 			if (check_player_coop())
 			{
-				other.sprite_index = self._spr_tv_idle
+				other.sprite_index = self.tv_idle
 			}
 		}
 		ds_list_clear(tvprompts_list)
@@ -128,17 +128,17 @@ function tv_do_expression(spr)
 		{
 			if (check_player_coop())
 			{
-				other.sprite_index = self._spr_tv_whitenoise
+				other.sprite_index = self.tv_whitenoise
 			}
 		}
 			
 			switch expressionsprite
 			{
-				case obj_player._spr_tv_exprhurt:
+				case obj_player.tv_exprhurt:
 				case spr_tv_hurtG:
 					expressionbuffer = 60
 					break
-				case obj_player._spr_tv_exprcollect:
+				case obj_player.tv_exprcollect:
 					expressionbuffer = 150
 					if obj_player.isgustavo
 						expressionsprite = spr_tv_happyG

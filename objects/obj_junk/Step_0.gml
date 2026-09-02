@@ -274,3 +274,5 @@ if thrown
 		instance_destroy(ds_list_find_value(global.instancelist, i))
 	ds_list_clear(global.instancelist)
 }
+if (object_index == obj_gerome && global.panic)
+	escape = 0

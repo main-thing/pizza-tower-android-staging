@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Mansion",
-    "path": "folders/Sprites/Backgrounds/Mansion.yy",
+    "name": "2018",
+    "path": "folders/Sprites/Tilesets/2018.yy",
   },
 }

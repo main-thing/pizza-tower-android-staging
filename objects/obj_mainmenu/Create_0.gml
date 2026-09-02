@@ -19,7 +19,7 @@ page = noone;
 text_arr = 
 [
 	new port_mainmenu_option("LEVEL SELECT", 480, 350, port_mainmenu_level_select),
-	new port_mainmenu_option("WHATS NEW", 480, 390, port_mainmenu_newstuff_click, port_mainmenu_newstuff_step, port_mainmenu_newstuff_draw),
+	new port_mainmenu_option("CHANGELOG", 480, 390, port_mainmenu_newstuff_click, port_mainmenu_newstuff_step, port_mainmenu_newstuff_draw),
 	new port_mainmenu_option("CREDITS", 480, 430, port_mainmenu_credits_click, port_mainmenu_credits_step, port_mainmenu_credits_draw),
 	new port_mainmenu_option("DISCORD", 480, 470, port_mainmenu_discord_click)
 ]

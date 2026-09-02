@@ -2,7 +2,7 @@ if(global.oldhud){
 	if (room == Realtitlescreen or room == rm_eggplantdisclaimer or room == rank_room or room == rm_levelselect or room == timesuproom or room == boss_room1 or room == characterselect or room == hub_loadingscreen)
 	{
 		visible = false
-		sprite_index = obj_player1._spr_tv_off
+		sprite_index = obj_player1.tv_off
 	}
 	else
 		visible = true
@@ -143,9 +143,9 @@ if(global.oldhud){
 	    message = "GOT THE KEY!"
 	    alarm[0] = 50
 	}
-	if instance_exists(obj_noise_normalT1)
+	if instance_exists(obj_noise_pushbutton)
 	{
-	    if (obj_noise_normalT1.hspeed != 0 && global.panic == 0)
+	    if (obj_noise_pushbutton.hspeed != 0 && global.panic == 0)
 	    {
 	        showtext = 1
 	        message = "UH OH..."
@@ -157,7 +157,7 @@ if(global.oldhud){
 if (room == Realtitlescreen or room == rm_eggplantdisclaimer or room == rank_room or room == rm_levelselect or room == timesuproom or room == boss_room1 or room == characterselect or room == hub_loadingscreen)
 {
 	visible = false
-	sprite_index = obj_player1._spr_tv_off
+	sprite_index = obj_player1.tv_off
 }
 else
 	visible = true
@@ -171,7 +171,7 @@ if (targetgolf != -4 && (!view_visible[1]))
 	view_visible[1] = true
 	view_enabled = true
 }
-if (bubblespr != -4 && bubblespr != _spr_tv_bubbleclosed)
+if (bubblespr != -4 && bubblespr != tv_bubbleclosed)
 {
 	if (prompt != noone)
 		prompt_buffer = 2
@@ -181,11 +181,11 @@ if (bubblespr != -4 && bubblespr != _spr_tv_bubbleclosed)
 		bubbleindex = 0
 		switch bubblespr
 		{
-			case _spr_tv_bubbleopen:
-				bubblespr = _spr_tv_bubble
+			case tv_bubbleopen:
+				bubblespr = tv_bubble
 				break
-			case _spr_tv_bubbleclose:
-				bubblespr = _spr_tv_bubbleclosed
+			case tv_bubbleclose:
+				bubblespr = tv_bubbleclosed
 				if (prompt == noone or prompt == "")
 					bubblespr = noone
 				break
@@ -196,7 +196,7 @@ if (bubblespr != -4 && bubblespr != _spr_tv_bubbleclosed)
 switch state
 {
 	case states.normal:
-		idlespr = obj_player1._spr_tv_idle
+		idlespr = obj_player1.tv_idle
 		if obj_player.isgustavo
 		{
 			idlespr = spr_tv_idleG
@@ -214,30 +214,30 @@ switch state
 			case states.knightpep:
 			case states.knightpepattack:
 			case states.knightpepslopes:
-				idlespr = obj_player1._spr_tv_knight
+				idlespr = obj_player1.tv_knight
 				break
 			case states.bombpep:
-				idlespr = obj_player1._spr_tv_bombpep
+				idlespr = obj_player1.tv_bombpep
 				break
 			case states.fireass:
-				idlespr = obj_player1._spr_tv_fireass
+				idlespr = obj_player1.tv_fireass
 				if (obj_player1.sprite_index == obj_player1.spr_scaredjump1 or obj_player1.sprite_index == obj_player1.spr_scaredjump2)
-					idlespr = obj_player1._spr_tv_scaredjump
+					idlespr = obj_player1.tv_scaredjump
 				break
 			case states.tumble:
 				if (obj_player1.sprite_index == obj_player1.spr_tumble or obj_player1.sprite_index == obj_player1.spr_tumblestart or obj_player1.sprite_index == obj_player1.spr_tumbleend)
-					idlespr = obj_player1._spr_tv_tumble
+					idlespr = obj_player1.tv_tumble
 				break
 			case states.firemouth:
-				idlespr = obj_player1._spr_tv_firemouth
+				idlespr = obj_player1.tv_firemouth
 				break
 			case states.ghost:
 			case states.ghostpossess:
-				idlespr = obj_player1._spr_tv_ghost
+				idlespr = obj_player1.tv_ghost
 				break
 			case states.stunned:
 				if (obj_player1.sprite_index == obj_player1.spr_squished)
-					idlespr = obj_player1._spr_tv_squished
+					idlespr = obj_player1.tv_squished
 				break
 			case states.normal:
 			case states.jump:
@@ -247,9 +247,9 @@ switch state
 				with (obj_player1)
 				{
 					if shotgunAnim
-						other.idlespr = self._spr_tv_shotgun
+						other.idlespr = self.tv_shotgun
 					else if global.mort
-						other.idlespr = self._spr_tv_mort
+						other.idlespr = self.tv_mort
 				}
 				break
 			case states.mort:
@@ -257,17 +257,17 @@ switch state
 			case states.morthook:
 			case states.mortjump:
 			with (obj_player1)
-				other.idlespr = self._spr_tv_mort
+				other.idlespr = self.tv_mort
 			break
 			case states.freefallprep:
 			case states.freefall:
 			case states.freefallland:
 				if obj_player1.shotgunAnim
-					idlespr = obj_player1._spr_tv_shotgun
+					idlespr = obj_player1.tv_shotgun
 				break
 			case states.pistol:
 				if global.mort
-					idlespr = obj_player1._spr_tv_mort
+					idlespr = obj_player1.tv_mort
 				break
 			case states.shotgun:
 			case states.shotgunfreefall:
@@ -275,19 +275,19 @@ switch state
 			case states.shotgundash:
 			case states.shotguncrouch:
 			case states.shotguncrouchjump:
-				idlespr = obj_player1._spr_tv_shotgun
+				idlespr = obj_player1.tv_shotgun
 				break
 			case states.barrel:
-				idlespr = obj_player1._spr_tv_barrel
+				idlespr = obj_player1.tv_barrel
 				break
 			case states.golf:
-				idlespr = obj_player1._spr_tv_golf
+				idlespr = obj_player1.tv_golf
 				break
 			case states.rocket:
-				idlespr = obj_player1._spr_tv_rocket
+				idlespr = obj_player1.tv_rocket
 				break
 			case states.cheeseball:
-				idlespr = obj_player1._spr_tv_cheeseball
+				idlespr = obj_player1.tv_cheeseball
 				break
 			case states.cheesepep:
 			case states.cheesepepstick:
@@ -296,19 +296,19 @@ switch state
 			case states.cheesepepjump:
 			case states.cheesepepfling:
 			case states.cheesepeplaunch:
-				idlespr = obj_player1._spr_tv_cheesepep
+				idlespr = obj_player1.tv_cheesepep
 				break
 			case states.boxxedpep:
 			case states.boxxedpepjump:
 			case states.boxxedpepspin:
-				idlespr = obj_player1._spr_tv_boxxedpep
+				idlespr = obj_player1.tv_boxxedpep
 				break
 			case states.mach2:
 			case states.climbwall:
 			case states.machroll:
 			case states.grind:
 				if obj_player1.skateboarding
-					idlespr = obj_player1._spr_tv_clown
+					idlespr = obj_player1.tv_clown
 				break
 			default:
 				_transfo = 0
@@ -327,33 +327,33 @@ switch state
 			with (obj_player1)
 			{
 				if (mach4mode == 1)
-					tv_do_expression(obj_player1._spr_tv_exprmach4)
+					tv_do_expression(obj_player1.tv_exprmach4)
 				else if (state == states.mach3 or sprite_index == spr_mach3boost)
-					tv_do_expression(obj_player1._spr_tv_exprmach3)
+					tv_do_expression(obj_player1.tv_exprmach3)
 				else if (state == states.hurt)
-					tv_do_expression(obj_player1._spr_tv_exprhurt)
+					tv_do_expression(obj_player1.tv_exprhurt)
 				else if (state == states.ratmounthurt)
 					tv_do_expression(spr_tv_hurtG)
 				else if (global.combo >= 3 && (!obj_player.isgustavo))
-					tv_do_expression(obj_player1._spr_tv_exprcombo)
+					tv_do_expression(obj_player1.tv_exprcombo)
 				else if (global.stylethreshold >= 3 && (!obj_player.isgustavo))
-					tv_do_expression(obj_player1._spr_tv_exprheat)
+					tv_do_expression(obj_player1.tv_exprheat)
 			}
 		}
 		switch sprite_index
 		{
-			case obj_player1._spr_tv_off:
+			case obj_player1.tv_off:
 				if visible
 				{
-					sprite_index = obj_player1._spr_tv_open
+					sprite_index = obj_player1.tv_open
 					image_index = 0
 				}
 				break
-			case obj_player1._spr_tv_open:
+			case obj_player1.tv_open:
 				if (floor(image_index) == (image_number - 1))
 					sprite_index = idlespr
 				break
-			case obj_player1._spr_tv_idle:
+			case obj_player1.tv_idle:
 			//case spr_tv_idleN:
 				if (idleanim > 0)
 					idleanim--
@@ -361,7 +361,7 @@ switch state
 					sprite_index = idlespr
 				if (idleanim <= 0 && floor(image_index) == (image_number - 1))
 				{
-					sprite_index = choose(obj_player1._spr_tv_idleanim1, obj_player1._spr_tv_idleanim2)
+					sprite_index = choose(obj_player1.tv_idleanim1, obj_player1.tv_idleanim2)
 					/*if (!obj_player1.ispeppino)
 					{
 						if (sprite_index == spr_tv_idleanim1)
@@ -372,21 +372,21 @@ switch state
 					image_index = 0
 				}
 				break
-			case obj_player1._spr_tv_idleanim1:
-			case obj_player1._spr_tv_idleanim2:
+			case obj_player1.tv_idleanim1:
+			case obj_player1.tv_idleanim2:
 				if (floor(image_index) == (image_number - 1))
 				{
 					sprite_index = idlespr
 					idleanim = (240 + (60 * irandom_range(-1, 2)))
 				}
-				if (idlespr != obj_player1._spr_tv_idle /*&& idlespr != spr_tv_idleN*/)
+				if (idlespr != obj_player1.tv_idle /*&& idlespr != spr_tv_idleN*/)
 					sprite_index = idlespr
 				break
 			default:
 				sprite_index = idlespr
 		}
 
-		if (sprite_index != obj_player1._spr_tv_open)
+		if (sprite_index != obj_player1.tv_open)
 		{
 			if (!ds_list_empty(tvprompts_list))
 			{
@@ -394,7 +394,7 @@ switch state
 				prompt_buffer = prompt_max
 				if (b[0] != "" && b[0] != noone)
 				{
-					bubblespr = _spr_tv_bubbleopen
+					bubblespr = tv_bubbleopen
 					bubbleindex = 0
 					prompt = b[0]
 					promptspd = b[3]
@@ -402,9 +402,9 @@ switch state
 				}
 				else
 				{
-					if (bubblespr != -4 && bubblespr != _spr_tv_bubbleclosed)
-						bubblespr = _spr_tv_bubbleclose
-					if (bubblespr == _spr_tv_bubbleclosed)
+					if (bubblespr != -4 && bubblespr != tv_bubbleclosed)
+						bubblespr = tv_bubbleclose
+					if (bubblespr == tv_bubbleclosed)
 						bubblespr = -4
 					bubbleindex = 0
 					promptx = promptxstart
@@ -412,7 +412,7 @@ switch state
 				}
 				if (b[1] == tvprompt.normal)
 				{
-					sprite_index = obj_player1._spr_tv_open
+					sprite_index = obj_player1.tv_open
 					image_index = 0
 					tvsprite = b[2]
 					if (!obj_player1.ispeppino)
@@ -443,7 +443,7 @@ switch state
 		}
 		break
 	case states.transitioncutscene:
-		if (sprite_index == obj_player1._spr_tv_open && floor(image_index) == (image_number - 1))
+		if (sprite_index == obj_player1.tv_open && floor(image_index) == (image_number - 1))
 			sprite_index = tvsprite
 		if (sprite_index == tvsprite)
 		{
@@ -458,7 +458,7 @@ switch state
 		}
 		break
 	case states.tv_whitenoise:
-		sprite_index = obj_player1._spr_tv_whitenoise
+		sprite_index = obj_player1.tv_whitenoise
 		if (noisebuffer > 0)
 			noisebuffer--
 		else
@@ -477,7 +477,7 @@ switch state
 	case states.tv_expression:
 		switch expressionsprite
 		{
-			case obj_player1._spr_tv_exprhurt:
+			case obj_player1.tv_exprhurt:
 				if (obj_player1.state != states.hurt)
 				{
 					if (expressionbuffer > 0)
@@ -501,16 +501,16 @@ switch state
 					}
 				}
 				break
-			case obj_player1._spr_tv_exprcombo:
+			case obj_player1.tv_exprcombo:
 				if (global.combo < 3 or obj_player1.isgustavo)
 				{
 					state = states.tv_whitenoise
 					expressionsprite = -4
 					if (obj_player1.state == states.hurt)
-						tv_do_expression(obj_player1._spr_tv_exprhurt)
+						tv_do_expression(obj_player1.tv_exprhurt)
 				}
 				break
-			case obj_player1._spr_tv_exprcollect:
+			case obj_player1.tv_exprcollect:
 			case spr_tv_happyG:
 				if (expressionbuffer > 0)
 					expressionbuffer--
@@ -520,7 +520,7 @@ switch state
 					expressionsprite = -4
 				}
 				break
-			case obj_player1._spr_tv_exprmach3:
+			case obj_player1.tv_exprmach3:
 				with (obj_player1)
 				{
 					if (state != states.mach3 && (state != states.chainsaw or tauntstoredstate != states.mach3) && sprite_index != spr_mach3boost && mach4mode == 0)
@@ -530,7 +530,7 @@ switch state
 					}
 				}
 				break
-			case obj_player1._spr_tv_exprmach4:
+			case obj_player1.tv_exprmach4:
 				with (obj_player1)
 				{
 					if (mach4mode == 0)
@@ -540,7 +540,7 @@ switch state
 					}
 				}
 				break
-			case obj_player1._spr_tv_exprheat:
+			case obj_player1.tv_exprheat:
 				_transfo = 0
 				with (obj_player1)
 				{

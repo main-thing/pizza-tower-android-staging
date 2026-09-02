@@ -43,7 +43,7 @@ function scr_player_tumble()
 		movespeed -= 0.05
 	if (sprite_index == spr_dive && key_jump)
 	{
-		sprite_index = spr_poundcancel1
+		sprite_index = (character == "PZ" ? spr_player_PZ_divebomb_start : spr_poundcancel1)
 		image_index = 0
 		state = states.freefall
 		vsp = -6

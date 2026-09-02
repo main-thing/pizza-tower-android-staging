@@ -64,8 +64,8 @@ if(_levelinfo[1] != characterselect){
 
 draw_set_font(global.smallfont)
 var sf = ini_read_real("Secret", _levelinfo[2], 0)
-if _levelinfo[1] != war_1 && _levelinfo[1] != tutorial_room1 && _levelinfo[1] != characterselect && _levelinfo[1] != dragonlair_1
-	draw_text_color(480, (yy + 88), concat(sf, " OUT OF 3 SECRETS"), c_white, c_white, c_white, c_white, 1)
+if _levelinfo[1] != war_1 && _levelinfo[1] != characterselect && _levelinfo[1] != dragonlair_1
+	draw_text_color(480, (yy + 88), concat(sf, " OUT OF " + secretcount + " SECRETS"), c_white, c_white, c_white, c_white, 1)
 ini_close()
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
