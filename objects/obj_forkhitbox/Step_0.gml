@@ -144,12 +144,7 @@ with (ID)
 				hitboxcreate = 0
 				instance_destroy(other)
 			}
-			break
-        case obj_fakepepclone:
-        case obj_fakepepboss:
-            if ((state != states.Sjump) && ((state != states.Sjumpprep) || (image_index >= 11)))
-                instance_destroy(other)
-            break
+		break
 	}
 
 }

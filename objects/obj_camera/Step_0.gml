@@ -1,10 +1,10 @@
 if (room == editor_room)
     exit;
 
-player = (obj_player1.spotlight == true) ? obj_player : obj_player2;
+player = (obj_player1.spotlight == true) ? obj_player1 : obj_player2;
 
 if (!instance_exists(obj_pizzaball))
-    targetgolf = -4;
+    targetgolf = noone;
 
 if (collect_shake > 0)
     collect_shake *= 0.5;

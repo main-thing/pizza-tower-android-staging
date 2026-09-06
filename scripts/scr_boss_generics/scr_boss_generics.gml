@@ -163,9 +163,6 @@ function scr_boss_pizzaheadKO()
 		case obj_noiseboss:
 			sprite_index = spr_playerN_hurt;
 			break;
-		case obj_fakepepboss:
-			sprite_index = spr_fakepeppino_vulnerable;
-			break;
 	}
 	if (pizzaheadKO_buffer > 0)
 		pizzaheadKO_buffer = 0;

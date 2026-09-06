@@ -109,14 +109,6 @@ function draw_enemy(_a0, _a1, _a2) //gml_Script_draw_enemy
                 maxhp = hp
             draw_healthbar((x - 16), (y - 50), (x + 16), (y - 45), ((hp / maxhp) * 100), c_black, c_red, c_red, 0, true, true)
         }
-        if ((object_index == obj_fakepepboss))
-        {
-            if miniflash
-            {
-                pal_swap_set(spr_peppalette, 14, false)
-                draw_sprite_ext(sprite_index, image_index, x, (y + _stun), (xscale * image_xscale), (yscale * _ys), angle, b, image_alpha)
-            }
-        }
         if ((object_index == obj_peppinoclone) || (usepalette && _a1))
         {
             //pattern_reset()
