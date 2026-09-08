@@ -346,8 +346,10 @@ fx_create("_effect_blend");
 fx_create("_effect_blend_ext");
 fx_create("_effect_glow");
 fx_create("_effect_recursive_blur");
+fx_create("_effect_windblown_particles");
 // replace all instances of "particle." with "_particle." and "var particle =" with "var _particle ="
-// located in C:\ProgramData\GameMakerStudio2\Cache\runtimes\runtime-2023.11.1.160\bin\FiltersAndEffects\_effect_windblown_particles\project\scripts\_effect_windblown_particles_script
+// located in C:\ProgramData\GameMakerStudio2-LTS\Cache\runtimes\runtime-2022.0.3.99\bin\FiltersAndEffects\_effect_windblown_particles\project\scripts\_effect_windblown_particles_script
+// you might need to replace runtime-2022.0.3.99 with the runtime ver you are using
 fx_create("_filter_blocks");
 fx_create("_filter_boxes");
 fx_create("_filter_clouds");

@@ -149,12 +149,12 @@ if (instance_exists(player) && player.state != states.timesup && player.state !=
         
         if (bound_camera)
         {
-            _room_x = obj_player.cam.x;
-            _room_y = obj_player.cam.y;
-            _room_width = obj_player.cam_width;
-            _room_height = obj_player.cam_height;
+            _room_x = target.cam.x;
+            _room_y = target.cam.y;
+            _room_width = target.cam_width;
+            _room_height = target.cam_height;
             
-            if (obj_player.cam != -4)
+            if (target.cam != noone)
             {
                 instance_deactivate_object(obj_minijohn_hitbox);
                 instance_deactivate_object(obj_pepgoblin_kickhitbox);

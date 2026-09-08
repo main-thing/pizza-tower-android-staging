@@ -84,3 +84,4 @@ tv_bubble = spr_tv_bubble
 tv_bubbleopen = spr_tv_bubbleopen
 tv_bubbleclose = spr_tv_bubbleclose
 tv_bubbleclosed = spr_tv_bubbleclosed
+player = obj_player1;

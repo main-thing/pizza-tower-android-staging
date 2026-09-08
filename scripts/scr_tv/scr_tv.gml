@@ -3,7 +3,7 @@ function tv_set_idle()
 	with (obj_tv)
 	{
 		state = states.normal
-		with (obj_player)
+		with (player)
 		{
 			if (check_player_coop())
 			{
@@ -18,7 +18,7 @@ function tv_reset()
 	with (obj_tv)
 	{
 		state = states.normal
-		with (obj_player)
+		with (player)
 		{
 			if (check_player_coop())
 			{
@@ -120,29 +120,30 @@ function tv_do_expression(spr)
 {
 	with (obj_tv)
 	{
-		if (expressionsprite != spr && bubblespr == -4)
+		if (expressionsprite != spr && bubblespr == noone)
 		{
 			state = states.tv_whitenoise
 			expressionsprite = spr
-		with (obj_player)
-		{
-			if (check_player_coop())
+			with(player)
 			{
-				other.sprite_index = self.tv_whitenoise
+				if (check_player_coop())
+				{
+					other.sprite_index = self.tv_whitenoise
+				}
 			}
-		}
 			
 			switch expressionsprite
 			{
-				case obj_player.tv_exprhurt:
+				case player.tv_exprhurt:
 				case spr_tv_hurtG:
 					expressionbuffer = 60
-					break
-				case obj_player.tv_exprcollect:
+				break
+				
+				case player.tv_exprcollect:
 					expressionbuffer = 150
-					if obj_player.isgustavo
+					if player.isgustavo
 						expressionsprite = spr_tv_happyG
-					break
+				break
 			}
 		}
 	}

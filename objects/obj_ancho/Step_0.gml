@@ -102,7 +102,7 @@ if (player.x > (x - 400) && player.x < (x + 400) && y <= (player.y + 60) && y >=
 		if (state == states.walk)
 		{
 			image_index = 0
-			image_xscale = (-(sign((x - obj_player.x))))
+			image_xscale = (-(sign((x - player.x))))
 			state = states.charge
 			sprite_index = spr_ancho_chargestart
 		}

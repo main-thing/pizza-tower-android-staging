@@ -38,46 +38,46 @@ if global.kungfu
 if(global.oldhud){
 	if(global.usepaletteshaders){
 		shader_set(global.Pal_Shader)
-		pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, 0)
+		pal_swap_set(player.spr_palette, player.paletteselect, 0)
 	}
-	if (obj_player1.state != states.gameover)
+	if (player.state != states.gameover)
 	{
-		var headspr = obj_player1.spr_HUD
+		var headspr = player.spr_HUD
 		if(global.panic || global.snickchallenge) 
-			headspr = obj_player1.spr_HUDpanic
-		if(obj_player1.angry) 
-			headspr = obj_player1.spr_HUD3hp
+			headspr = player.spr_HUDpanic
+		if(player.angry) 
+			headspr = player.spr_HUD3hp
 		if(global.minutes == 0 && global.seconds == 0) 
-			headspr = obj_player1.spr_HUD1hp
-		switch(obj_player1.state)
+			headspr = player.spr_HUD1hp
+		switch(player.state)
 		{
 			case states.knightpep:
 			case states.knightpepslopes:
-				headspr = (obj_player1.sprite_index == obj_player1.spr_knightpepthunder) ? obj_player1.spr_HUDthunder : ((obj_player1.sprite_index == obj_player1.spr_knightpepstart) ? obj_player1.spr_HUD: obj_player1.spr_HUDknight)
+				headspr = (player.sprite_index == player.spr_knightpepthunder) ? player.spr_HUDthunder : ((player.sprite_index == player.spr_knightpepstart) ? player.spr_HUD: player.spr_HUDknight)
 			break
 			case states.Sjumpland:
-				headspr = obj_player1.spr_HUDstun
+				headspr = player.spr_HUDstun
 			break
 			case states.freefallland:
-				headspr = (shake_mag > 0) ? obj_player1.spr_HUDstun : obj_player1.spr_HUD
+				headspr = (shake_mag > 0) ? player.spr_HUDstun : player.spr_HUD
 			break
 			case states.hurt:
 			case states.timesup:
-				headspr = obj_player1.spr_HUDhurt
+				headspr = player.spr_HUDhurt
 			break
 			case states.bombpep:
-				headspr = (obj_player1.sprite_index == obj_player1.spr_bombpepintro || obj_player.sprite_index == obj_player1.spr_bombpeprunabouttoexplode || obj_player.sprite_index == obj_player1.spr_bombpeprun) ? obj_player1.spr_HUDscream : obj_player1.spr_HUDhurt
+				headspr = (player.sprite_index == player.spr_bombpepintro || player.sprite_index == player.spr_bombpeprunabouttoexplode || player.sprite_index == player.spr_bombpeprun) ? player.spr_HUDscream : player.spr_HUDhurt
 			break
 			case states.bossintro:
-				headspr = (obj_player1.sprite_index == obj_player1.spr_idle) ? obj_player1.spr_HUDhappy : obj_player1.spr_HUDhurt
+				headspr = (player.sprite_index == player.spr_idle) ? player.spr_HUDhappy : player.spr_HUDhurt
 			break
 			case states.keyget:
 			case states.smirk:
 			case states.gottreasure:
-				headspr = obj_player1.spr_HUDhappy
+				headspr = player.spr_HUDhappy
 			break
 			case states.tumble:
-				headspr = obj_player1.spr_HUDrolling
+				headspr = player.spr_HUDrolling
 			break
 			case states.mach1:
 			case states.chainsaw:
@@ -93,46 +93,46 @@ if(global.oldhud){
 			case states.backkick:
 			case states.uppunch:
 			case states.shoulder:
-				headspr = obj_player1.spr_HUDmach1
+				headspr = player.spr_HUDmach1
 			break
 			case states.mach2:
 			case states.climbwall:
 			case states.handstandjump:
 			case states.superslam:
-				headspr = obj_player1.spr_HUDmach2
+				headspr = player.spr_HUDmach2
 			break
 			case states.machslide:
-				headspr = (obj_player1.sprite_index == obj_player1.spr_mach3boost) ? obj_player1.spr_HUDmach3 : obj_player1.spr_HUDmach2
+				headspr = (player.sprite_index == player.spr_mach3boost) ? player.spr_HUDmach3 : player.spr_HUDmach2
 			break
 			case states.mach3:
-				headspr = (obj_player1.sprite_index == obj_player1.spr_crazyrun) ? obj_player1.spr_HUDmach4 : obj_player1.spr_HUDmach3
+				headspr = (player.sprite_index == player.spr_crazyrun) ? player.spr_HUDmach4 : player.spr_HUDmach3
 			break
 		}
-		if(headspr != obj_player1.spr_HUDthunder && headspr != obj_player1.spr_HUDknight && headspr != obj_player1.spr_HUDbombend)
+		if(headspr != player.spr_HUDthunder && headspr != player.spr_HUDknight && headspr != player.spr_HUDbombend)
 		{
-			if(global.combo >= menacing_combo_count) headspr = obj_player1.spr_HUDmenacing
-			if(instance_exists(obj_itspizzatime)) headspr = obj_player1.spr_HUDscream
+			if(global.combo >= menacing_combo_count) headspr = player.spr_HUDmenacing
+			if(instance_exists(obj_itspizzatime)) headspr = player.spr_HUDscream
 		}
 		draw_head_sprite(headspr)
 		if(global.usepaletteshaders){
 			shader_reset()
 		}
-		if(obj_player1.speedbarvisible)
+		if(player.speedbarvisible)
 		{
-		    if (obj_player1.movespeed < 2.4 || (!((obj_player1.state == states.mach1 || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.climbwall || obj_player1.state == states.machslide || obj_player1.state == states.machroll || obj_player1.state == states.handstandjump))))
-		        draw_sprite_ext(obj_player1.speedbarspr, 0, 125, 140, 1, 1, 1, c_white, alpha)
-		    else if (obj_player1.movespeed >= 2.4 && obj_player1.movespeed < 4.8 && (obj_player1.state == states.mach1 || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.climbwall || obj_player1.state == states.machslide || obj_player1.state == states.machroll || obj_player1.state == states.handstandjump))
-		        draw_sprite_ext(obj_player1.speedbarspr, 1, 125, 140, 1, 1, 1, c_white, alpha)
-		    else if (obj_player1.movespeed >= 4.8 && obj_player1.movespeed < 7.2 && (obj_player1.state == states.mach1 || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.climbwall || obj_player1.state == states.machslide || obj_player1.state == states.machroll || obj_player1.state == states.handstandjump))
-		        draw_sprite_ext(obj_player1.speedbarspr, 2, 125, 140, 1, 1, 1, c_white, alpha)
-		    else if (obj_player1.movespeed >= 7.2 && obj_player1.movespeed < 9.6 && (obj_player1.state == states.mach1 || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.climbwall || obj_player1.state == states.machslide || obj_player1.state == states.machroll || obj_player1.state == states.handstandjump))
-		        draw_sprite_ext(obj_player1.speedbarspr, 3, 125, 140, 1, 1, 1, c_white, alpha)
-		    else if (obj_player1.movespeed >= 9.6 && obj_player1.movespeed < 12 && (obj_player1.state == states.mach1 || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.climbwall || obj_player1.state == states.machslide || obj_player1.state == states.machroll || obj_player1.state == states.handstandjump))
-		        draw_sprite_ext(obj_player1.speedbarspr, 4, 125, 140, 1, 1, 1, c_white, alpha)
-		    else if (obj_player1.movespeed >= 12 && (obj_player1.state == states.mach1 || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.climbwall || obj_player1.state == states.machslide || obj_player1.state == states.machroll || obj_player1.state == states.handstandjump))
-		        draw_sprite_ext(obj_player1.speedbarmaxspr, -1, 125, 140, 1, 1, 1, c_white, alpha)
+		    if (player.movespeed < 2.4 || (!((player.state == states.mach1 || player.state == states.mach2 || player.state == states.mach3 || player.state == states.climbwall || player.state == states.machslide || player.state == states.machroll || player.state == states.handstandjump))))
+		        draw_sprite_ext(player.speedbarspr, 0, 125, 140, 1, 1, 1, c_white, alpha)
+		    else if (player.movespeed >= 2.4 && player.movespeed < 4.8 && (player.state == states.mach1 || player.state == states.mach2 || player.state == states.mach3 || player.state == states.climbwall || player.state == states.machslide || player.state == states.machroll || player.state == states.handstandjump))
+		        draw_sprite_ext(player.speedbarspr, 1, 125, 140, 1, 1, 1, c_white, alpha)
+		    else if (player.movespeed >= 4.8 && player.movespeed < 7.2 && (player.state == states.mach1 || player.state == states.mach2 || player.state == states.mach3 || player.state == states.climbwall || player.state == states.machslide || player.state == states.machroll || player.state == states.handstandjump))
+		        draw_sprite_ext(player.speedbarspr, 2, 125, 140, 1, 1, 1, c_white, alpha)
+		    else if (player.movespeed >= 7.2 && player.movespeed < 9.6 && (player.state == states.mach1 || player.state == states.mach2 || player.state == states.mach3 || player.state == states.climbwall || player.state == states.machslide || player.state == states.machroll || player.state == states.handstandjump))
+		        draw_sprite_ext(player.speedbarspr, 3, 125, 140, 1, 1, 1, c_white, alpha)
+		    else if (player.movespeed >= 9.6 && player.movespeed < 12 && (player.state == states.mach1 || player.state == states.mach2 || player.state == states.mach3 || player.state == states.climbwall || player.state == states.machslide || player.state == states.machroll || player.state == states.handstandjump))
+		        draw_sprite_ext(player.speedbarspr, 4, 125, 140, 1, 1, 1, c_white, alpha)
+		    else if (player.movespeed >= 12 && (player.state == states.mach1 || player.state == states.mach2 || player.state == states.mach3 || player.state == states.climbwall || player.state == states.machslide || player.state == states.machroll || player.state == states.handstandjump))
+		        draw_sprite_ext(player.speedbarmaxspr, -1, 125, 140, 1, 1, 1, c_white, alpha)
 		}
-	    if (obj_player1.y < 200 && obj_player1.x < 200)
+	    if (player.y < 200 && player.x < 200)
 	        alpha = 0.5
 	    else
 	        alpha = 1
@@ -159,7 +159,7 @@ if(global.oldhud){
 	        draw_sprite_ext(spr_key, -1, 50, 30, 1, 1, 1, c_white, alpha)
 	    draw_sprite_ext(spr_inv, -1, 50, 30, 1, 1, 1, c_white, alpha)
 	    draw_set_color(c_white) // fix health color bug
-		if (obj_player1.usehp)
+		if (player.usehp)
 			draw_text((200 + healthshake), (125 + healthshake), global.playerhealth)
 		/*var _score = global.collect
 		var hud_xx = (121 + irandom_range((-collect_shake), collect_shake))
@@ -219,9 +219,9 @@ if(global.oldhud){
 	}
 	exit;
 }
-if (obj_player.state != states.gameover)
+if (player.state != states.gameover)
 {
-	if (obj_player.x < 250 && obj_player.y < 169)
+	if (player.x < 250 && player.y < 169)
 		hud_posY = Approach(hud_posY, -300, 15)
 	else
 		hud_posY = Approach(hud_posY, 0, 15)
@@ -236,37 +236,37 @@ if (obj_player.state != states.gameover)
 			pizzascore_index = 0
 	}
 	if (global.heatmetervisible) {
-		var sw = sprite_get_width(obj_player1.heatmeter_fillspr)
-		var sh = sprite_get_height(obj_player1.heatmeter_fillspr)
+		var sw = sprite_get_width(player.heatmeter_fillspr)
+		var sh = sprite_get_height(player.heatmeter_fillspr)
 	}
 	var b = global.stylemultiplier
 	var hud_xx = (hud_x + irandom_range((-collect_shake), collect_shake))
 	var hud_yy = ((hud_y + irandom_range((-collect_shake), collect_shake)) + hud_posY)
 	if (global.heatmetervisible) {
-		draw_sprite_part(obj_player1.heatmeter_fillspr, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
+		draw_sprite_part(player.heatmeter_fillspr, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
 	}
 	if(global.usepaletteshaders){
 		shader_set(global.Pal_Shader)
-		pal_swap_set(obj_player1.heatmeter_palettespr, global.stylethreshold, 0)
+		pal_swap_set(player.heatmeter_palettespr, global.stylethreshold, 0)
 	}
 	if (global.heatmetervisible) {
-		draw_sprite_ext(obj_player1.heatmeterspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+		draw_sprite_ext(player.heatmeterspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	}
 	if(global.usepaletteshaders){
 		shader_reset()
 	}
-	draw_sprite_ext(obj_player1.pizzascorespr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+	draw_sprite_ext(player.pizzascorespr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	var _score = global.collect
 	if global.coop
 		_score += global.collectN
 	if (_score >= global.crank)
-		draw_sprite_ext(obj_player1.pizzascore_pepperspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+		draw_sprite_ext(player.pizzascore_pepperspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	if (_score >= global.brank)
-		draw_sprite_ext(obj_player1.pizzascore_pepperonispr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+		draw_sprite_ext(player.pizzascore_pepperonispr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	if (_score >= global.arank)
-		draw_sprite_ext(obj_player1.pizzascore_olivespr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+		draw_sprite_ext(player.pizzascore_olivespr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	if (_score >= global.srank)
-		draw_sprite_ext(obj_player1.pizzascore_shroomspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+		draw_sprite_ext(player.pizzascore_shroomspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	var rx = (hud_xx + rank_xoffset)
 	var ry = (hud_yy + rank_yoffset)
 	var rank_ix = 0
@@ -381,7 +381,7 @@ if (obj_player.state != states.gameover)
 	draw_set_font(global.bigfont)
 	draw_set_halign(fa_center)
 	draw_set_color(c_white)
-	if (obj_player1.usehp)
+	if (player.usehp)
 		draw_text((200 + healthshake), (125 + healthshake), global.playerhealth)
 	draw_text(window_get_height() - 50, window_get_width() - 200, "Lap: " + string(global.laps))
 	if(global.oldsprites){

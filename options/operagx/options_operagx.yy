@@ -1,6 +1,6 @@
 {
   "resourceType": "GMOperaGXOptions",
-  "resourceVersion": "1.1",
+  "resourceVersion": "1.0",
   "name": "operagx",
   "option_operagx_display_cursor": true,
   "option_operagx_editUrl": "",
