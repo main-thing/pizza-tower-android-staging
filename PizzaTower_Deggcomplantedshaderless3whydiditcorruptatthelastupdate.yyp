@@ -4314,6 +4314,7 @@
     {"id":{"name":"spr_playerN_noisebombkick","path":"sprites/spr_playerN_noisebombkick/spr_playerN_noisebombkick.yy",},"order":162,},
     {"id":{"name":"spr_playerN_noisebombland","path":"sprites/spr_playerN_noisebombland/spr_playerN_noisebombland.yy",},"order":163,},
     {"id":{"name":"spr_playerN_noisebombslide","path":"sprites/spr_playerN_noisebombslide/spr_playerN_noisebombslide.yy",},"order":164,},
+    {"id":{"name":"scr_gmlobjecthooks","path":"scripts/scr_gmlobjecthooks/scr_gmlobjecthooks.yy",},"order":35,},
     {"id":{"name":"spr_playerN_noisebombspinjump","path":"sprites/spr_playerN_noisebombspinjump/spr_playerN_noisebombspinjump.yy",},"order":165,},
     {"id":{"name":"spr_playerN_noisebombthrow","path":"sprites/spr_playerN_noisebombthrow/spr_playerN_noisebombthrow.yy",},"order":166,},
     {"id":{"name":"spr_playerN_panicidle","path":"sprites/spr_playerN_panicidle/spr_playerN_panicidle.yy",},"order":167,},
