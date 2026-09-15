@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(global.oldsprites){
 	var xx = obj_player1.x
 	var yy = (obj_player1.y - 100)

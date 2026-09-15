@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 #macro VKEYUI_BUTTON_HALF_WIDTH 32
 #macro VKEYUI_CLOSE_HALF_WIDTH 16
 if(position_meeting(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), self))

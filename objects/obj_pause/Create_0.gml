@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 player = obj_player1.id
 pause = 0
 var i = 0

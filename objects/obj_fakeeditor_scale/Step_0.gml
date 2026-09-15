@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(live_call()) return live_result
 if(!instance_exists(obj_fakeeditor)) 
 	return instance_destroy()

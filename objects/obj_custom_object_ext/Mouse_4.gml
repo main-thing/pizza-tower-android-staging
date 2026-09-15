@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.mouse_left_pressed[0] == "")
 	return;
 if(event.mouse_left_pressed[1] != undefined)

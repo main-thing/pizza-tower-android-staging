@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 title_index = 0
 title = 0
 vsp = 0

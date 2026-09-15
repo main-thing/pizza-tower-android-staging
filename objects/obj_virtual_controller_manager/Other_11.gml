@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 /// @description Clear vkeys
 with(obj_virtual_controller)
 {

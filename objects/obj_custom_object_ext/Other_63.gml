@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.dialog[0] == "")
 	return;
 if(event.dialog[1] != undefined)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 // not ideal to be a seperate instance, but I'm not spending another 4 hours trying to make it integrated to obj_virtual_controller.
 image_alpha = 0.5
 old_click_x = x

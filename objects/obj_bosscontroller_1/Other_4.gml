@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 boss_maxhp = boss_hp;
 boss_prevhp = boss_maxhp;
 player_maxhp = player_hp;

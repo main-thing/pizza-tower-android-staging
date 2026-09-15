@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.audio_recording[0] == "")
 	return;
 if(event.audio_recording[1] != undefined)

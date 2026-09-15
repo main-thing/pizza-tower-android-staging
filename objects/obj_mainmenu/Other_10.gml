@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 /// @description Init newstuff text
 
 if(file_exists("changelog.txt"))

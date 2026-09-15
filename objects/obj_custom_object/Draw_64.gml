@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(drawgui_event != ""){
 	if(drawgui_event_saved != undefined){
 		if(USE_GMLIVE)

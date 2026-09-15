@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var i_d = ds_map_find_value(async_load, "id")
 if(i_d == fakeeditor_obj)
 {

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(global.vkeyui_showfps)
 {
 	draw_set_halign(fa_left);

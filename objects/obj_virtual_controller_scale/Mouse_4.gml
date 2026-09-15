@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 dragging = true;
 object_xscale = object_id.image_xscale;
 object_yscale = object_id.image_yscale;

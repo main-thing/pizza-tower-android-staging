@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 window_set_size(960, 540)
 draw_height = 540
 draw_width = 960

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 getout = 400
 outtime = 200
 getoutspd = 200

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var i_d = async_load[? "id"]
 if (i_d == fake_ed_edit_var)
 {

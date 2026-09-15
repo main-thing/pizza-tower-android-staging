@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 hide = 0
 if (special_prompts == -4 && room != Realtitlescreen && room != characterselect)
 {

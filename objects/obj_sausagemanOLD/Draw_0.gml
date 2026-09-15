@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (cigar == 1)
 {
 	if(global.usepaletteshaders){

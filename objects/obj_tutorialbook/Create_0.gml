@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_speed = 0.05;
 mask_index = spr_tutorialgranny_sleep;
 show = false;

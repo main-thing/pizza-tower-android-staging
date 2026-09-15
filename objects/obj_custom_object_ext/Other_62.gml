@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.http[0] == "")
 	return;
 if(event.http[1] != undefined)

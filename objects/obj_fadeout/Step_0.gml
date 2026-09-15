@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(waitforanim == 1){
 	with(obj_player1){
 		if(state == states.door){

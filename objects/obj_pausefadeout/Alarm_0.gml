@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 scr_deactivate_escape()
 with (obj_music)
 {

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (global.timeattack == 0)
 {
     obj_timeattack.alarm[1] = 60

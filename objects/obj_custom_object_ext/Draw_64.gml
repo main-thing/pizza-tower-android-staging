@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.draw_gui[0] == "")
 	return;
 if(event.draw_gui[1] != undefined)

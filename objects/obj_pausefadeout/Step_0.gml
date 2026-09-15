@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (fadealpha > 1 && (!fadein))
 {
 	if obj_pause.pause

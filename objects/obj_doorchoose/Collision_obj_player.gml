@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 live_auto_call;
 var _actor = 0;
 with (obj_player)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(global.usehitshaders)
 {
 	pal_swap_set(spr_noisepalette, 0, 0)

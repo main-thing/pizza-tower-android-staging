@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 draw_self();
 draw_set_alpha(0.5);
 draw_set_color(c_black);

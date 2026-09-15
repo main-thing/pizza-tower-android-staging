@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(!variable_instance_exists(id, "keycodes"))
 	keycodes = [VKEYUI_KEY_TYPES.NONE, ord("Z")];
 vkeys = [];

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.intersect_view[2][0] == "")
 	return;
 if(event.intersect_view[2][1] != undefined)

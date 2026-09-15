@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 visible = ((room == rank_room or room == timesuproom) ? false : playerid.visible)
 if (obj_player.state == states.pizzathrow)
 	visible = false

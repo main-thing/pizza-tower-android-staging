@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 #macro CONTENT_NAME_BADDIE_SPAWNER 0
 var object = fake_ed_content
 if(object_exists(object))

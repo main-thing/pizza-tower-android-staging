@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 scr_initenemy()
 vsp = -11
 if(!variable_instance_exists(id,"targetplayer")){

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (floor(image_index) == (image_number - 1))
 	image_speed = 0
 if (global.collect >= global.collectN)

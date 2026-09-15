@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.networking[0] == "")
 	return;
 if(event.networking[1] != undefined)

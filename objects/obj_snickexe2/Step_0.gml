@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 x = median((x - maxspeed), obj_player1.x, (x + maxspeed))
 y = median((y - maxspeed), obj_player1.y, (y + maxspeed))
 if (x != obj_player.x)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (instance_number(obj_hardmode) > 1)
 	instance_destroy()
 depth = -108

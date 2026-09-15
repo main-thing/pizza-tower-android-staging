@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (!global.panic)
 {
 	for(var i = 0; i < array_length(room_arr); i++)

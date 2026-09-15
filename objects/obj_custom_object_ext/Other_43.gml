@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.outside_view[3][0] == "")
 	return;
 if(event.outside_view[3][1] != undefined)

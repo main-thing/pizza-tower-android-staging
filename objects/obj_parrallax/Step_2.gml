@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var ix = (camera_get_view_width(view_camera[0]) / obj_camera.original_cam_width)
 var iy = (camera_get_view_height(view_camera[0]) / obj_camera.original_cam_height)
 var _cam_x = camera_get_view_x(view_camera[0])

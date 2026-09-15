@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 // run this before so you don't accidentally delete it on select
 if(global.vkeyui_movingvkeys && global.vkeyui_selectedvbutton == self)
 {

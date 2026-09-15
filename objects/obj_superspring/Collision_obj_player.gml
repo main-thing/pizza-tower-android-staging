@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 with (other)
 {
 	if (state != states.Sjump && state != states.gotoplayer && state != states.actor)

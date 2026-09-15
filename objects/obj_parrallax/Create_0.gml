@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 bg = bg_desert
 bg2 = bg_null
 bg3 = bg_null

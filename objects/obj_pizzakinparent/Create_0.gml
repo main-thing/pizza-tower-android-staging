@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 depth = 50
 event_inherited()
 image_speed = 0.35

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (defused == 1)
 	countdown -= 0.5
 if (countdown < 50)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 with(selectedent) fake_ed_sprite_clicked = false;
 if(position_meeting(mouse_x, mouse_y, obj_fakeeditor_scale)) 
 	exit;

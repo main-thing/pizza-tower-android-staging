@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 event_inherited()
 dmg = 10
 col_buffer = 0

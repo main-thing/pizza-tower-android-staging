@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 sprite = "spr_command_trigger"
 step_event = ""
 destroy_event = ""

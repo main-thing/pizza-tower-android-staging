@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var a;
 a = random_range(-100, 100);
 alarm[4] = 5;

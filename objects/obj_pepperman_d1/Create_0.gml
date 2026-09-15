@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 stunhp = 5;
 image_xscale = -1;
 hsp = 0;

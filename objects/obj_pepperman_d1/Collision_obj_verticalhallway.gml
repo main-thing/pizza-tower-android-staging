@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 x = 704;
 y = -128;
 hsp = 0;

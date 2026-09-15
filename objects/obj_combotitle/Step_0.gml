@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (global.oldsprites) 
 {
 	title_index += 0.35

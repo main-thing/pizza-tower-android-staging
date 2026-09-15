@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(!instance_exists(object_id) || !global.vkeyui_movingvkeys) 
 	return instance_destroy();
 if(dragging)

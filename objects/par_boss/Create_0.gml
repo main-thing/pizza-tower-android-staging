@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 grabbedby = noone
 elite = 0
 elitegrab = 0

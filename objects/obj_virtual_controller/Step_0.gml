@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(global.vkeyui_movingvkeys) 
 {
 	image_alpha = my_usual_alpha;

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 /// @description Don't forget to place this object in the first room!
 // this is a simple safeguard against making multiple obj_gmlive instances
 if (instance_number(obj_gmlive) > 1) {

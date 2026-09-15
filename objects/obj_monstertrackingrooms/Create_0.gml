@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (instance_number(obj_monstertrackingrooms) > 1)
 {
 	instance_destroy()

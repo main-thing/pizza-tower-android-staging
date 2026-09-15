@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (image_index == 1 && global.panic == false && room != war_13)
 {
 	with (obj_player)

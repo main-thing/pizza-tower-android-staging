@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 player = (obj_player1.spotlight == true) ? obj_player1 : obj_player2;
 
 if(global.oldhud)

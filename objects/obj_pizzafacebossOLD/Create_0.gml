@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 event_inherited()
 ds_map_set(player_hurtstates, states.handstandjump, 30)
 ds_map_set(player_hurtstates, states.chainsawbump, 50)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if ((!instance_exists(obj_keyconfig)) && (!instance_exists(obj_audioconfig)))
 	scr_getinput()
 if ((!instance_exists(obj_keyconfig)) && (!instance_exists(obj_audioconfig)))

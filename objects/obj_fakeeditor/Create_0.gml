@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 grid_size = 32; // The grid size
 editormode = true;
 created_buttons = false;

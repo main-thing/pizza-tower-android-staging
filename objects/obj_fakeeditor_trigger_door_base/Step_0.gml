@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 switch(string_lower(targetkey)){
 	case "up":
 		variable_internal = "key_up2"

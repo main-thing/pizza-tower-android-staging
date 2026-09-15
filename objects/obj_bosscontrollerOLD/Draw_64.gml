@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (bossID == noone)
 	exit;
 if (!instance_exists(bossID))

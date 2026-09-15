@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(async_load[? "id"] != discord_dialogue)
 	return;
 

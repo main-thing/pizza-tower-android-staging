@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 draw_self();
 
 if(keycodes[0] == VKEYUI_KEY_TYPES.JOYSTICK)

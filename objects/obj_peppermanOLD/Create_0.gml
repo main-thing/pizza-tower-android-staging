@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 event_inherited()
 state = states.arenaround
 ds_map_set(player_hurtstates, states.handstandjump, 30)

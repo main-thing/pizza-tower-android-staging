@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 event_inherited()
 boss_array[0] = -4
 boss_array[1] = [obj_peppermanOLD, 1] // [object, bossfight phase]

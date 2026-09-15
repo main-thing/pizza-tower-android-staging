@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 with (all)
 {
     if (variable_instance_exists(id, "createdbyeditor") && variable_instance_exists(id, "editorplacedroom") && variable_instance_exists(id, "oldinstanceeditor"))

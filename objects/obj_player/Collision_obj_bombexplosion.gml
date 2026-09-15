@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (scr_transformationcheck() && state != states.bombpepside && state != states.bombpepup && state != states.Sjump && state != states.Sjumpprep)
 {
 	var dir = point_direction(other.x, other.y, x, y)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 /// @description Load Buttons_1 layer
 if(USE_ASSETS_FOR_DEFAULT_LAYOUT)
 {

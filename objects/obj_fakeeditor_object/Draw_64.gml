@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(fake_ed_content == obj_solid_tiled || fake_ed_content == obj_tiled)
 {
 	if(fake_ed_debug)

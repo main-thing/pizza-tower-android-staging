@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 prevpillar_on_camera = pillar_on_camera
 if instance_exists(obj_hungrypillar)
 {

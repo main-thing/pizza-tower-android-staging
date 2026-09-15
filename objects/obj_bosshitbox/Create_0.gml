@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 collisioned = 0
 dmg = 30
 parryable = 0

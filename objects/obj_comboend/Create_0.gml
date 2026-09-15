@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 combo = 0
 comboscore = 0
 combominus = 0

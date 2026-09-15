@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if used
 	image_index = 1
 else

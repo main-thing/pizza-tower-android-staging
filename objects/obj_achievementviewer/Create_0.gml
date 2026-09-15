@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_speed = 0
 text = "Default text"
 with (obj_player) {

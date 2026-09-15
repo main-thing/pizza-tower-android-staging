@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_speed = 0.35
 followQueue = ds_queue_create()
 hsp = 0

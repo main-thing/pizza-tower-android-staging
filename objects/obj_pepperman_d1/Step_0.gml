@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 scr_collide();
 if ((!instance_exists(obj_slaphitbox)) && (!instance_exists(obj_shotgunbullet)))
     slapped = 0;

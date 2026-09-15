@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 typing = 0;
 text = "";
 match = "";

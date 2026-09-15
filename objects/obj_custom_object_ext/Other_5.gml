@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.room_end[0] == "")
 	return;
 if(event.room_end[1] != undefined)

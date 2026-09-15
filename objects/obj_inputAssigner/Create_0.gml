@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 player_input_device[0] = -2
 player_input_device[1] = -2
 device_selected[0] = 0

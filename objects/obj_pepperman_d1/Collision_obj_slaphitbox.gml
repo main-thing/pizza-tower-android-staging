@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (stunned == 1 && stunhp == 0 && alarm[1] > 40 && slapped == 0 && sprite_index == stunspr)
 {
     stunhp = 5;

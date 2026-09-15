@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (slapped == 0)
 {
     obj_camera.shake_mag = 3;

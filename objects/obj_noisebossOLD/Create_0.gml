@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 event_inherited()
 attack_pool[0] = [states.handstandjump, states.jump]
 attack_pool[1] = [states.skateboard, states.boss_skateboardturn]

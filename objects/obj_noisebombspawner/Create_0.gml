@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_speed = 0.35
 canthrowbomb = 1
 if (string_pos("AT_", room_get_name(room)))

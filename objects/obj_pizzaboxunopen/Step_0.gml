@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var roomname = string_letters(room_get_name(room))
 if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen) || (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen_1)
 {

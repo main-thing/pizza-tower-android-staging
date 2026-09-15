@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 fake_ed_sprite_clicked = false
 fake_ed_content = obj_solid
 fake_ed_old_sprite_x = x

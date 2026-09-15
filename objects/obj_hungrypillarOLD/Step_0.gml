@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (obj_player.state == states.thrown) {
     if (framereset == 0) {
         image_index = 0;

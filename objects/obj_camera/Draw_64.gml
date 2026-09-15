@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (is_bossroom() or room == editor_room)
 	exit;
 if(instance_exists(obj_fakeeditor)){

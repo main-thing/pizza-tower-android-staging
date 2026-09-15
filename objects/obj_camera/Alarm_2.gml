@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (global.timedgate == 1)
 {
 	global.timedgate = 0

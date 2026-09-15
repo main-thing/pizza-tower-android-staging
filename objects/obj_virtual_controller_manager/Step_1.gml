@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var _max_devices = 4;
 for(var i = 0; i < _max_devices; i++)
 {

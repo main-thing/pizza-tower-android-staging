@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 tex_list = -4
 draw_flush()
 //var group_arr = ["playergroup", "backgroundgroup", "hudgroup", "smallgroup", "baddiegroup", "levelstructuregroup"]

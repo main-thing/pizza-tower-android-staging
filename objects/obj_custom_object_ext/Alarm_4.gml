@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.alarms[4][0] == "")
 	return;
 if(event.alarms[4][1] != undefined)

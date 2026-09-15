@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.game_start[0] == "")
 	return;
 if(event.game_start[1] != undefined)

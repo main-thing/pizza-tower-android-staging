@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 countdown -= 0.5
 if (place_meeting((x + 1), y, obj_ratblock) or place_meeting((x - 1), y, obj_ratblock) or place_meeting(x, (y - 1), obj_ratblock) or place_meeting(x, (y + 1), obj_ratblock))
 	instance_destroy()

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 switch negative
 {
 	case 0:

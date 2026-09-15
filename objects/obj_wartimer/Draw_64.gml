@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (addseconds <= 0)
     draw_set_font(global.wartimerfont1);
 else

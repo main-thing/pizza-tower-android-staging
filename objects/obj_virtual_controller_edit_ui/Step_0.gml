@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(global.vkeyui_movingvkeys) 
 {
 	if(mouse_check_button_released(mb_left)) 

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.draw[0] == "draw_self()")
 	return draw_self();
 if(event.draw[0] == "")

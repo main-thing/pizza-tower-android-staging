@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.outside_room[0] == "")
 	return;
 if(event.outside_room[1] != undefined)

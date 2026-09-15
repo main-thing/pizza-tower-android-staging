@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 with (obj_trapghost)
 {
 	if (point_distance(obj_player1.x, obj_player1.y, other.x, other.y) < other.ghost_distance_threshold)

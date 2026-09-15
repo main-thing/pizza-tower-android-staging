@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (image_alpha == 1)
 {
 	if (obj_player1.character == "V")

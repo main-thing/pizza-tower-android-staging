@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.end_step[0] == "")
 		return;
 if(event.end_step[1] != undefined)

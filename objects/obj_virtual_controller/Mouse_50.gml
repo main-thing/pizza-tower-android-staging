@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 sprite_index = ((sprite_exists(spr_pressed) && pressed) ? spr_pressed : sprite)
 image_blend = (pressed ? pressed_color : realcolor)
 

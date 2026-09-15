@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var playerid = obj_player1
 if (obj_player1.spotlight == 0)
 	playerid = obj_player2

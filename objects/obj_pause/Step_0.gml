@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if((!pause) && obj_player1.key_start)
 {
 	var _cutscenehandler = 0

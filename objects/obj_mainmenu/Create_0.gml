@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 selected_option = 0;
 
 stringoffset = 0;

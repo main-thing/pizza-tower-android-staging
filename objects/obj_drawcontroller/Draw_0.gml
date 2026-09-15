@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if use_dark
 {
 	for (var i = 0; i < array_length(objdark_arr); i++)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (!(room == tutorial_room1 || string_pos("normalT_", room_get_name(room)) || string_pos("AT_", room_get_name(room))))
 {
 	layer_depth("Tiles_BG", 200)

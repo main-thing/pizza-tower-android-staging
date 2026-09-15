@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if mouse_check_button_pressed(mb_left)
     {
         if editormode

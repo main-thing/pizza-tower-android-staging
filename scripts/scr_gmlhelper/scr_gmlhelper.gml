@@ -284,20 +284,7 @@ function struct_create()
 {
 	return {};
 }
-/*
-function array_get_index(array, value)
-{
-	for(var __index = -1, i = 0;i < array_length(array); i++)
-	{
-		if(value == array[i])
-		{
-			__index = i;
-			break
-		}
-	}
-	return __index
-}
-*/
+
 function call_alarm(alarmid,delay,instance = noone){
 	if(instance_exists(instance)){
 		instance.alarm[alarmid] = delay
@@ -305,7 +292,8 @@ function call_alarm(alarmid,delay,instance = noone){
 		alarm[alarmid] = delay
 	}
 }
-function set_view_surface(_id,surf)
+
+function set_view_surface(_id, surf)
 {
 	view_surface_id[_id] = surf
 }

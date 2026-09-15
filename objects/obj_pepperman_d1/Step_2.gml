@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (thrown == 0 && (
     obj_player.state == states.grabbing ||
     obj_player.state == states.grab ||

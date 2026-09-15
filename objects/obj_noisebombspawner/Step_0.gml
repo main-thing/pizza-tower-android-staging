@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (floor(image_index) == 2 && canthrowbomb == 1)
 {
 	with (instance_create((x + (image_xscale * 10)), (y - 20), obj_pizzagoblinbomb))

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_xscale = abs(image_xscale)
 image_yscale = abs(image_yscale)
 var tilesetid = asset_get_index(tileset_name)

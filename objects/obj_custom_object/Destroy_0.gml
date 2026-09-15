@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var l = global.custom_object_list
 if(ds_exists(l, ds_type_list))
 	ds_list_delete(l, ds_list_find_index(l, id))

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 x = xstart;
 y = ystart;
 image_xscale = -1;

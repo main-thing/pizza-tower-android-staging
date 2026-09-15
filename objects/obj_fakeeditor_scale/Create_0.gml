@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_alpha = 0.5
 old_click_x = x
 old_click_y = y

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(editormode)
 {
 	if (instance_exists(selectedent) && !in_play_mode)

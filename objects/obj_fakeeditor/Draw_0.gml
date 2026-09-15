@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (editormode && !in_play_mode)
 {
 	if(grid_mode)

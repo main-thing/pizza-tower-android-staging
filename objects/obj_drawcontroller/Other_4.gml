@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (room != kidsparty_entrance1)
 {
 	var roomname = room_get_name(room)

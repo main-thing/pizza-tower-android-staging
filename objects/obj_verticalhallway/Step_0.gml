@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if place_meeting(x, y, obj_doorA)
 	targetDoor = "A"
 if place_meeting(x, y, obj_doorB)

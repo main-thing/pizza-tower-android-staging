@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (instance_exists(obj_pizzafaceboss_p3intro) || instance_exists(obj_blackoutline))
 	exit;
 if (image_alpha <= 0)

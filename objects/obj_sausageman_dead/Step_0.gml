@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var _vsp = 20
 if (sprite_index == spr_enemyblockdead)
 	_vsp = 30

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (!instance_exists(obj_ghostcollectibles))
 {
     if ((global.panic == true && global.minutes < 1) || player.sprite_index == spr_player_timesup)

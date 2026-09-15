@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if locked
 	exit;
 var _actor = 0

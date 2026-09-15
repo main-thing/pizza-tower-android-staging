@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 var p = noone
 if (player == 1)
 	p = obj_player1.id

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (player == 1)
 {
 	if (got && obj_player1.state != states.gottreasure)

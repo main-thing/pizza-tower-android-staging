@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(draw_event != "" && draw_event != "draw_self()"){
 	if(draw_event_saved != undefined){
 		if(USE_GMLIVE)

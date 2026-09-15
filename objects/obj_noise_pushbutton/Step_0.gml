@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (sprite_index == noise_button_sprite && floor(image_index) == (image_number - 1))
 {
     hspeed = 3

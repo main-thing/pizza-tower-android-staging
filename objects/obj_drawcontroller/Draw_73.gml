@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (kidsparty_lightning or dark_lightning)
 {
 	var cw = (camera_get_view_width(view_camera[0]) + 32)

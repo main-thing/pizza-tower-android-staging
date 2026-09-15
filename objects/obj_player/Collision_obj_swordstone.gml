@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (grounded && other.sprite_index == spr_swordstone && (state == states.handstandjump or state == states.punch or state == states.lungeattack))
 {
 	transformationlives = 3

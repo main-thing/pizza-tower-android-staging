@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (room == rm_editor)
 	exit;
 var playerid = instance_place(x, (y - 1), obj_player)

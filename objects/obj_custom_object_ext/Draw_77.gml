@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.post_draw[0] == "")
 	return;
 if(event.post_draw[1] != undefined)

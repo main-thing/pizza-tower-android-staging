@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 selected_level = 0
 selected_world = 0
 active = false

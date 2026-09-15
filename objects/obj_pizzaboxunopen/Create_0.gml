@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 image_speed = 0.35
 content = obj_pizzakinshroom
 subimg = 0;

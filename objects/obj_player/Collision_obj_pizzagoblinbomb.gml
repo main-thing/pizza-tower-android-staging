@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (!other.grabbable)
 	exit;
 if (state != states.boxxedpepspin)

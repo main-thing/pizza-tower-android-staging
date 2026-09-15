@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if (sprite_index == spr_pepperman_charge)
     x += (spd - 0.5)
 if (sprite_index == spr_pepperman_charge && obj_player.movespeed > 5)

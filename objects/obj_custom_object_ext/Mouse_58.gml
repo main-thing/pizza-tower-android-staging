@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(event.global_mouse_middle_released[0] == "")
 	return;
 if(event.global_mouse_middle_released[1] != undefined)

@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 view_enabled = true
 view_visible[0] = true
 if(os_type == os_windows){

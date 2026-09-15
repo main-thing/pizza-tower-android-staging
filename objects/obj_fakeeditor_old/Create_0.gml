@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 button1clicked = 0
 button1height = 50
 button1width = 50

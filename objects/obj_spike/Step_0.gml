@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 with (obj_player)
 {
 	var _debris = spr_knightdebris

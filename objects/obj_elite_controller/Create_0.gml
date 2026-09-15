@@ -1,3 +1,4 @@
+ADD_OBJECT_EVENT_GML_HOOK;
 if(!variable_global_exists("elitebaddies")){
 	global.elitebaddies = false
 }
