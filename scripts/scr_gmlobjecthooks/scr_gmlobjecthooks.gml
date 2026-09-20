@@ -12,5 +12,12 @@ global.object_gml_event_hooks_map = {};
 
 function gml_hook_object_event(object, event, code)
 {
-	global.object_gml_event_hooks_map[$ "gml_Object_" + object + "_" + event + ":1"] = live_snippet_create(code);
+	var snip = live_snippet_create(code, "gml_Object_" + object + "_" + event + ":1");
+	if(snip == undefined) get_string_async("AN ERROR HAS OCCURRED", live_result);
+	global.object_gml_event_hooks_map[$ "gml_Object_" + object + "_" + event + ":1"] = snip;
+}
+
+function gml_unhook_object_event(object, event)
+{
+	variable_struct_remove(global.object_gml_event_hooks_map, "gml_Object_" + object + "_" + event + ":1");
 }

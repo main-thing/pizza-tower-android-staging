@@ -8,8 +8,6 @@ function port_mainmenu_option(_title, _x, _y, _click_func = noone, _step_func = 
 	page_draw_func = _page_draw_func;
 }
 
-
-
 function port_mainmenu_level_select()
 {
 	with(other)	
@@ -30,6 +28,7 @@ function port_mainmenu_newstuff_click()
 		up_key = virtual_key_add(2, 388, 64, 64, vk_up);
 		down_key = virtual_key_add(2, 452, 64, 64, vk_down);
 		close_key = virtual_key_add(2356 * 0.01-16, 1080 * 0.02 - 16, 32, 32, ord("X"));
+		stringoffset = 0;
 	}
 	
 	layer_set_visible(layer_get_id("Assets_1"), false);
@@ -95,6 +94,130 @@ function port_mainmenu_newstuff_draw()
 		draw_sprite_ext(spr_button_escape, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5);
 	}
 }
+
+function port_mainmenu_options_click()
+{
+	if (live_call()) return live_result;
+	layer_set_visible(layer_get_id("Assets_1"), false);
+	global.forcehidecontrols = true;
+	with(obj_virtual_controller) 
+		event_perform(ev_mouse, ev_global_left_button);
+	
+	with(other)
+	{
+		stagger = true;
+	}
+}
+
+function port_mainmenu_options_step()
+{
+	if (live_call()) return live_result;
+	with(other)
+	{
+		if(stagger) 
+		{
+			stagger = false
+			exit;
+		}
+		
+		// don't judge
+		drawsquareoffset += 1;
+		if(drawsquareoffset > 200)
+			drawsquareoffset = 0;
+			
+		if(key_slap2)
+		{
+			page = noone;
+			layer_set_visible(layer_get_id("Assets_1"), true);
+			
+			global.forcehidecontrols = false;
+			with(obj_virtual_controller) 
+				event_perform(ev_mouse, ev_global_left_button);
+				
+			scr_soundeffect(sfx_enemyprojectile);
+		}
+		
+		if(key_jump)
+		{
+			var _click_func = port_options[page_cursorind][2];
+			var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
+			
+			// this is stupid
+			var is_snippet = is_struct(_click_func) && !is_method(_click_func);
+			if(is_snippet)
+				_snip(_click_func)
+			else
+				script_execute(asset_get_index(script_get_name(_click_func)));
+			
+			scr_soundeffect(sfx_enemyprojectile);
+		}
+		
+		var _input = (key_down2 - key_up2);
+		
+		if(_input != 0)
+				scr_soundeffect(sfx_step);
+				
+		page_cursorind += _input;
+		
+		if(page_cursorind < 0)
+			page_cursorind = array_length(port_options) - 1;
+		
+		if(page_cursorind > array_length(port_options) - 1)
+			page_cursorind = 0;
+	}
+}
+
+function port_mainmenu_options_draw()
+{
+	if (live_call()) return live_result;
+	with(other)
+	{
+		draw_set_alpha(1);
+		draw_set_color(make_color_rgb(83, 96, 108));
+		draw_rectangle(0, 0, 960, 540, false);
+		for(var i = 0; i < 6; i++)
+		{
+			for(var j = 0; j < 5; j ++)
+			{
+				draw_set_color(make_color_rgb(32, 38, 51));
+				draw_primitive_begin(pr_trianglefan);
+				draw_vertex(100 + i * 200 + drawsquareoffset - 200, 0 + j * 200 + drawsquareoffset - 200);
+				draw_vertex(0 + i * 200 + drawsquareoffset - 200, 100  + j * 200 + drawsquareoffset - 200);
+				draw_vertex(100 + i * 200 + drawsquareoffset - 200, 200 + j * 200 + drawsquareoffset - 200);
+				draw_vertex(200 + i * 200 + drawsquareoffset - 200, 100 + j * 200 + drawsquareoffset - 200);
+				draw_primitive_end();
+			}
+		}
+		draw_set_alpha(0.5);
+		draw_roundrect_color_ext(150, 80, 810, 450, 10, 10, c_black, c_black, false);
+		
+		draw_set_alpha(1);
+		draw_set_font(global.bigfont);
+		draw_set_valign(fa_top);
+		draw_set_halign(fa_middle);
+		draw_set_color(c_white);
+		draw_text(480, 100, "PORT OPTIONS");
+		draw_set_alpha(0.5);
+		draw_line(150, 150, 810, 150);
+		
+		draw_set_alpha(1);
+		cursorindex += 0.35
+		if(cursorindex > sprite_get_number(spr_cursor))
+			cursorindex = frac(cursorindex);
+			
+		draw_sprite(spr_cursor, cursorindex, 200, 186 + page_cursorind * 50);
+		draw_set_halign(fa_left);
+		
+		for(var i = 0; i < array_length(port_options); i++)
+		{
+			draw_set_alpha((i == page_cursorind) ? 1 : 0.5);
+			draw_set_color(port_options[i][1] ? c_green : c_maroon);
+			draw_text(260, 170 + i * 50, port_options[i][0]);
+		}
+	}
+}
+
+
 
 function port_mainmenu_credits_click()
 {

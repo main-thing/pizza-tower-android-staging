@@ -90,6 +90,7 @@ register_vkey_debug_command
 			
 		if(argument_count > 1)
 		{
+			
 			if(array_contains(["bool", "int", "real", "float", "string", "asset"], argument[1]))
 			{
 				_type = argument[1];

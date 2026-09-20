@@ -147,7 +147,7 @@ register_vkey_edit_command
 		}
 	},
 	"sprite",
-	"sprite (num)"
+	"sprite (asset)"
 );
 
 register_vkey_edit_command
@@ -163,7 +163,7 @@ register_vkey_edit_command
 		}
 	},
 	"stick_sprite",
-	"stick_sprite (num)",
+	"stick_sprite (asset)",
 	VKEYUI_KEY_TYPES.JOYSTICK
 );
 
@@ -217,7 +217,7 @@ register_vkey_edit_command
 		}
 	},
 	"stick_scale",
-	"stick_scale (number)",
+	"stick_scale (num)", 
 	VKEYUI_KEY_TYPES.JOYSTICK
 );
 
@@ -310,7 +310,7 @@ register_vkey_edit_command
 		}
 	},
 	"image_speed",
-	"image_speed (number)"
+	"image_speed (num)"
 );
 
 register_vkey_edit_command
@@ -345,4 +345,36 @@ register_vkey_edit_command
 	"forceshowbind (bool)",
 	VKEYUI_KEY_TYPES.BIND,
 	false
+);
+
+register_vkey_edit_command
+(
+	function()
+	{
+		if(argument_count > 0)
+		{
+			with(global.vkeyui_selectedvbutton)
+			{
+				spr_palette = asset_get_index_vkey(argument[0]);
+			}
+		}
+	},
+	"palette_sprite",
+	"palette_sprite (asset)"
+);
+
+register_vkey_edit_command
+(
+	function()
+	{
+		if(argument_count > 0)
+		{
+			with(global.vkeyui_selectedvbutton)
+			{
+				paletteselect = real_safe(argument[0]);
+			}
+		}
+	},
+	"paletteselect",
+	"paletteselect (num)"
 );

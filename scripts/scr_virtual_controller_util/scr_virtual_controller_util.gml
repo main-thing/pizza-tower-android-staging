@@ -121,6 +121,7 @@ function createvbutton(loadedbutton)
 	loadedbutton[$ "sprite"] = loadedbutton[$ "sprite"] == undefined ? spr_button_z_big : asset_get_index_vkey(loadedbutton[$ "sprite"]);
 	loadedbutton[$ "sprite_index"] = loadedbutton[$ "sprite_index"] == undefined ? spr_button_z_big : asset_get_index_vkey(loadedbutton[$ "sprite_index"]);
 	loadedbutton[$ "spr_pressed"] = loadedbutton[$ "spr_pressed"]  == undefined ? loadedbutton[$ "sprite"] : asset_get_index_vkey(loadedbutton[$ "spr_pressed"]);
+	loadedbutton[$ "spr_palette"] = loadedbutton[$ "spr_palette"] == undefined ? noone : asset_get_index_vkey(loadedbutton[$ "spr_palette"]);
 	loadedbutton[$ "keycodes"] = !is_array(loadedbutton[$ "keycodes"]) ? [VKEYUI_KEY_TYPES.NONE] : loadedbutton[$ "keycodes"];
 	loadedbutton[$ "keycodes"][0] = VKEYUI_KEY_TYPES[$ loadedbutton[$ "keycodes"][0]];
 	
@@ -227,6 +228,7 @@ function virtual_key_save(exportdialog = false, save = false)
 		buttonproperties.sprite = sprite_get_name(sprite);
 		buttonproperties.sprite_index = sprite_get_name(sprite_index);
 		buttonproperties.spr_pressed = sprite_get_name(spr_pressed);
+		buttonproperties.spr_palette = sprite_get_name(spr_palette);
 		
 		if(keycodes[0] == VKEYUI_KEY_TYPES.JOYSTICK)
 		{
@@ -356,10 +358,14 @@ function doedit(commandstring)
 		var _args = _string_split(commandstring, " ");
 		var _cmd = _args[0];
 		array_delete(_args, 0, 1);
-	
-	
+		
 		if(global.vkeyui_edit_table[$ _cmd] != undefined)
-			script_execute_ext(global.vkeyui_edit_table[$ _cmd][0], _args);
+		{
+			// TODO: Merge with upstream mobile controls repo
+			// game gets confused if we don't do this
+			var _func = asset_get_index(script_get_name(global.vkeyui_edit_table[$ _cmd][0]));
+			script_execute_ext(_func, _args);
+		}
 	}
 	else
 	{

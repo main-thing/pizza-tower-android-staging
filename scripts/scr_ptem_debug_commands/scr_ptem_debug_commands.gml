@@ -161,8 +161,11 @@ function scr_ptem_debug_commands()
 	                variable_instance_set(id, events[i] + "_saved", live_snippet_destroy(_saved));
             
 	            if (_content != "")
+				{
 	                variable_instance_set(id, events[i] + "_saved", live_snippet_create(_content));
-	        }
+					if(variable_instance_get(id, events[i] + "_saved") == undefined) get_string_async("AN ERROR HAS OCCURRED", live_result);
+				}
+			}
 	    }
     
 	    with (obj_custom_object_ext)
@@ -181,6 +184,7 @@ function scr_ptem_debug_commands()
 	                        _event[i2][1] = live_snippet_destroy(_event[i2][1]);
                     
 	                    _event[i2][1] = live_snippet_create(_event[i2][0]);
+						if(_event[i2][1] == undefined) get_string_async("AN ERROR HAS OCCURRED", live_result);
 	                }
 	            }
 	            else
@@ -189,7 +193,10 @@ function scr_ptem_debug_commands()
 	                    _event[1] = live_snippet_destroy(_event[1]);
                 
 	                if (_event[0] != "" || (events[i] == "draw" && _event[0] != "draw_self()"))
+					{
 	                    _event[1] = live_snippet_create(_event[0]);
+						if(_event[1] == undefined) get_string_async("AN ERROR HAS OCCURRED", live_result);
+					}	
 	            }
 	        }
 	    }

@@ -23,12 +23,15 @@ if(!instance_exists(obj_option))
 	{
 		if(other.key_jump)
 		{
-			if(click_func != noone)
+			if(click_func != noone && other.page == noone)
 			{
 				var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
-				var _exec = is_struct(click_func) ? _snip : script_execute;
-				
-				_exec(click_func);
+				// this is stupid
+				var is_snippet = is_struct(click_func) && !is_method(click_func);
+				if(is_snippet)
+					_snip(click_func)
+				else
+					script_execute(asset_get_index(script_get_name(click_func)));
 			}
 			
 			if(page_draw_func == noone)
@@ -41,9 +44,12 @@ if(!instance_exists(obj_option))
 		if(step_func != noone && other.page == other.selected_option)
 		{
 			var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
-			var _exec = is_struct(step_func) ? _snip : script_execute;
-				
-			_exec(step_func);
+			// this is stupid
+			var is_snippet = is_struct(step_func) && !is_method(step_func);
+			if(is_snippet)
+				_snip(step_func)
+			else
+				script_execute(asset_get_index(script_get_name(step_func)));
 		}
 	}
 

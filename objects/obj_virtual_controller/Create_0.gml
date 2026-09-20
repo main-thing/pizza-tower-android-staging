@@ -25,6 +25,10 @@ if(!variable_instance_exists(id, "sprite"))
 	sprite = spr_button_z_big;
 if(!variable_instance_exists(id, "spr_pressed"))
 	spr_pressed = noone;
+if(!variable_instance_exists(id, "spr_palette"))
+	spr_palette = noone;
+if(!variable_instance_exists(id, "paletteselect"))
+	paletteselect = 0;
 sprite_index = sprite;
 
 // joystick variables

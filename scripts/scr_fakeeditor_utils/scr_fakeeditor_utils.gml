@@ -501,6 +501,7 @@ function fakeeditor_save_editor_objects()
 		{
 			var item = var_array[i];
 			var found = false;
+			
 			if(array_contains(global.fake_ed_remove_vars, item))
 			{
 				found = true	

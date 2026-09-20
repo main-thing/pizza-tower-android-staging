@@ -327,7 +327,20 @@ function sprite_get_height_replacement(a)
 function sprite_get_width_replacement(a)
 {
 	return sprite_exists(a) ? sprite_get_width_old(a) : -1;
+} 
+
+if(PRE_2023_GM)
+{
+	// not ideal
+	function array_contains(array, value)
+	{
+		var list = ds_list_from_array(array);
+		var retval = ds_list_find_index(array, value) != -1;
+		ds_list_destroy(list);
+		return retval;
+	}
 }
+
 
 exit;
 fx_create("_effect_blend");

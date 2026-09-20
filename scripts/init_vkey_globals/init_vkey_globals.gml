@@ -47,7 +47,9 @@ global.vkeyui__blacklisted_controls = ds_list_create();
 ds_list_add(global.vkeyui__blacklisted_controls, VKEYUI_KEY_TYPES.EDIT, VKEYUI_KEY_TYPES.ADD, VKEYUI_KEY_TYPES.REMOVE, VKEYUI_KEY_TYPES.LOAD, VKEYUI_KEY_TYPES.SAVE, VKEYUI_KEY_TYPES.COLOR, VKEYUI_KEY_TYPES.GRID);
 		
 global.vkeyui__blacklisted_variables = ds_list_create();
-ds_list_add(global.vkeyui__blacklisted_variables, 
+ds_list_add
+(
+	global.vkeyui__blacklisted_variables, 
 	"mouseon", 
 	"held_keys", 
 	"last_input", 
@@ -63,11 +65,14 @@ ds_list_add(global.vkeyui__blacklisted_variables,
 );
 
 global.vkeyui__special_variables = ds_list_create();
-ds_list_add(global.vkeyui__special_variables, 
+ds_list_add
+(
+	global.vkeyui__special_variables, 
 	// manually handle these variables
 	"sprite_index", 
 	"sprite", 
 	"spr_pressed",
+	"spr_palette",
 	
 	"spr_joystick",
 	"stick_xscale",

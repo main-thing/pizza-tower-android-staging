@@ -1,4 +1,9 @@
 ADD_OBJECT_EVENT_GML_HOOK;
+if(sprite_exists(spr_palette))
+{
+	shader_set(global.Pal_Shader);
+	pal_swap_set(spr_palette, paletteselect);
+}
 draw_self();
 
 if(keycodes[0] == VKEYUI_KEY_TYPES.JOYSTICK)
@@ -40,9 +45,12 @@ if(keycodes[0] == VKEYUI_KEY_TYPES.JOYSTICK)
 	}
 }
 
+if(sprite_exists(spr_palette))
+{
+	shader_reset();
+}
 if(global.vkeyui_movingvkeys && global.vkeyui_selectedvbutton == self)
 {
 	if(!is_control_blacklisted(keycodes[0]))
 		draw_sprite(spr_button_close_controls_edit, 0, x - sprite_xoffset + sprite_width, y - sprite_yoffset);
-
 }

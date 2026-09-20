@@ -10,9 +10,12 @@ if(page != noone)
 		if(page_draw_func != noone)
 		{
 			var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
-			var _exec = is_struct(page_draw_func) ? _snip : script_execute;
-				
-			_exec(page_draw_func);
+			// this is stupid
+			var is_snippet = is_struct(page_draw_func) && !is_method(page_draw_func);
+			if(is_snippet)
+				_snip(page_draw_func)
+			else
+				script_execute(asset_get_index(script_get_name(page_draw_func)));
 		}
 	}
 	exit;
