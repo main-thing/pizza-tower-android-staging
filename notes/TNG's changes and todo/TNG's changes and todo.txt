@@ -1,0 +1,92 @@
+updated list
+
+# CHANGES
+
+- Reverted states.dynamite sliding
+- Reverted noise's characterspr to only include the sprites set in eggplant and also removed pesto anchovi as his escape theme
+- Unhardcoded mach 3, super jump, wall climb, and punch states. You can now add your own "character" entry without having to re-code states
+- Hardcoded sounds like sfx_mach2 to only play if you're in the states they're meant for
+- FPS counter look like the one seen in the boss builds
+- obj_sandparticle is no longer persistent if "oldassets" is enabled
+- Motorcycle in old desert explodes, like intended
+- Dynamite now automatically explodes upon contact with bombs blocks, stupid rats, and TNT blocks
+- Bomb automatically explodes upon contact with bomb blocks
+- Old hud now changes the camera's behavior alongside removing the combo titles
+- Dresser has been updated to get the width of the player's palette sprite and placed in enemy test
+- Cleaned up scr_characterspr
+- Renamed some sound files
+↓
+mu_Your_Fat_Ass_Slows_You_Down > mu_fatass
+sfx_swingding > sfx_minijohnpunch
+
+# NEW ADDITIONS
+
+- New PTEM logo
+- Whether or not characters can use their own collectible sprites is now controlled through "global.Ncollect, global.Scollect, global.Vcollect"
+- Wall splatting for when you roll/dive into a wall in finalmoveset as well as making use of the other sounds we added
+- scr_vigi_utilities. Works like scr_dotaunt but for vigilante's revolver/dynamite
+- "escape" variable for gerome that makes him have his rework build behavior. Intended for some of the old levels that weren't supposed to have lap 2
+- "warningspr" and "showwarning" to obj_lapportal. Now you can change it's icon and it's no longer fully reliant on oldassets
+- "oldblock" for obj_reverseminipillar. turns it into enemyblock from ETB
+- Old medieval tileset to fix dragonslair's weird slopes
+- Restored obj_timeattackclock to fix time attack
+- Restored secret music for strongcold
+
+# FIXES
+
+- Playable vigilante
+- Strongcold iceblock softlocking
+- Pogo noise (through global.pogonoisefix)
+- Greaseball's upward swing inaccuracy. Third golf room is no longer hell
+- obj_chargeeffect and obj_camera delays
+- obj_camera shaking inaccuracy
+- obj_goldendoor sprite inaccuracy
+- offsets for noise's parry sprites
+- knight's movespeed on "oldblock" slopes
+- hardmode's randomized enemy indexes
+- obj_skateboardOLD, obj_clownmatoOLD, obj_trashOLD, obj_pizzaballOLD obj_pizzaballOLDOLD
+- ETB noise cutscene
+- boss_noise
+
+# REMOVALS
+
+- Fake TV. We believe the community can come up with better replacements for missing character HUDs
+- Space Pinball(ufo) rooms. It's been reverted to it's original state as we currently don't intend on fixing this level due to it not playing well enough in later pizza tower builds.
+- mu_whats_on_kids_menu, mu_funiculi, bg_peppizza, spr_player_idle_old, spr_peppermanbomb, and many unnecessary misc sprites we added ourselves
+- doise and doisey sprites. No longer necessary as we can use palettes
+- obj_desert_tile_fixer, obj_lap2fixer, obj_outletalt, obj_treasure1
+- off screen lap counter
+- scr_playerN
+- rm_misctest, rm_blank, and final game tutorial rooms(only 1 was playable anyways)
+
+# LEVEL CHANGES
+
+- Marked some background layers in ruin_9/10 and entrance_9/10 as invisible for accuracy with eggplant
+- Updated/overhauled ETB and old desert entirely
+- Added more balloons to dragonslair and removed john blocks
+- Removed lapping from dragonslair and strongcold.
+- Old desert no longer has it's own lap room. The portal is now located in the same room as the exit gate
+- Unfixed slope collision in medieval_3b
+
+# ???
+
+- New playable character
+- Swedish
+
+todo (very lazily written):
+
+- Smoked weenie
+- strongcold doise and time's up fix (compare to xmas)
+- fix layer issue in normalT_room4 and make that room possible to p rank
+- fix and desert spawner fix and etc
+- make dynamite kill rat
+- old hud war timer
+- etb bonus rooms count as secrets(check)
+- fix greaseball
+- pizzelle's hud, ranks, and moveset
+- bo noise if they let me(they did but this needs approval from main)
+- read the changelogs and see what you didnt do
+- etb parrallax code?
+- sewer spit bug
+- UNIQUE PIZELLE SPRITES FOR UH PIPE JUMP AND GROUND POUNDS
+- PIZZELLE BRB and tumble

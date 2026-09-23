@@ -5901,6 +5901,7 @@
     {"id":{"name":"tile_window","path":"sprites/tile_window/tile_window.yy",},"order":6,},
     {"id":{"name":"trapscreen2","path":"sprites/trapscreen2/trapscreen2.yy",},"order":42,},
     {"id":{"name":"yousuck","path":"sprites/yousuck/yousuck.yy",},"order":127,},
+    {"id":{"name":"TNG's changes and todo","path":"notes/TNG's changes and todo/TNG's changes and todo.yy",},"order":2,},
     {"id":{"name":"bg_grindrail_tileset","path":"tilesets/bg_grindrail_tileset/bg_grindrail_tileset.yy",},"order":0,},
     {"id":{"name":"spr_spaceprops1","path":"tilesets/spr_spaceprops1/spr_spaceprops1.yy",},"order":0,},
     {"id":{"name":"tilesert_factory3","path":"tilesets/tilesert_factory3/tilesert_factory3.yy",},"order":0,},
