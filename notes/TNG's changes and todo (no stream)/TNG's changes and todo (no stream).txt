@@ -93,3 +93,4 @@ todo (very lazily written, ask questions if needed)
 - sewer spit bug
 - UNIQUE PIZELLE SPRITES FOR UH PIPE JUMP AND GROUND POUNDS
 - PIZZELLE BRB and tumble
+- remove palettes from peppinoselect
