@@ -143,7 +143,7 @@ function nsp_get_constant(_a0) {
 		case "fa_readonly": return fa_readonly;
 		case "fa_sysfile": return fa_sysfile;
 		case "fa_volumeid": return fa_volumeid;
-		case "ptem_data": return ((os_type == os_android) ? "/storage/emulated/0/Documents/pizza tower android/" : "");
+		case "ptem_data": return get_ptem_data_folder();
 		
 	 // alignment:
 		case "fa_bottom": return fa_bottom;

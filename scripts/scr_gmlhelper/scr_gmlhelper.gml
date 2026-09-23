@@ -335,9 +335,27 @@ if(PRE_2023_GM)
 	function array_contains(array, value)
 	{
 		var list = ds_list_from_array(array);
-		var retval = ds_list_find_index(array, value) != -1;
+		var retval = ds_list_find_index(list, value) != -1;
 		ds_list_destroy(list);
 		return retval;
+	}
+	
+	function array_get_index(value, array)
+	{
+		var list = ds_list_from_array(array);
+		var retval = ds_list_find_index(list, value);
+		ds_list_destroy(list);
+		return retval;
+	}
+}
+
+function get_ptem_data_folder()
+{
+	if(os_type == os_android)
+	{
+		var temp = string_split(game_save_id, "/", true)
+		var first_index = array_get_index("data", temp)
+		return "/storage/emulated/" + temp[first_index + 2] + "/android/media/" + temp[first_index + 3] + "/"
 	}
 }
 

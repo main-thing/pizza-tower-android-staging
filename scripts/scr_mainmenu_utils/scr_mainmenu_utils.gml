@@ -8,6 +8,14 @@ function port_mainmenu_option(_title, _x, _y, _click_func = noone, _step_func = 
 	page_draw_func = _page_draw_func;
 }
 
+function port_config_option(_title, _enabled, _click_func = noone, _forced_color = false) constructor
+{
+	title = _title;
+	click_func = _click_func;
+	forcedcolor = _forced_color;
+	enabled = _enabled;
+}
+
 function port_mainmenu_level_select()
 {
 	with(other)	
@@ -19,16 +27,18 @@ function port_mainmenu_level_select()
 
 function port_mainmenu_newstuff_click()
 {
+	if (live_call()) return live_result;
 	global.forcehidecontrols = true;
 	with(obj_virtual_controller) 
 		event_perform(ev_mouse, ev_global_left_button);
 	
 	with(other)
 	{
-		up_key = virtual_key_add(2, 388, 64, 64, vk_up);
-		down_key = virtual_key_add(2, 452, 64, 64, vk_down);
-		close_key = virtual_key_add(2356 * 0.01-16, 1080 * 0.02 - 16, 32, 32, ord("X"));
+		click_y = 0;
 		stringoffset = 0;
+		close_key = virtual_key_add(25 - 21, 25 - 22, 42, 45, ord("X"));
+		oldstringoffset = stringoffset;
+		savedheight = noone;
 	}
 	
 	layer_set_visible(layer_get_id("Assets_1"), false);
@@ -38,9 +48,22 @@ function port_mainmenu_newstuff_click()
 
 function port_mainmenu_newstuff_step()
 {
+	if (live_call()) return live_result;
 	with(other)
 	{
-		stringoffset -= (key_down - key_up) * scrollspeed;
+		//stringoffset -= (key_down - key_up) * scrollspeed;
+		
+		if(device_mouse_check_button_pressed(0, mb_left))
+		{
+			click_y = device_mouse_y_to_gui(0);
+			oldstringoffset = stringoffset;
+		}
+		
+		if(device_mouse_check_button(0, mb_left))
+		{
+			stringoffset = oldstringoffset + device_mouse_y_to_gui(0) - click_y;
+			stringoffset = clamp(stringoffset, -savedheight + 540, 0)
+		}
 		
 		if(key_slap2)
 		{
@@ -48,15 +71,7 @@ function port_mainmenu_newstuff_step()
 			layer_set_visible(layer_get_id("Backgrounds_1"), true);
 			layer_set_visible(layer_get_id("Backgrounds_2"), false);
 			
-			virtual_key_delete(up_key);
-			virtual_key_delete(down_key);
-			virtual_key_delete(close_key);
-			
-			up_key = noone;
-			down_key = noone;
-			close_key = noone;
 			page = noone;
-			
 			
 			global.forcehidecontrols = false;
 			with(obj_virtual_controller) 
@@ -69,8 +84,11 @@ function port_mainmenu_newstuff_step()
 
 function port_mainmenu_newstuff_draw()
 {
+	if (live_call()) return live_result;
 	with(other)
 	{
+		if(savedheight == noone)
+			savedheight = 100 + string_height_ext(textstring, 36, 1600);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_left);
 		draw_set_color(c_white);
@@ -89,8 +107,8 @@ function port_mainmenu_newstuff_draw()
 	
 		draw_set_font(subtextfont2);
 		draw_text_ext(80, 90 + stringoffset, textstring, 36, 1600);
-		draw_sprite_ext(spr_virtual_controller, 0, 38, 432, 1, 1, 0, c_white, 0.5);
-		draw_sprite_ext(spr_virtual_controller, 0, 38, 498, 1, 1, 180, c_white, 0.5);
+		//draw_sprite_ext(spr_virtual_controller, 0, 38, 432, 1, 1, 0, c_white, 0.5);
+		//draw_sprite_ext(spr_virtual_controller, 0, 38, 498, 1, 1, 180, c_white, 0.5);
 		draw_sprite_ext(spr_button_escape, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5);
 	}
 }
@@ -139,17 +157,20 @@ function port_mainmenu_options_step()
 		
 		if(key_jump)
 		{
-			var _click_func = port_options[page_cursorind][2];
-			var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
+			var _option = port_options[page_cursorind];
+			with(_option)
+			{
+				var _snip = USE_GMLIVE ? live_snippet_call : NSP_execute_saved;
 			
-			// this is stupid
-			var is_snippet = is_struct(_click_func) && !is_method(_click_func);
-			if(is_snippet)
-				_snip(_click_func)
-			else
-				script_execute(asset_get_index(script_get_name(_click_func)));
+				// this is stupid
+				var is_snippet = is_struct(click_func) && !is_method(click_func);
+				if(is_snippet)
+					_snip(click_func)
+				else
+					script_execute(asset_get_index(script_get_name(click_func)));
 			
-			scr_soundeffect(sfx_enemyprojectile);
+				scr_soundeffect(sfx_enemyprojectile);
+			}
 		}
 		
 		var _input = (key_down2 - key_up2);
@@ -211,8 +232,8 @@ function port_mainmenu_options_draw()
 		for(var i = 0; i < array_length(port_options); i++)
 		{
 			draw_set_alpha((i == page_cursorind) ? 1 : 0.5);
-			draw_set_color(port_options[i][1] ? c_green : c_maroon);
-			draw_text(260, 170 + i * 50, port_options[i][0]);
+			draw_set_color(port_options[i].enabled ? c_green : c_maroon);
+			draw_text(260, 170 + i * 50, port_options[i].title);
 		}
 	}
 }
@@ -221,6 +242,7 @@ function port_mainmenu_options_draw()
 
 function port_mainmenu_credits_click()
 {
+	if (live_call()) return live_result;
 	global.forcehidecontrols = true;
 	with(obj_virtual_controller) 
 		event_perform(ev_mouse, ev_global_left_button);
@@ -235,6 +257,7 @@ function port_mainmenu_credits_click()
 
 function port_mainmenu_credits_step()
 {
+	if (live_call()) return live_result;
 	with(other)
 	{
 		if(key_slap2)
@@ -259,7 +282,7 @@ function port_mainmenu_credits_step()
 
 function port_mainmenu_credits_draw()
 {
-	live_auto_call;
+	if (live_call()) return live_result;
 	with(other)
 	{
 		//draw_sprite(bg_creditsoverlay, 0, 0, 0);

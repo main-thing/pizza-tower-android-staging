@@ -10,8 +10,8 @@ subtextfont2 = global.smallfont3;
 cursorindex = 0
 discord_dialogue = noone
 close_key = noone
-up_key = noone
-down_key = noone
+//up_key = noone
+//down_key = noone
 textstring = "ERROR: file[changelog.txt] DOES NOT EXIST."
 textstring2 = ""
 
@@ -32,7 +32,8 @@ drawsquareoffset = 0;
 page_cursorind = 0;
 port_options = 
 [
-	[
+	new port_config_option
+	(
 		"FINAL MOVESET", 
 		obj_player1.finalmoveset, 
 		function()
@@ -40,37 +41,40 @@ port_options =
 			with(obj_player1)
 			{
 				finalmoveset = !finalmoveset;
-				other.port_options[0][1] = finalmoveset;
+				other.enabled = finalmoveset;
 			}
 		}
-	],
-	[
+	),
+	new port_config_option
+	(
 		"OLD ASSETS", 
 		global.oldsprites, 
 		function()
 		{
 			global.oldsprites = !global.oldsprites;
-			port_options[1][1] = global.oldsprites;
+			enabled = global.oldsprites;
 		}
-	],
-	[
+	),
+	new port_config_option
+	(
 		"ENABLE RANKS", 
 		global.showrank, 
 		function()
 		{
 			global.showrank = !global.showrank;
-			port_options[2][1] = global.showrank;
+			enabled = global.showrank;
 		}
-	],
-	[
+	),
+	new port_config_option
+	(
 		"OLD HUD", 
 		global.oldhud, 
 		function()
 		{
 			global.oldhud = !global.oldhud;
-			port_options[3][1] = global.oldhud;
+			enabled = global.oldhud;
 		}
-	]
+	)
 ];
 
 event_user(0);
