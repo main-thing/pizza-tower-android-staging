@@ -8,3 +8,4 @@ TODO:
 
 - fix obj_secrettile not liking being stretched out of bounds
 - scr_gmlhelper windblown stuff fix
+- fix wave background going fast or something
