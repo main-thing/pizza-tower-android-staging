@@ -41,6 +41,7 @@ level_array[6][1] = ["DRAGONSLAIR", dragonlair_1, "dragonlair"]
 level_array[6][2] = ["DESERT", desert_1, "desert"]
 level_array[6][3] = ["EARLY TEST BUILD", tutorial_room1, "etb"]
 level_array[6][4] = ["ANCIENT TOWER", AT_room1, "at"]
+level_array[6][5] = ["PIZZASCAPE", medieval1_1, "medieval1"]
 
 toppin_info[0] = [0, spr_toppinshroom] // image_index, sprite
 toppin_info[1] = [0, spr_toppincheese]
