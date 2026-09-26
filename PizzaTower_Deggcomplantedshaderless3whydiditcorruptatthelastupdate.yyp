@@ -6907,6 +6907,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Collision","folderPath":"folders/Objects/Collision.yy","order":13,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cutscenes","folderPath":"folders/Objects/Cutscenes.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Treasure","folderPath":"folders/Objects/Cutscenes/Treasure.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"escape blocks","folderPath":"folders/Objects/escape blocks.yy","order":22,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"fakeeditor","folderPath":"folders/Objects/fakeeditor.yy","order":7,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Game settings","folderPath":"folders/Objects/Game settings.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Editor","folderPath":"folders/Objects/Game settings/Editor.yy","order":13,},
@@ -7303,7 +7304,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tower","folderPath":"folders/Tile Sets/Tower.yy","order":10,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tutorial","folderPath":"folders/Tile Sets/Tutorial.yy","order":34,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"War","folderPath":"folders/Tile Sets/War.yy","order":25,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"escape blocks","folderPath":"folders/Objects/escape blocks.yy","order":22,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
