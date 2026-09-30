@@ -86,7 +86,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Golf",
-    "path": "folders/Sprites/Decorations/Golf.yy",
+    "name": "Gustavo deco",
+    "path": "folders/Sprites/Decorations/Gustavo deco.yy",
   },
 }

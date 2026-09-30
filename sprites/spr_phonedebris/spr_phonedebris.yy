@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Effects and particles",
-    "path": "folders/Sprites/Effects and particles.yy",
+    "name": "Phone booth",
+    "path": "folders/Sprites/Cutscene/Phone booth.yy",
   },
 }

@@ -3,7 +3,7 @@
   "resourceVersion": "1.1",
   "name": "Credit_Original_Controls",
   "parent": {
-    "name": "small",
-    "path": "folders/Sprites/mobilecontrols/small.yy",
+    "name": "Small",
+    "path": "folders/Sprites/PTEM Controls/Small.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Cutscene",
-    "path": "folders/Sprites/Cutscene.yy",
+    "name": "Gustavo NPC",
+    "path": "folders/Sprites/Cutscene/Gustavo NPC.yy",
   },
 }

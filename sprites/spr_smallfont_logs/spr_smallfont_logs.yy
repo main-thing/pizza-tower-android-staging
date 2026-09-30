@@ -226,7 +226,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "HUD",
-    "path": "folders/Sprites/HUD.yy",
+    "name": "Fonts",
+    "path": "folders/Sprites/HUD/Fonts.yy",
   },
 }

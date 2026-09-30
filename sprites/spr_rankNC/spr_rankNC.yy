@@ -96,7 +96,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Ranks",
-    "path": "folders/Sprites/HUD/Ranks.yy",
+    "name": "Noise",
+    "path": "folders/Sprites/HUD/Ranks/Noise.yy",
   },
 }

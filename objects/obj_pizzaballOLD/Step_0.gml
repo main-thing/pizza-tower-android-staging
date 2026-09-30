@@ -9,13 +9,13 @@ current = place_meeting(x, (y + 1), obj_current)
 switch state
 {
 	case states.normal:
-		scr_pizzaball_normal()
+		scr_pizzaballOLD_normal()
 		break
 	case states.tumble:
-		scr_pizzaball_roll()
+		scr_pizzaballOLD_roll()
 		break
 	case states.golf:
-		scr_pizzaball_golf()
+		scr_pizzaballOLD_golf()
 		break
 }
 

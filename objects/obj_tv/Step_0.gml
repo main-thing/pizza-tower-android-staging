@@ -117,7 +117,7 @@ if(global.oldhud)
 	    tvsprite = spr_tvrad
 	    once = 1
 	}
-	else if (obj_player.state == states.slipnslide)
+	else if (obj_player.state == states.slipnslideOLD)
 	{
 	    image_speed = 0.1
 	    showtext = 1

@@ -94,7 +94,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Gustavo",
-    "path": "folders/Sprites/HUD/TV/Gustavo.yy",
+    "name": "Gustavo deco",
+    "path": "folders/Sprites/Decorations/Gustavo deco.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Demo events",
-    "path": "folders/Sprites/Demo events.yy",
+    "name": "Tutorial",
+    "path": "folders/Sprites/Decorations/Tutorial.yy",
   },
 }

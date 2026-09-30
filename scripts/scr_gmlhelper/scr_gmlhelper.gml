@@ -277,7 +277,9 @@ states =
 	phase1hurt: 273,
 	transition: 274,
 	animation: 275,
-	duel: 276
+	duel: 276,
+	golfOLD: 277,
+	slipnslideOLD: 288
 }
 
 function struct_create()

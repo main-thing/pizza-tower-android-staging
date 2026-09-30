@@ -1,3 +1,2 @@
 //pal_swap_init_system(shd_pal_swapper)
 global.roommessage = "POOL OF CHRISTMAS JOY"
-with(obj_boilingsauce) targetvsp = -30;

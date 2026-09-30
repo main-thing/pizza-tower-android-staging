@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "HUD",
-    "path": "folders/Sprites/HUD.yy",
+    "name": "Stylebar",
+    "path": "folders/Sprites/HUD/Old HUD/Heatmeter/Stylebar.yy",
   },
 }

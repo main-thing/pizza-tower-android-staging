@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Control tutorial",
-    "path": "folders/Sprites/Misc/Control tutorial.yy",
+    "name": "Control tutorial ok",
+    "path": "folders/Sprites/Menu/Control tutorial ok.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "mobilecontrols",
-    "path": "folders/Sprites/mobilecontrols.yy",
+    "name": "PTEM Controls",
+    "path": "folders/Sprites/PTEM Controls.yy",
   },
 }

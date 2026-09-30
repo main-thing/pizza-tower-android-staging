@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Unsorted or unused",
-    "path": "folders/Sprites/Unsorted or unused.yy",
+    "name": "Warps",
+    "path": "folders/Sprites/Level structure/Warps.yy",
   },
 }

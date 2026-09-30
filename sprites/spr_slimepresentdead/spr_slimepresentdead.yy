@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Strongcold",
-    "path": "folders/Sprites/Boss/Strongcold.yy",
+    "name": "Vigilante",
+    "path": "folders/Sprites/Boss/Strongcold/Vigilante.yy",
   },
 }

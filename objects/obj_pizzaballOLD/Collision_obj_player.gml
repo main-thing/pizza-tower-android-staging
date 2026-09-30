@@ -17,7 +17,7 @@ if ((other.state == states.handstandjump or other.state == states.lungeattack) &
 				hsp = 0
 				movespeed = 0
 				slopespeed = 0
-				state = states.golf
+				state = states.golfOLD
 				_pizzaball.state = states.golf
 				_pizzaball.player = id
 				if (xscale > 0)

@@ -204,7 +204,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "HUD",
-    "path": "folders/Sprites/HUD.yy",
+    "name": "Final game",
+    "path": "folders/Sprites/HUD/Final game.yy",
   },
 }

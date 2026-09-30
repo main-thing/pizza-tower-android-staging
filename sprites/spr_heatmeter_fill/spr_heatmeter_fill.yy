@@ -90,7 +90,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Heat meter",
-    "path": "folders/Sprites/HUD/Heat meter.yy",
+    "name": "Heatmeter",
+    "path": "folders/Sprites/HUD/Heatmeter.yy",
   },
 }

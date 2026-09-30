@@ -19,7 +19,8 @@ if (other.state != states.gotoplayer)
 		global.collect += val
 	else
 		global.collectN += val
-	create_collect(x, y, sprite_index)
+	if (!global.oldhud)
+		create_collect(x, y, sprite_index)
 	with (instance_create((x + 16), y, obj_smallnumber))
 		number = string(val)
 	instance_destroy()

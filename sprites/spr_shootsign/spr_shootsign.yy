@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Unsorted or unused",
-    "path": "folders/Sprites/Unsorted or unused.yy",
+    "name": "Tutorial",
+    "path": "folders/Sprites/Decorations/Tutorial.yy",
   },
 }

@@ -74,7 +74,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Strongcold",
-    "path": "folders/Sprites/Boss/Strongcold.yy",
+    "name": "Mr Stick",
+    "path": "folders/Sprites/Boss/Strongcold/Mr Stick.yy",
   },
 }

@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "objects",
-    "path": "folders/Sprites/fakeeditor/objects.yy",
+    "path": "folders/Sprites/Editor/fakeeditor/objects.yy",
   },
 }

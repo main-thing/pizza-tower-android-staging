@@ -11,7 +11,8 @@ world_array[2] = "WORLD 3"
 world_array[3] = "WORLD 4"
 world_array[4] = "WORLD 5"
 world_array[5] = "SPECIAL"
-world_array[6] = "SCRAPPED"
+world_array[6] = "APRIL 2021"
+world_array[7] = "SCRAPPED"
 
 level_array[0][0] = ["ENTRANCE", entrance_1, "entrance"]
 level_array[0][1] = ["MEDIEVAL", medieval_1, "medieval"]
@@ -32,16 +33,22 @@ level_array[3][3] = ["FREEZER", freezer_1, "freezer"]
 level_array[4][0] = ["PIZZASCARE", chateau_1, "chateau"]
 level_array[4][1] = ["KIDS PARTY", kidsparty_1, "kidsparty"]
 level_array[4][2] = ["WAR", war_1, "war"]
+
 level_array[5][0] = ["CHARACTER SELECT", characterselect, "characterselect"]
 level_array[5][1] = ["ENEMY TEST", rm_swedish, "rm_swedish"]
-level_array[5][2] = ["EDITOR ROOM", rm_editor_new, "rm_editor_new"]
-level_array[5][3] = ["EDITOR ROOM OLD", rm_editor_big, "rm_editor_big"]
-level_array[6][0] = ["STRONGCOLD", strongcold_10, "strongcold"]
-level_array[6][1] = ["DRAGONSLAIR", dragonlair_1, "dragonlair"]
-level_array[6][2] = ["DESERT", desert_1, "desert"]
-level_array[6][3] = ["EARLY TEST BUILD", tutorial_room1, "etb"]
-level_array[6][4] = ["ANCIENT TOWER", AT_room1, "at"]
-level_array[6][5] = ["PIZZASCAPE", medieval1_1, "medieval1"]
+level_array[5][2] = ["EDITOR", rm_editor_new, "rm_editor_new"]
+level_array[5][3] = ["LEGACY EDITOR", rm_editor_big, "rm_editor_big"]
+
+level_array[6][0] = ["ENTRANCE", old_entrance_1, "old_entrance"]
+level_array[6][1] = ["MEDIEVAL", old_medieval_1, "old_medieval"]
+level_array[6][2] = ["RUIN", ruin_1, "ruin"]
+level_array[6][3] = ["DUNGEON", dungeon_1, "dungeon"]
+level_array[6][4] = ["DRAGONSLAIR", dragonlair_1, "dragonlair"]
+level_array[6][5] = ["STRONGCOLD", strongcold_10, "strongcold"]
+
+level_array[7][0] = ["DESERT", desert_1, "desert"]
+level_array[7][1] = ["EARLY TEST BUILD", tutorial_room1, "etb"]
+level_array[7][2] = ["ANCIENT TOWER", AT_room1, "at"]
 
 toppin_info[0] = [0, spr_toppinshroom] // image_index, sprite
 toppin_info[1] = [0, spr_toppincheese]
