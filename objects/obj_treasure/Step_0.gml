@@ -32,8 +32,8 @@ if (player == 0 && place_meeting(x, y, obj_player))
 					if (!other.got)
 					{
 						state = states.gottreasure
-						with (other){
-							if (!oldblock){
+						with (other) {
+							if (!oldblock) {
 								scr_soundeffect(sfx_secretfound)
 								alarm[0] = 150
 							}
@@ -54,7 +54,6 @@ if (player == 0 && place_meeting(x, y, obj_player))
 					obj_tv.alarm[0] = 200
 					other.player = (object_index == obj_player1 ? 1 : 2)
 				}
-				//ds_list_clear(global.instancelist)
 			}
 		}
 	}

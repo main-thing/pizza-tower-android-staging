@@ -58,7 +58,7 @@ function scr_player_Sjump()
 		vsp = 0
 		if (move != 0)
 			xscale = move
-		if(!finalmoveset){
+		if(!finalmoveset) {
 			if (floor(image_index) == (image_number - 1))
 			{
 				vsp = -5

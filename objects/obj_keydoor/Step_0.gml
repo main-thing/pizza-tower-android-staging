@@ -43,12 +43,12 @@ if (place_meeting(x, y, obj_player1) && (!instance_exists(obj_jumpscare)) && flo
 	{
 		obj_player1.targetDoor = other.targetDoor
 		obj_player1.targetRoom = other.targetRoom
-			if(variable_instance_exists(other,"target_x")){
+			if(variable_instance_exists(other,"target_x")) {
 				obj_player1.target_x = other.target_x
 			} else {
 				obj_player1.target_x = "null"
 			}
-			if(variable_instance_exists(other,"target_y")){
+			if(variable_instance_exists(other,"target_y")) {
 				obj_player1.target_y = other.target_y
 			} else {
 				obj_player1.target_y = "null"
@@ -57,12 +57,12 @@ if (place_meeting(x, y, obj_player1) && (!instance_exists(obj_jumpscare)) && flo
 		{
 			obj_player2.targetDoor = other.targetDoor
 			obj_player2.targetRoom = other.targetRoom
-			if(variable_instance_exists(other,"target_x")){
+			if(variable_instance_exists(other,"target_x")) {
 				obj_player2.target_x = other.target_x
 			} else {
 				obj_player2.target_x = "null"
 			}
-			if(variable_instance_exists(other,"target_y")){
+			if(variable_instance_exists(other,"target_y")) {
 				obj_player2.target_y = other.target_y
 			} else {
 				obj_player2.target_y = "null"

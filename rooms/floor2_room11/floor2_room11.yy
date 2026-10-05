@@ -176,6 +176,6 @@
   },
   "parent": {
     "name": "Old Mansion",
-    "path": "folders/Rooms/Unused/Demo Leftovers/Patreon/Old Mansion.yy",
+    "path": "folders/Rooms/Unused/Patreon Leftovers/Old Mansion.yy",
   },
 }

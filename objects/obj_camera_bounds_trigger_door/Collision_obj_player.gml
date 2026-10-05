@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if(single && has_touched_player){
+if(single && has_touched_player) {
 	exit;
 }
 if(variable_instance_get(other,variable_internal)) {

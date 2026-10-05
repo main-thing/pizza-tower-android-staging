@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "is_bossroom",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Utilities",
-    "path": "folders/Scripts/Utilities.yy",
+    "path": "folders/Objects/Game settings/Scripts/Utilities.yy",
   },
 }

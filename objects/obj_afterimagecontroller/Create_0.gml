@@ -21,6 +21,6 @@ if(global.usecustomafterimageshaders)
 {
 	//_uniformcolor = shader_get_uniform(shd_custom_afterimage, "u_imagecolor");
 }
-if(global.usefiremouthshaders){
+if(global.usefiremouthshaders) {
 	shd_alpha = shader_get_uniform(shd_firemouth_afterimage, "newAlpha")
 }

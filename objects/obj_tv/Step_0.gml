@@ -10,7 +10,7 @@ if(global.oldhud)
 	}
 	else
 		visible = true
-	if(tvsprite==spr_tv_idle){
+	if(tvsprite==spr_tv_idle) {
 		tvsprite=spr_tvdefault
 	}
 	if (showtext == 1)
@@ -27,12 +27,12 @@ if(global.oldhud)
 	}
 	if (!((obj_player.state == states.knightpep && obj_player.state == states.knightpepattack && obj_player.state == states.knightpepslopes)))
 	    once = 0
-	if (obj_player.y < 200 && obj_player.x > (room_width - 200)){
+	if (obj_player.y < 200 && obj_player.x > (room_width - 200)) {
 	    alpha = 0.5
 	} else {
 		alpha = 1
 	}
-	if (room == Realtitlescreen or room == rm_eggplantdisclaimer or room == rank_room or room == rm_levelselect or room == timesuproom or room == boss_room1 or room == characterselect or room == hub_loadingscreen){
+	if (room == Realtitlescreen or room == rm_eggplantdisclaimer or room == rank_room or room == rm_levelselect or room == timesuproom or room == boss_room1 or room == characterselect or room == hub_loadingscreen) {
 	    alpha = 0
 		tvsprite=spr_tvdefault
 	}

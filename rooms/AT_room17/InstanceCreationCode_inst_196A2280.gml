@@ -1,1 +1,1 @@
-sprite_index = spr_shotgun1
+sprite_index = spr_shotgun_1

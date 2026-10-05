@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if(global.oldsprites){
+if(global.oldsprites) {
 	create_blur_afterimage(x, y, sprite_index, image_index, image_xscale)
 	alarm[0] = 3
 }

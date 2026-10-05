@@ -39,7 +39,7 @@ exclude_object_hide_arr = [obj_pizzaface, obj_johnghost, obj_snickexe, obj_fakes
 variabletochange = ""
 door_object_arr = [obj_arenadoor, obj_startgate, obj_snickchallengedoor, obj_door, obj_keydoor, obj_geromedoor]
 depth = -19998
-if(instance_number(object_index) > 1){
+if(instance_number(object_index) > 1) {
 	instance_destroy()
 }
 function save_editor_objects() //gml_Script_save_editor_objects
@@ -74,14 +74,14 @@ function save_editor_objects() //gml_Script_save_editor_objects
 	var objectsstring = json_stringify(myobjects)
 	get_string_async("save code:",objectsstring)
 }
-function createeditorobject(loadedobject){
-		if(typeof(loadedobject.object_index) != "string"){
+function createeditorobject(loadedobject) {
+		if(typeof(loadedobject.object_index) != "string") {
 			with(instance_create(0, 0, loadedobject.object_index)) {
 				var var_array = variable_struct_get_names(loadedobject)
 				var i = 0
 				while (i < array_length(var_array))
 	            {
-					if(var_array[i] != "object_index"){
+					if(var_array[i] != "object_index") {
 						variable_instance_set(id, var_array[i], variable_struct_get(loadedobject, var_array[i]))
 					}
 	                i++
@@ -93,7 +93,7 @@ function createeditorobject(loadedobject){
 				var i = 0
 				while (i < array_length(var_array))
 	            {
-					if(var_array[i] != "object_index"){
+					if(var_array[i] != "object_index") {
 						variable_instance_set(id, var_array[i], variable_struct_get(loadedobject, var_array[i]))
 					}
 	                i++
@@ -114,12 +114,12 @@ function load_editor_objects(_a0) //gml_Script_load_editor_objects
 		}
     }
 }
-function delete_editor_objects(){
+function delete_editor_objects() {
 	with (all)
 	{
 		if (variable_instance_exists(id, "createdbyeditor"))
 		{
-			if(createdbyeditor){
+			if(createdbyeditor) {
 				instance_destroy()
 			}
 		}

@@ -81,6 +81,6 @@
   },
   "parent": {
     "name": "Old Freezer",
-    "path": "folders/Rooms/Unused/Demo Leftovers/Patreon/Old Freezer.yy",
+    "path": "folders/Rooms/Unused/Patreon Leftovers/Old Freezer.yy",
   },
 }

@@ -27,7 +27,7 @@ if (place_meeting(x, y, playerid) && (!playerid.cutscene) && playerid.state != s
 		instance_create(x, y, obj_flash)
 		global.panic = true
 		global.fill = 59 * 12
-		with(obj_tv){
+		with(obj_tv) {
 			pizzaface_sprite = spr_timer_pizzaface1
 			chunkmax = global.fill
 		}

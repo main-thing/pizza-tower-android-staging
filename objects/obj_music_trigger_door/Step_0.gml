@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-switch(targetkey){
+switch(targetkey) {
 	case "up":
 		variable_internal = "key_up2"
 	break

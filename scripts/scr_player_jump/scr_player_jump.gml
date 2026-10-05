@@ -109,7 +109,7 @@ function state_player_jump()
 			mort = 1
 		}
 	}
-	if(!finalmoveset){
+	if(!finalmoveset) {
 		if grounded
 		{
 			if (input_buffer_jump < 8 && (!key_down) && (!key_attack) && vsp > 0 && (!((sprite_index == spr_facestomp or sprite_index == spr_freefall))))
@@ -199,7 +199,7 @@ function state_player_jump()
 		input_buffer_jump = 0
 	if (vsp > 5 && sprite_index != spr_mortdoublejump)
 		fallinganimation++
-	if(character != "S"){
+	if(character != "S") {
 		if (fallinganimation >= 40 && fallinganimation < 80)
 			sprite_index = spr_facestomp
 		else if (fallinganimation >= 80)
@@ -260,7 +260,7 @@ function state_player_jump()
 		sprite_index = spr_stomp
 	if (key_down2 && (!global.kungfu))
 	{
-		if(!finalmoveset){
+		if(!finalmoveset) {
 			input_buffer_slap = 8
 		} else {
 			input_buffer_slap = 0
@@ -362,7 +362,7 @@ function state_player_jump()
 				movespeed = 5
 			}
 		}
-		if(finalmoveset){
+		if(finalmoveset) {
 			if (input_buffer_slap > 0 && !key_up && sprite_index != spr_suplexbump)
 			{
 				input_buffer_slap = 0;
@@ -534,7 +534,7 @@ function state_player_jump()
 
 	if ((!key_attack) or move != xscale)
 		mach2 = 0
-	if (floor(image_index) == (image_number - 1)){
+	if (floor(image_index) == (image_number - 1)) {
 		jumpAnim = 0
 	}
 	scr_dotaunt()

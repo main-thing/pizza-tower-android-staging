@@ -6,6 +6,6 @@
   "isCompatibility": false,
   "parent": {
     "name": "mobilecontrols",
-    "path": "folders/Scripts/mobilecontrols.yy",
+    "path": "folders/Objects/Game settings/Scripts/mobilecontrols.yy",
   },
 }

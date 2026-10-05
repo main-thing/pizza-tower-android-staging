@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if (!(room == tutorial_room1 || string_pos("normalT_", room_get_name(room)) || string_pos("AT_", room_get_name(room))))
+if (!(room == tutorial_room1 || string_pos("normalT_", room_get_name(room))))
 {
 	layer_depth("Tiles_BG", 200)
 	layer_depth("Tiles_BG2", 199)
@@ -13,7 +13,7 @@ if (!(room == tutorial_room1 || string_pos("normalT_", room_get_name(room)) || s
 	layer_depth("Tiles_Foreground3", -32)
 	layer_depth("Assets_BG", 201)
 }
-if(global.hidetiles){
+if(global.hidetiles) {
 	layer_set_visible(layer_get_id("Tiles_BG"),false)
 	layer_set_visible(layer_get_id("Tiles_BG2"),false)
 	layer_set_visible(layer_get_id("Tiles_BG3"),false)

@@ -76,7 +76,7 @@ draw_sprite(spr_cursor, cursorindex, cursoroffset, (350 + (selected_option * 40)
 
 
 /*
-if(newstuff){
+if(newstuff) {
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_left)
 	draw_set_color(c_white)
@@ -101,7 +101,7 @@ if(newstuff){
 	exit;
 }
 // TODO: replace with new credits
-if(credits){
+if(credits) {
 	draw_set_alpha(0.8)
 	draw_set_color(c_black)
 	//left

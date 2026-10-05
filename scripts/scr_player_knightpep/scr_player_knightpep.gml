@@ -220,9 +220,9 @@ function scr_player_knightpep()
 	}
 	if (scr_slope() && sprite_index != spr_knightpepthunder)
 	{
-		with (instance_place(x, (y + 1), obj_slope)){
-			if(!oldblock){
-				with (other){
+		with (instance_place(x, (y + 1), obj_slope)) {
+			if(!oldblock) {
+				with (other) {
 					if (sprite_index == spr_knightpepdowntrust)
 						movespeed = 11
 					else

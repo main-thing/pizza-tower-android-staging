@@ -7,7 +7,7 @@ function scr_ptem_debug_commands()
 	register_vkey_debug_command(function()
 	{
 	    with(obj_player1)
-	        state = (state == states.normal) ? states.debugstate : states.normal;
+	        state = states.debugstate;
 	}, "noclip", "Enables noclip on the player.\nUsage: noclip");
 	
 	register_vkey_debug_command(function()

@@ -1,7 +1,7 @@
 // TODO: Finish recreation of the new string_trim func, for now we are using the old script
 if(PRE_2023_GM)
 {
-	function _string_trim(Inputstring, side = "both", char = " "){
+	function _string_trim(Inputstring, side = "both", char = " ") {
 		/// string_trim(string Inputstring, string side="both", string char=" ")
 		// Description: Removes leading and trailing matches of a string.
 		// --- Arguments ---
@@ -14,7 +14,7 @@ if(PRE_2023_GM)
 		var new_string = Inputstring
 		if side == "left" or side == "both" {
 		    var _start = 0
-		    for(var i = 1;i <= string_length(new_string);i++){
+		    for(var i = 1;i <= string_length(new_string);i++) {
 		        if string_char_at(new_string, i) != char{
 		            _start = i - 1
 		            break
@@ -24,7 +24,7 @@ if(PRE_2023_GM)
 		}
 		if side == "right" or side == "both"{
 		    var _end = 0
-		    for(var i = string_length(new_string);i > 0;i--){
+		    for(var i = string_length(new_string);i > 0;i--) {
 		        if string_char_at(new_string, i) != char{
 		            _end = i + 1
 		            break

@@ -116,7 +116,7 @@ function scr_player_mach2()
 		input_buffer_jump = 0
 	if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) or scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) or (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) or scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && place_meeting(x, (y + 1), obj_slope)))
 	{
-		if(!finalmoveset){
+		if(!finalmoveset) {
 		wallspeed = movespeed
 		if (vsp > 0)
 			wallspeed -= vsp
@@ -134,7 +134,7 @@ function scr_player_mach2()
 	if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
 	{
 		wallspeed = movespeed
-		if(finalmoveset){
+		if(finalmoveset) {
 			grabclimbbuffer = 0;
 		}
 		state = states.climbwall
@@ -170,10 +170,10 @@ function scr_player_mach2()
 		flash = 0
 		state = states.tumble
 		vsp = 10
-		if(character != "S"){
+		if(character != "S") {
 			image_index = 0
 			if (!grounded) {
-				if(!finalmoveset){
+				if(!finalmoveset) {
 					sprite_index = spr_mach2jump
 				} else {
 					sprite_index = spr_dive
@@ -281,7 +281,7 @@ function scr_player_mach2()
 		sprite_index = spr_clown
 	if mortjump
 		sprite_index = spr_mortdoublejumpstart
-	if(!finalmoveset){
+	if(!finalmoveset) {
 		if (key_shoot2 && shotgunAnim)
 			scr_shotgunshoot()
 		if ((key_slap2 or input_buffer_slap < 8) && (!key_up) && character != "V" && character != "S")

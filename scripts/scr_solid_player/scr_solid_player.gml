@@ -1,6 +1,6 @@
 function scr_solid_player(_a0, _a1)
 {
-	if(!finalmoveset){
+	if(!finalmoveset) {
 		var old_x = x
 		var old_y = y
 		x = _a0

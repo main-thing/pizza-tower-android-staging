@@ -10,10 +10,10 @@ function scr_playerreset()
 		music = -4
 		secretmusic = -4
 		lapstart = false
-		if(obj_player1.escapemusic != undefined){
+		if(obj_player1.escapemusic != undefined) {
 			escapemusic = obj_player1.escapemusic
 		}
-		if(obj_player1.lap2music != undefined){
+		if(obj_player1.lap2music != undefined) {
 			lap2music = obj_player1.lap2music
 		}
 	}

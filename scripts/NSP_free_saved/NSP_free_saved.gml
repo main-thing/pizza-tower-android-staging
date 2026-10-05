@@ -8,7 +8,7 @@ function NSP_free_saved(_argument0) {
 	Returns: n/a 
 
 	*/
-	if(_argument0 == undefined){
+	if(_argument0 == undefined) {
 		return 0;
 	}
 	var index;

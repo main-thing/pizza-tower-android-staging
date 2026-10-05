@@ -55,7 +55,7 @@ switch (state)
 		}
 		else
 		{
-			if(instance_exists(trapid)){
+			if(instance_exists(trapid)) {
 			with (trapid)
 			{
 				switch object_index

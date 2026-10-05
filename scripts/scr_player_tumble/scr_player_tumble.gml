@@ -11,14 +11,14 @@ function scr_player_tumble()
 	mask_index = spr_crouchmask
 	if (sprite_index == spr_tumblestart)
 		movespeed = 6
-	if(!finalmoveset){
+	if(!finalmoveset) {
 		if ((!grounded) && (sprite_index == spr_machroll or sprite_index == spr_mach2jump or sprite_index == spr_backslide or sprite_index == spr_backslideland))
 		{
 			vsp = 10
 			sprite_index = spr_dive
 		}
 	}
-	if(finalmoveset){
+	if(finalmoveset) {
 		if (!grounded && (sprite_index == spr_crouchslip || sprite_index == spr_machroll || sprite_index == spr_mach2jump || sprite_index == spr_backslide || sprite_index == spr_backslideland))
 		{
 			vsp = 10;

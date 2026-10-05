@@ -10,7 +10,7 @@ for (var i = 0; i < array_length(backgrounds); i++)
 	layer_background_xscale(lay_id, ix)
 	layer_background_yscale(lay_id, iy)
 }
-if (room == normalT_room1 || room == normalT_room2 || room == normalT_room3 || room == normalT_room4 || room == normalT_runbackpassage || room == AT_room17 || room == AT_room8 || room == AT_room15 || room == AT_room6){
+if (room == normalT_room1 || room == normalT_room2 || room == normalT_room3 || room == normalT_room4 || room == normalT_runbackpassage || room == AT_room17 || room == AT_room8 || room == AT_room15 || room == AT_room6) {
 	var vw = camera_get_view_width(view_camera[0]);
 	var vh = camera_get_view_height(view_camera[0]);
 	var sx = max(0, room_width - vw);
@@ -19,9 +19,9 @@ if (room == normalT_room1 || room == normalT_room2 || room == normalT_room3 || r
 	var ty = 0
 	var background_width = [];
 	var background_height = [];
-	for (var i = 1; i < 6; i++){
+	for (var i = 1; i < 6; i++) {
 		var bg = "Backgrounds_" + string(i);
-		if (layer_exists(bg) && layer_background_get_sprite(layer_background_get_id(bg)) != -1){
+		if (layer_exists(bg) && layer_background_get_sprite(layer_background_get_id(bg)) != -1) {
 			array_push(background_width, sprite_get_width(layer_background_get_sprite(layer_background_get_id(bg))));
 			array_push(background_height, sprite_get_height(layer_background_get_sprite(layer_background_get_id(bg))));
 		}

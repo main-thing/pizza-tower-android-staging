@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_blobmonster",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Monsters",
-    "path": "folders/Scripts/Enemies/Monsters.yy",
+    "path": "folders/Objects/Game settings/Scripts/Enemies/Monsters.yy",
   },
 }

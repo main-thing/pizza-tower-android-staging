@@ -35,12 +35,12 @@ if(editormode)
 	}
 }
 /*
-if(!surface_exists(tileselectsurf)){
+if(!surface_exists(tileselectsurf)) {
 	tileselectsurf = surface_create_(tileselectsurf_width,tileselectsurf_height)
 } else {
 	surface_set_target(tileselectsurf);
 	draw_clear(c_black)
-	if(keyboard_check(vk_space)){
+	if(keyboard_check(vk_space)) {
 		funnyx -= 1
 	}
 	draw_sprite(tile_secret,0,0,funnyx)

@@ -67,7 +67,7 @@ if (global.collectN > global.collect)
 			sprite_index = spr_rankNP
 	}
 }
-if(!global.showrank){
+if(!global.showrank) {
 	sprite_index = spr_rankEGGPLANT
 }
 if instance_exists(obj_treasureviewer)

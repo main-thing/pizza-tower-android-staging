@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_enemy_ghostpossess",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "States",
-    "path": "folders/Scripts/Enemies/States.yy",
+    "path": "folders/Objects/Game settings/Scripts/Enemies/States.yy",
   },
 }

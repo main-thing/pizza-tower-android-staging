@@ -24,7 +24,7 @@ function scr_player_climbwall()
 				sprite_index = spr_clingwall
 			if (!finalmoveset) 
 			{
-				if(character != "S"){
+				if(character != "S") {
 					if ((!key_attack) && (!skateboarding))
 					{
 						state = states.normal
@@ -44,7 +44,7 @@ function scr_player_climbwall()
 			} else {
 				if (grabclimbbuffer > 0)
 					grabclimbbuffer--;
-				if(character != "S"){
+				if(character != "S") {
 					if (!key_attack && !skateboarding && grabclimbbuffer == 0)
 					{
 						state =	states.normal;

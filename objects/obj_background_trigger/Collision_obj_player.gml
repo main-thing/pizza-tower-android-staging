@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if(!has_touched_player){
+if(!has_touched_player) {
 	var lay_id = layer_get_id(layer_name)
 	var lay_id2 = layer_get_id(layer_name_still)
 	if(!layer_exists(lay_id))

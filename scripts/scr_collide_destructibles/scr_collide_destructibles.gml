@@ -105,7 +105,7 @@ function scr_collide_destructibles()
 					}
 				}
 			}
-			if(finalmoveset){
+			if(finalmoveset) {
 				if (state == states.firemouth)
 					{
 						with (instance_place(x + xscale, y, obj_tntblock))

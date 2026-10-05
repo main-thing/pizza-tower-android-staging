@@ -28,7 +28,7 @@ function state_player_normal()
 		if (!instance_exists(obj_beatbox))
 		{
 			instance_create(x, y, obj_genericpoofeffect)
-			with (instance_create(x, y, obj_beatbox)){
+			with (instance_create(x, y, obj_beatbox)) {
 				vsp = -11
 				targetplayer = other.object_index
 				switch (other.character)
@@ -79,8 +79,8 @@ function state_player_normal()
 				sprite_index = spr_pistolwalk
 			else if mort
 				sprite_index = spr__mortwalk
-			else if(taunt_key && canbreakdance){
-				if(!shotgunAnim){
+			else if(taunt_key && canbreakdance) {
+				if(!shotgunAnim) {
 					sprite_index = spr_breakdance
 				}
 			}
@@ -149,8 +149,8 @@ function state_player_normal()
 						sprite_index = spr_player_pistolidle
 					else if mort
 						sprite_index = spr__mortidle
-					else if(taunt_key && canbreakdance){
-							if(!shotgunAnim){
+					else if(taunt_key && canbreakdance) {
+							if(!shotgunAnim) {
 								sprite_index = spr_breakdance
 						}
 					}	
@@ -170,8 +170,8 @@ function state_player_normal()
 					idle = 0
 					windingAnim--
 					sprite_index = spr_winding
-					if((taunt_key)){
-						if(canbreakdance && !shotgunAnim){
+					if((taunt_key)) {
+						if(canbreakdance && !shotgunAnim) {
 							sprite_index = spr_breakdance
 						}
 					}
@@ -181,8 +181,8 @@ function state_player_normal()
 			{
 				windingAnim = 0
 				sprite_index = spr_facehurt
-				if(taunt_key){
-					if(canbreakdance && !shotgunAnim){
+				if(taunt_key) {
+					if(canbreakdance && !shotgunAnim) {
 						sprite_index = spr_breakdance
 					}
 				}
@@ -274,7 +274,7 @@ function state_player_normal()
 	}
 	if grounded
 	{
-		if(!finalmoveset){
+		if(!finalmoveset) {
 			if ((key_jump or (input_buffer_jump < 8 && (!key_attack) && vsp > 0)) && (!key_down))
 			{
 				scr_soundeffect(sfx_jump)
@@ -318,7 +318,7 @@ function state_player_normal()
 	            freefallstart = 0
 	        }
 		}
-		if(character != "S"){
+		if(character != "S") {
 			if (key_down or (grounded && vsp > 0 && scr_solid(x, (y - 3)) && scr_solid(x, y)) or place_meeting(x, y, obj_solid))
 			{
 				state = states.crouch
@@ -363,7 +363,7 @@ function state_player_normal()
 			}
 		}
 	}
-	if(!finalmoveset){
+	if(!finalmoveset) {
 		if (key_shoot2 && shotgunAnim)
 			scr_shotgunshoot()
 		if(character != "S" && character != "V")
@@ -454,7 +454,7 @@ function state_player_normal()
 			    state = states.mach1
 			    image_index = 0
 			}
-			if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && grounded){
+			if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && grounded) {
 				state = states.handstandjump
 				movespeed = 0
 			}

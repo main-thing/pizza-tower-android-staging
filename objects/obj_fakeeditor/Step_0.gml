@@ -40,7 +40,7 @@ else
 			button_name = button_names.grid
 		}
 		
-		with(instance_create_depth(960 - sprite_width * 1.5, 540 - (sprite_height * 2.5), depth, obj_fakeeditor_button)){
+		with(instance_create_depth(960 - sprite_width * 1.5, 540 - (sprite_height * 2.5), depth, obj_fakeeditor_button)) {
 			button_name = button_names.swipe
 		}
 		created_buttons = true;

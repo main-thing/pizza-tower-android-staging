@@ -7,7 +7,7 @@ function scr_player_punch()
 		jumpstop = 0
 		image_speed = 0.4
 		hsp = movespeed
-		if(!finalmoveset){
+		if(!finalmoveset) {
 			if (move != 0)
 			{
 				dir = move

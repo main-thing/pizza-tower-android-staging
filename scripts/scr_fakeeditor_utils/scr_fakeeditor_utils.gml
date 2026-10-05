@@ -153,9 +153,9 @@ function fakeeditor_toggle_swipe()
 		swipemode = !swipemode
 	}
 }
-function fakeeditor_delete_object(){
-	with(obj_fakeeditor){
-		if(instance_exists(transfotip)){
+function fakeeditor_delete_object() {
+	with(obj_fakeeditor) {
+		if(instance_exists(transfotip)) {
 			instance_destroy(transfotip)
 		}
 		transfotip = instance_create(0,0,obj_transfotip)
@@ -564,7 +564,7 @@ function fakeeditor_load_editor_objects(_argument0)
         show_message_async("No input provided")
     else
     {
-		if(os_type == os_android){
+		if(os_type == os_android) {
 			// use png cause of android 14 being too stingy regarding apps to read files.
 			// TODO: Tell the player the existence of this feature.
 			// TODO: Add a file picker, or at least a permission to manage all files and invalidate
@@ -589,7 +589,7 @@ function fakeeditor_load_editor_objects(_argument0)
 							while (i < array_length(var_array))
 				            {
 								var tempvar = variable_struct_get(loadedobject, var_array[i])
-								if(is_string(tempvar)){
+								if(is_string(tempvar)) {
 									if(string_pos("asset|",tempvar) == 1)
 										tempvar = asset_get_index(string_replace(tempvar,"asset|",""))
 								}
@@ -649,7 +649,7 @@ function scr_resize_room(_x,_y,_width,_height)
 		fakeheight = _height
 	}
 	/*
-	with(instance_create(_x,_y,obj_1x1)){
+	with(instance_create(_x,_y,obj_1x1)) {
 		image_xscale = _width
 		image_yscale = _height
 	}

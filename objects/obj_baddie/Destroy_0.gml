@@ -43,6 +43,29 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && ((!elite) or elitehit <= 
 				sprite_index = other.spr_content_dead
 		}
 	}
+	if (object_index == obj_noisesatellite)
+	{
+		repeat (3)
+			instance_create(x, y, obj_slapstar)
+		instance_create(x, y, obj_bossdefeatflash)
+		with (obj_tv)
+		{
+			message = "VICTORY!!!"
+			showtext = 1
+			alarm[0] = 260
+			tvsprite = spr_tvclap
+			image_speed = 0.1
+		}
+		with (obj_player1)
+		{
+			//x = 608
+			//y = 498
+			hsp = 0
+			image_index = 0
+			sprite_index = spr_levelcomplete
+			state = states.bossintro
+		}
+	}
 }
 if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 {

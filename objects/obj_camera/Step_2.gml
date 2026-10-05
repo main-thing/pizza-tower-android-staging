@@ -21,9 +21,12 @@ if (shake_mag > 0)
         shake_mag = 0;
 }
 
-detachedby = -1;
-detach = false;
+targetzoom = min(2.5, targetzoom);
+var nw = lerp(camera_get_view_width(view_camera[0]), targetzoom * original_cam_width, zoomspd);
+var nh = lerp(camera_get_view_height(view_camera[0]), targetzoom * original_cam_height, zoomspd);
+camera_set_view_size(view_camera[0], nw, nh);
 follow_golf = false;
+camera_y = (global.oldhud ? 0 : 50);
 
 if (instance_exists(player) && player.state != states.timesup && player.state != states.gameover && !follow_golf && !detach)
 {
@@ -59,6 +62,7 @@ if (instance_exists(player) && player.state != states.timesup && player.state !=
         
         var cam_width = camera_get_view_width(view_camera[0]);
         var cam_height = camera_get_view_height(view_camera[0]);
+		var vw = camera_get_view_width(view_camera[0]);
         
         if (targetgolf != -4 && !instance_exists(targetgolf))
             targetgolf = -4;
@@ -232,4 +236,25 @@ else if (detach)
     _xx = obj_player1.x - (camera_get_view_width(view_camera[0]) / 2);
     _yy = obj_player1.y - (camera_get_view_height(view_camera[0]) / 2);
     camera_set_view_pos(view_camera[0], _xx, _yy);
+}
+if (obj_player1.state == states.golfOLD)
+{
+	if (obj_player1.key_attack2)
+	{
+		detachedby = 1;
+		detach = !detach;
+	}
+}
+if (obj_player2.state == states.golfOLD && detachedby == -1)
+{
+	if (obj_player2.key_attack2)
+	{
+		detachedby = 2;
+		detach = !detach;
+	}
+}
+if (obj_player1.state != states.golfOLD && obj_player2.state != states.golfOLD)
+{
+	detachedby = -1;
+	detach = 0;
 }

@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if(global.oldhud){
+if(global.oldhud) {
 	showtext = 0
 	tvsprite = spr_tvdefault
 	image_speed = 0.1

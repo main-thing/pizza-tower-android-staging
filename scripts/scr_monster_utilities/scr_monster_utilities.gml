@@ -15,7 +15,7 @@ function scr_monster_activate()
 			image_speed = 0.35
 		}
 	}
-	if(!instance_exists(obj_warshader)){
+	if(!instance_exists(obj_warshader)) {
 		warbg_init()
 	}
 }

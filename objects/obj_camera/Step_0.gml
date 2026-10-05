@@ -4,7 +4,7 @@ if (room == editor_room)
 
 player = (obj_player1.spotlight == true) ? obj_player1 : obj_player2;
 
-if (!instance_exists(obj_pizzaball))
+if (!instance_exists(obj_pizzaballOLD))
     targetgolf = noone;
 
 if (collect_shake > 0)
@@ -119,15 +119,11 @@ if (global.seconds <= 0 && global.minutes <= 0 && ded == false)
     
     ded = true;
 }
-
-camera_y = (global.oldhud ? 0 : 50)
-
 if (global.seconds > 59)
 {
-    global.minutes += 1;
-    global.seconds -= 59;
+	global.minutes += 1;
+	global.seconds -= 59;
 }
-
 if (global.timedgatetimer)
 {
     if (global.timedgatetime > 0)

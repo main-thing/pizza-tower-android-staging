@@ -107,6 +107,6 @@
   },
   "parent": {
     "name": "Old Factory",
-    "path": "folders/Rooms/Unused/Demo Leftovers/Patreon/Old Factory.yy",
+    "path": "folders/Rooms/Unused/Patreon Leftovers/Old Factory.yy",
   },
 }

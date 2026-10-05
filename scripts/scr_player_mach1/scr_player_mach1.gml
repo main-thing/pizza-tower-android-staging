@@ -76,7 +76,7 @@ function scr_player_mach1()
 			image_index = 0
 		}
 	} else {
-		if(move == 0){
+		if(move == 0) {
 			state = states.normal
 			image_index = 0
 		}

@@ -63,8 +63,8 @@ function scr_player_mach3()
 	}
 	if (grounded && vsp > 0)
 		jumpstop = 0
-	if(character != "S"){
-		if(!finalmoveset){
+	if(character != "S") {
+		if(!finalmoveset) {
 			if (input_buffer_jump < 8 && sprite_index != spr_mach3jump && grounded && (!((move == 1 && xscale == -1))) && (!((move == -1 && xscale == 1))))
 			{
 				scr_soundeffect(sfx_jump)
@@ -97,7 +97,7 @@ function scr_player_mach3()
             }
 		}
 	} else {
-		if(!finalmoveset){
+		if(!finalmoveset) {
 			if (input_buffer_jump < 8 && grounded && (!((move == 1 && xscale == -1))) && (!((move == -1 && xscale == 1))))
 			{
 				scr_soundeffect(sfx_jump)
@@ -120,7 +120,7 @@ function scr_player_mach3()
 	{
 		if (sprite_index == spr_mach3jump && floor(image_index) == (image_number - 1))
 			sprite_index = spr_mach4
-		if(finalmoveset){
+		if(finalmoveset) {
 			if (sprite_index == spr_Sjumpcancel && grounded)
 				sprite_index = spr_mach4;
 		}
@@ -190,7 +190,7 @@ function scr_player_mach3()
 	}
 	if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) || scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_mach3solid))) && (!(place_meeting((x + hsp), y, obj_metalblock)))) || (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) || scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_mach3solid))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && place_meeting(x, (y + 1), obj_slope)))
 	{
-		if(!finalmoveset){
+		if(!finalmoveset) {
 			wallspeed = movespeed
 			if (vsp > 0)
 				wallspeed -= vsp
@@ -208,12 +208,12 @@ function scr_player_mach3()
 	if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
 	{
 		wallspeed = movespeed
-		if(finalmoveset){
+		if(finalmoveset) {
 			grabclimbbuffer = 0;
 		}
 		state = states.climbwall
 	}
-	if(!finalmoveset){
+	if(!finalmoveset) {
 		if (key_shoot2 && shotgunAnim)
 			scr_shotgunshoot()
 		if(character != "V" && character != "S")
@@ -232,7 +232,7 @@ function scr_player_mach3()
 			}
 		}
 	} 
-	if(finalmoveset){
+	if(finalmoveset) {
 		if(character != "V" && character != "S")
 		{
 			if (input_buffer_slap > 0 && !key_up && !shotgunAnim && sprite_index != spr_dashpadmach)

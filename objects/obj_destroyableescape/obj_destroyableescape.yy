@@ -40,7 +40,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "escape blocks",
-    "path": "folders/Objects/escape blocks.yy",
+    "name": "Blocks",
+    "path": "folders/Objects/Room structure/Generic/Blocks.yy",
   },
 }

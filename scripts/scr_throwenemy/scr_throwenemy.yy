@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_throwenemy",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Enemies",
-    "path": "folders/Scripts/Enemies.yy",
+    "path": "folders/Objects/Game settings/Scripts/Enemies.yy",
   },
 }

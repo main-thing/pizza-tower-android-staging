@@ -8,7 +8,7 @@ function nsp_execute_script(_a0, _a1) {
 	var nspToken=global.nspToken;
 	var rv,a;
 	//See if any _as are strings and convert if necessary:
-	if(is_array(_a1)){
+	if(is_array(_a1)) {
 		 for(var i=0; i<array_length(_a1); i+=1) {
 			if(is_string(_a1[i])) {
 				if(nsp_is_string(_a1[i])) {
@@ -18,14 +18,14 @@ function nsp_execute_script(_a0, _a1) {
 		 }
 	}
 	//PART 1 (Built-in scripts): ------------------------------------------------------------------------------------------
-	if (is_array(_a1)){
+	if (is_array(_a1)) {
 		a=array_length(_a1)
 	}
 	else {
 		a=0
 	}
-	if(global.___nspforceasync){
-		switch(_a0){
+	if(global.___nspforceasync) {
+		switch(_a0) {
 			case "show_message":
 				_a0 = "show_message_async"
 			break
@@ -43,12 +43,12 @@ function nsp_execute_script(_a0, _a1) {
 			break
 		}
 	}
-	if(global.___nspfunctions[$ string(_a0)] != undefined){
+	if(global.___nspfunctions[$ string(_a0)] != undefined) {
 		// this has to be done as script_execute is REALLY buggy regarding some built-in functions. 
 		// for example tilemap_tileset(tilemap, tilespr) 
 		// which turns into tilemap_tileset() ???
 		/*
-		switch(a){
+		switch(a) {
 			case 0:
 				return global.___nspfunctions[$string(_a0)]()
 			break
@@ -846,7 +846,7 @@ function nsp_execute_script(_a0, _a1) {
 
 	_a0=asset_get_index(_a0);
 
-	 if (is_array(_a1)){
+	 if (is_array(_a1)) {
 		a=array_length(_a1)
 	 }
 	 else{

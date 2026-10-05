@@ -8,7 +8,7 @@ depth = -10
 alarm[0] = 3
 image_speed = 0
 //afterimages = array_create(0);
-if(!global.oldsprites){
+if(!global.oldsprites) {
 	scr_soundeffect(sfx_comboup1, sfx_comboup2, sfx_comboup4)
 	depth = -100;
 	x = 832;

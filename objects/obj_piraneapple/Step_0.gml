@@ -63,4 +63,7 @@ switch state
 			scr_collide()
 		}
 		break
+	case states.hit:
+		scr_enemy_hit()
+		break
 }

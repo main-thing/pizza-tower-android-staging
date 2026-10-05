@@ -1,6 +1,6 @@
 function scr_solid(_a0, _a1)
 {
-	if(!obj_player.finalmoveset){
+	if(!obj_player.finalmoveset) {
 	var old_x = x
 	var old_y = y
 	x = _a0

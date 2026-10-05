@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "cutscene_taxi_start",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Cutscene",
-    "path": "folders/Scripts/Cutscene.yy",
+    "path": "folders/Objects/Game settings/Scripts/Cutscene.yy",
   },
 }

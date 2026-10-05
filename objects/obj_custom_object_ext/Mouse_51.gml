@@ -5,7 +5,7 @@ if(event.global_mouse_right_down[1] != undefined)
 {
 	if(USE_GMLIVE)
 	{
-		if(live_snippet_call(event.global_mouse_right_down[1])){}else{get_string_async("AN ERROR HAS OCCURRED", live_result)}
+		if(live_snippet_call(event.global_mouse_right_down[1])) {}else{get_string_async("AN ERROR HAS OCCURRED", live_result)}
 	}
 	else
 	{

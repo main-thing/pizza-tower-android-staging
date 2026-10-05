@@ -28,26 +28,26 @@ with (obj_baddie)
 {
 	draw_enemy(_kungfu, true)
 }
-with (obj_sprite){
-	if(is_numeric(paletteselect)){
-		if(global.usepaletteshaders){
+with (obj_sprite) {
+	if(is_numeric(paletteselect)) {
+		if(global.usepaletteshaders) {
 			shader_set(global.Pal_Shader)
 			pal_swap_set(spr_palette, paletteselect, 0)
 		}
 	}
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
-	if(is_numeric(paletteselect)){
+	if(is_numeric(paletteselect)) {
 		shader_reset() // why
 	}
 }
-if(global.usepaletteshaders){
+if(global.usepaletteshaders) {
 	shader_set(global.Pal_Shader)
 }
 with (obj_sausageman_dead)
 {
 	if (visible && bbox_in_camera(view_camera[0], 32))
 	{
-		if(global.usepaletteshaders){
+		if(global.usepaletteshaders) {
 			pal_swap_set(spr_palette, paletteselect, 0)
 		}
 		b = get_dark(image_blend, other.use_dark)
@@ -58,7 +58,7 @@ with (obj_heatafterimage)
 {
 	if visible
 	{
-		if(global.usepaletteshaders){
+		if(global.usepaletteshaders) {
 			pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, 0)
 		}
 		draw_sprite_ext(obj_player1.sprite_index, obj_player1.image_index, x, y, obj_player1.xscale, obj_player1.yscale, 1, c_white, alpha)
@@ -68,7 +68,7 @@ with (obj_player2)
 {
 	if (visible && bbox_in_camera(view_camera[0], 32))
 	{
-		if(global.usepaletteshaders){
+		if(global.usepaletteshaders) {
 			pal_swap_set(spr_palette, paletteselect, 0)
 		}
 		b = get_dark(image_blend, other.use_dark)
@@ -79,14 +79,14 @@ with (obj_player1)
 {
 	if (visible && bbox_in_camera(view_camera[0], 32))
 	{
-		if(global.usepaletteshaders){
+		if(global.usepaletteshaders) {
 			pal_swap_set(spr_palette, paletteselect, 0)
 		}
 		b = get_dark(image_blend, other.use_dark)
 		draw_sprite_ext(sprite_index, image_index, x, y, (xscale * scale_xs), (yscale * scale_ys), angle, b, image_alpha)
 	}
 }
-if(global.usehitshaders){
+if(global.usehitshaders) {
 	shader_set(shd_hit)
 }
 with (obj_baddie)
@@ -112,6 +112,6 @@ with (obj_smallnumber)
 	if (visible && flash)
 		draw_text(x, y, number)
 }
-if(global.usehitshaders){
+if(global.usehitshaders) {
 	shader_reset()
 }

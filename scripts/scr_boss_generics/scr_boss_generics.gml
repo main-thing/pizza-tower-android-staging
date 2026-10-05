@@ -1,6 +1,6 @@
 function scr_boss_grabbed()
 {
-	if(!variable_instance_exists(self,"pizzahead")){
+	if(!variable_instance_exists(self,"pizzahead")) {
 		pizzahead = 0
 	}
 	if (pizzahead)

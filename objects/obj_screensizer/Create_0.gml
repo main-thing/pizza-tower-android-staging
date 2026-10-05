@@ -5,7 +5,7 @@ draw_width = 960
 cam_height = 540
 cam_width = 960
 _multi = (display_get_height() / draw_height)
-if(os_type == os_windows){
+if(os_type == os_windows) {
 	surface_resize(application_surface, draw_width, draw_height)
 	camera_set_view_size(view_camera[0], cam_width, cam_height)
 }

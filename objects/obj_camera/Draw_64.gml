@@ -1,43 +1,21 @@
 ADD_OBJECT_EVENT_GML_HOOK;
 if (is_bossroom() or room == editor_room)
 	exit;
-if(instance_exists(obj_fakeeditor)){
-	if(!obj_fakeeditor.in_play_mode){
+if(instance_exists(obj_fakeeditor)) {
+	if(!obj_fakeeditor.in_play_mode) {
 		exit;
 	}
 }
-if(instance_exists(player)){
+if(instance_exists(player)) {
 	key_inv_x = player.key_inv_x
 	key_inv_y = player.key_inv_y
 	hud_x = player.hud_x
 	hud_y = player.hud_y
 }
 if global.kungfu
-{
-	draw_sprite(spr_pizzahealthbar, (global.hp - (sprite_get_number(spr_pizzahealthbar) -1 )) * -1, hp_hud_x, hp_hud_y) // should be dynamic now if anyone needs it.
-	/*
-	if (global.hp == 8)
-		draw_sprite(spr_pizzahealthbar, 0, hp_x, hp_y)
-	else if (global.hp == 7)
-		draw_sprite(spr_pizzahealthbar, 1, hp_x, hp_y)
-	else if (global.hp == 6)
-		draw_sprite(spr_pizzahealthbar, 2, hp_x, hp_y)
-	else if (global.hp == 5)
-		draw_sprite(spr_pizzahealthbar, 3, hp_x, hp_y)
-	else if (global.hp == 4)
-		draw_sprite(spr_pizzahealthbar, 4, hp_x, hp_y)
-	else if (global.hp == 3)
-		draw_sprite(spr_pizzahealthbar, 5, hp_x, hp_y)
-	else if (global.hp == 2)
-		draw_sprite(spr_pizzahealthbar, 6, hp_x, hp_y)
-	else if (global.hp == 1)
-		draw_sprite(spr_pizzahealthbar, 7, hp_x, hp_y)
-	else if (global.hp == 0)
-		draw_sprite(spr_pizzahealthbar, 8, hp_x, hp_y)
-	*/
-}
-if(global.oldhud){
-	if(global.usepaletteshaders){
+	draw_sprite(spr_pizzahealthbar, (global.hp - (sprite_get_number(spr_pizzahealthbar) -1 )) * -1, hp_hud_x, hp_hud_y)
+if(global.oldhud) {
+	if(global.usepaletteshaders) {
 		shader_set(global.Pal_Shader)
 		pal_swap_set(player.spr_palette, player.paletteselect, 0)
 	}
@@ -78,7 +56,12 @@ if(global.oldhud){
 				headspr = player.spr_HUDhappy
 			break
 			case states.tumble:
-				headspr = player.spr_HUDrolling
+				if (player.sprite_index == player.spr_crouchslip || player.sprite_index == player.spr_jumpdive1 || player.sprite_index == player.spr_jumpdive2)
+					headspr = player.spr_HUD
+				else if (player.sprite_index == player.spr_dive || player.sprite_index == player.spr_Sjumpcancelslide || player.sprite_index == player.spr_Sjumpcancelland)
+					headspr = player.spr_HUDmach2
+				else
+					headspr = player.spr_HUDrolling
 			break
 			case states.mach1:
 			case states.chainsaw:
@@ -115,7 +98,7 @@ if(global.oldhud){
 			if(instance_exists(obj_itspizzatime)) headspr = player.spr_HUDscream
 		}
 		draw_head_sprite(headspr)
-		if(global.usepaletteshaders){
+		if(global.usepaletteshaders) {
 			shader_reset()
 		}
 		if(player.speedbarvisible)
@@ -212,7 +195,7 @@ if(global.oldhud){
 			draw_sprite_ext(spr_ranks_hudeggplant, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1)
 		} else {
 			draw_sprite_ext(spr_ranks_hud, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1)
-			if(perc != 1){
+			if(perc != 1) {
 				draw_sprite_part(spr_ranks_hudfill, rank_ix, 0, top, spr_w, (spr_h - top), (rx - spr_xo), ((ry - spr_yo) + top))
 			}
 		}*/
@@ -246,14 +229,14 @@ if (player.state != states.gameover)
 	if (global.heatmetervisible) {
 		draw_sprite_part(player.heatmeter_fillspr, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
 	}
-	if(global.usepaletteshaders){
+	if(global.usepaletteshaders) {
 		shader_set(global.Pal_Shader)
 		pal_swap_set(player.heatmeter_palettespr, global.stylethreshold, 0)
 	}
 	if (global.heatmetervisible) {
 		draw_sprite_ext(player.heatmeterspr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	}
-	if(global.usepaletteshaders){
+	if(global.usepaletteshaders) {
 		shader_reset()
 	}
 	draw_sprite_ext(player.pizzascorespr, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
@@ -316,7 +299,7 @@ if (player.state != states.gameover)
 		draw_sprite_ext(spr_ranks_hudeggplant, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1)
 	} else {
 		draw_sprite_ext(spr_ranks_hud, rank_ix, rx, ry, rank_scale, rank_scale, 0, c_white, 1)
-		if(perc != 1){
+		if(perc != 1) {
 			draw_sprite_part(spr_ranks_hudfill, rank_ix, 0, top, spr_w, (spr_h - top), (rx - spr_xo), ((ry - spr_yo) + top))
 		}
 	}
@@ -362,7 +345,7 @@ if (player.state != states.gameover)
 			color_array[i] = choose(irandom(3))
 		lastcollect = sc
 	}
-	if(global.usepaletteshaders){
+	if(global.usepaletteshaders) {
 		shader_set(global.Pal_Shader)
 	}
 	draw_set_alpha(alpha)
@@ -376,7 +359,7 @@ if (player.state != states.gameover)
 		xx += (w / num)
 	}
 	draw_set_alpha(1)
-	if(global.usepaletteshaders){
+	if(global.usepaletteshaders) {
 		shader_reset()
 	}
 	draw_set_font(global.bigfont)
@@ -385,7 +368,7 @@ if (player.state != states.gameover)
 	if (player.usehp)
 		draw_text((200 + healthshake), (125 + healthshake), global.playerhealth)
 	draw_text(window_get_height() - 50, window_get_width() - 200, "Lap: " + string(global.laps))
-	if(global.oldsprites){
+	if(global.oldsprites) {
 		draw_sprite_ext(spr_inv, -1, key_inv_x, key_inv_y, 1, 1, 1, c_white, alpha)
 		if global.key_inv
 			draw_sprite_ext(spr_key, -1, key_inv_x, key_inv_y, 1, 1, 1, c_white, alpha)

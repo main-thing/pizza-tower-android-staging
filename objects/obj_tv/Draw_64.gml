@@ -10,8 +10,6 @@ if(instance_exists(player))
 {
 	tv_x = player.tv_hud_x
 	tv_y = player.tv_hud_y
-	fake_tv_x = player.fake_tv_hud_x
-	fake_tv_y = player.fake_tv_hud_y
 	tv_bg_sprite = player.tv_bg
 	tv_overlay_sprite = player.tv_empty
 	timer_xstart = player.escapetimer_x
@@ -47,15 +45,19 @@ if(global.oldhud)
 	    draw_set_valign(fa_top)
 		draw_text(852, 75, string_hash_to_newline(global.combo))
 	}
-	if (tvsprite == spr_tvdefault)
+	if (tvsprite == spr_tvdefault && room != strongcold_endscreen && global.miniboss == 0)
 	{
 	    chose = 0
-	    if (room != boss_room1)
+		if (global.coop == 0)
+			draw_text(832, 60, string_hash_to_newline(global.collect));
+		else
 		{
-			draw_set_valign(fa_top)
-	        draw_text(832, 60, string_hash_to_newline(global.collect))
+			draw_text(832, 40, string_hash_to_newline(global.collect));
+			draw_text(832, 80, string_hash_to_newline(global.collectN));
 		}
 	}
+	else if (global.miniboss == 1)
+		draw_text(832, 60, string_hash_to_newline(global.boxhp));
 	
 	if(show_combobar)
 	{

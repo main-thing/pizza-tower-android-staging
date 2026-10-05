@@ -12,8 +12,8 @@ with (obj_player)
 		{
 			if (character != "S")
 			{
-				for (var i = 0; i < sprite_get_number(_debris); i++){
-					with (create_debris(x, y, _debris)){
+				for (var i = 0; i < sprite_get_number(_debris); i++) {
+					with (create_debris(x, y, _debris)) {
 						image_index = i
 						vsp = random_range(-10, -5)
 						hsp = ((-obj_player.xscale) * random_range(4, 8))
@@ -25,7 +25,7 @@ with (obj_player)
 			{
 				repeat (6)
 				{
-					with (create_debris(x, y, spr_metalblockdebris)){
+					with (create_debris(x, y, spr_metalblockdebris)) {
 						image_index = random_range(0, 3);
 						vsp = random_range(-4, 0)
 						hsp = random_range(-4, 4)
@@ -42,7 +42,7 @@ with (obj_player)
 			flash = 1
 			scr_soundeffect(sfx_loseknight)
 		}
-		else if (state == states.barrel){
+		else if (state == states.barrel) {
 			state = states.bump
 			sprite_index = spr_bump
 			image_index = 0

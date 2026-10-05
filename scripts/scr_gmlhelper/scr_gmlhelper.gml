@@ -287,8 +287,8 @@ function struct_create()
 	return {};
 }
 
-function call_alarm(alarmid,delay,instance = noone){
-	if(instance_exists(instance)){
+function call_alarm(alarmid,delay,instance = noone) {
+	if(instance_exists(instance)) {
 		instance.alarm[alarmid] = delay
 	} else {
 		alarm[alarmid] = delay

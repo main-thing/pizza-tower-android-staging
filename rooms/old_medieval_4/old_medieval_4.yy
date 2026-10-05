@@ -99,9 +99,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_118783","properties":[],"isDnd":false,"objectId":{"name":"obj_escapecollect","path":"objects/obj_escapecollect/obj_escapecollect.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1792.0,"y":96.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_118784","properties":[],"isDnd":false,"objectId":{"name":"obj_escapecollect","path":"objects/obj_escapecollect/obj_escapecollect.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1760.0,"y":128.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_118785","properties":[],"isDnd":false,"objectId":{"name":"obj_escapecollect","path":"objects/obj_escapecollect/obj_escapecollect.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1824.0,"y":128.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5E5DF534","properties":[],"isDnd":false,"objectId":{"name":"obj_knightremover","path":"objects/obj_knightremover/obj_knightremover.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":3.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2784.0,"y":320.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3E4E2CA","properties":[],"isDnd":false,"objectId":{"name":"obj_knightremover","path":"objects/obj_knightremover/obj_knightremover.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2592.0,"y":320.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E2C2612","properties":[],"isDnd":false,"objectId":{"name":"obj_knightremover","path":"objects/obj_knightremover/obj_knightremover.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":8.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2336.0,"y":64.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":false,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","tilesetId":{"name":"tileset_medieval_1","path":"tilesets/tileset_medieval_1/tileset_medieval_1.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":88,"SerialiseHeight":22,"TileCompressedData":[
 -42,18,-33,22,-55,18,2,22,51,-29,32,2,53,22,-45,18,-6,22,-4,18,2,22,23,-29,0,2,21,22,-45,18,6,22,51,32,32,53,22,-4,18,2,22,23,-29,0,2,21,22,-45,18,6,22,23,0,0,21,22,-4,18,2,22,23,-29,0,2,21,22,-45,18,6,22,23,0,0,21,22,-4,18,2,22,23,-11,0,3,11,12,13,-15,0,
@@ -198,9 +195,6 @@
     {"name":"inst_118783","path":"rooms/old_medieval_4/old_medieval_4.yy",},
     {"name":"inst_118784","path":"rooms/old_medieval_4/old_medieval_4.yy",},
     {"name":"inst_118785","path":"rooms/old_medieval_4/old_medieval_4.yy",},
-    {"name":"inst_5E5DF534","path":"rooms/old_medieval_4/old_medieval_4.yy",},
-    {"name":"inst_3E4E2CA","path":"rooms/old_medieval_4/old_medieval_4.yy",},
-    {"name":"inst_E2C2612","path":"rooms/old_medieval_4/old_medieval_4.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -224,7 +218,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Pizzascape",
-    "path": "folders/Rooms/Levels/World 1/Pizzascape.yy",
+    "name": "Old Pizzascape",
+    "path": "folders/Rooms/Levels/Old Levels/April 2021/Old Pizzascape.yy",
   },
 }

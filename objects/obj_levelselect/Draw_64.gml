@@ -13,7 +13,7 @@ var c = c_white
 ini_open_from_string(obj_savesystem.ini_str)
 if(_levelinfo[1] != characterselect)
 	draw_text(480, yy - 38, ini_read_real("Highscore", _levelinfo[2], 0))
-if(_levelinfo[1] != characterselect && _levelinfo[1] != dragonlair_1){
+if(_levelinfo[1] != characterselect && _levelinfo[1] != dragonlair_1) {
 	for (var i = 0; i < array_length(toppin_info); i++)
 	{
 		var b = toppin_info[i]
@@ -37,8 +37,8 @@ if _levelinfo[1] != war_1 && _levelinfo[1] != characterselect && _levelinfo[1] !
 	draw_sprite_ext(spr_treasure_eggplant, 0, 637, (yy + 26), 1, 1, 0, c, 1)
 }
 var rank = ini_read_string("Ranks", _levelinfo[2], 0)
-if(_levelinfo[1] != characterselect){
-	switch(rank){
+if(_levelinfo[1] != characterselect) {
+	switch(rank) {
 		case "p":
 			draw_sprite_ext(spr_ranks_hud, 5, 351, (yy + 26), 1, 1, 0, c_white, 1)
 		break

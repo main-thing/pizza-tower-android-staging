@@ -1,13 +1,13 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if(step_event != ""){
-	if(step_event_saved != undefined){
+if(step_event != "") {
+	if(step_event_saved != undefined) {
 		if(USE_GMLIVE)
 		{
-			if(live_snippet_call(step_event_saved)){}else{get_string_async("AN ERROR HAS OCCURRED", live_result)}
+			if(live_snippet_call(step_event_saved)) {}else{get_string_async("AN ERROR HAS OCCURRED", live_result)}
 		}
 		else
 		{
-			if(NSP_check_saved(step_event_saved)){
+			if(NSP_check_saved(step_event_saved)) {
 				try 
 				{
 					NSP_execute_saved(step_event_saved)

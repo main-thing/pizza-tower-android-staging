@@ -3,7 +3,7 @@ function scr_player_skateboard()
 	machhitAnim = 0
 	crouchslideAnim = 1
 	hsp = (xscale * movespeed)
-	if(movespeed < 5){
+	if(movespeed < 5) {
 		movespeed = 5
 	}
 	if key_jump
@@ -19,11 +19,11 @@ function scr_player_skateboard()
 	}
 	if (scr_solid((x + xscale), y))
 	{
-		with (create_debris(x, (y + 10), obj_skateboardebris1)){
+		with (create_debris(x, (y + 10), obj_skateboardebris1)) {
 			vsp = random_range(-5, 0)
 			hsp = -4
 		}
-		with (create_debris(x, (y + 10), obj_skateboardebris2)){
+		with (create_debris(x, (y + 10), obj_skateboardebris2)) {
 			vsp = random_range(-5, 0)
 			hsp = 4
 		}

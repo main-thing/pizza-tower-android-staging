@@ -5,18 +5,18 @@
 // Feather disable all
 
 if(live_enabled)
-function vm_v2_gml_thread_v2_handlers_init_set(l_funcs,l_map,l_name,l_fn){
+function vm_v2_gml_thread_v2_handlers_init_set(l_funcs,l_map,l_name,l_fn) {
 	var l_id=l_map[$ l_name];
 	if(l_id!=undefined)l_funcs[@l_id]=l_fn; else throw gml_std_haxe_Exception_thrown("Can't find "+l_name);
 }
 
 if(live_enabled)
-function vm_v2_gml_thread_v2_handlers_init(){
+function vm_v2_gml_thread_v2_handlers_init() {
 	var l_names=gml_std_Type_getEnumConstructs(mt_gml_action);
 	var l_map={}
 	var l_funcs=array_create(array_length(l_names),undefined);
 	var l_i=0;
-	for(var l__g1=array_length(l_names);l_i<l__g1;l_i++){
+	for(var l__g1=array_length(l_names);l_i<l__g1;l_i++) {
 		var l_name=l_names[l_i];
 		if(gml_std_StringTools_endsWith(l_name,"_hx"))l_name=gml_std_string_substring(l_name,0,string_length(l_name)-3);
 		l_map[$ l_name]=l_i;
@@ -148,12 +148,12 @@ function vm_v2_gml_thread_v2_handlers_init(){
 }
 
 if(live_enabled)
-function vm_v2_gml_thread_v2_ready(){
+function vm_v2_gml_thread_v2_ready() {
 	vm_v2_gml_thread_v2_handlers=vm_v2_gml_thread_v2_handlers_init();
 }
 
 if(live_enabled)
-function vm_v2_gml_thread_v2_on_unknown(l_th,l_act,l_scope,l_st){
+function vm_v2_gml_thread_v2_on_unknown(l_th,l_act,l_scope,l_st) {
 	l_th.h_proc_error("Can't execute "+gml_std_Type_enumConstructor(l_act),l_act);
 	return 1;
 }

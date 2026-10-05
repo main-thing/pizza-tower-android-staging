@@ -7,7 +7,7 @@ if(event.draw[1] != undefined)
 {
 	if(USE_GMLIVE)
 	{
-		if(live_snippet_call(event.draw[1])){}else{get_string_async("AN ERROR HAS OCCURRED", live_result)}
+		if(live_snippet_call(event.draw[1])) {}else{get_string_async("AN ERROR HAS OCCURRED", live_result)}
 	}
 	else
 	{

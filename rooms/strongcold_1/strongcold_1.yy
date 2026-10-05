@@ -96,6 +96,6 @@
   },
   "parent": {
     "name": "Strongcold",
-    "path": "folders/Rooms/Levels/Old Levels/April 2021/Strongcold.yy",
+    "path": "folders/Rooms/Levels/Old Levels/Scrapped/Strongcold.yy",
   },
 }

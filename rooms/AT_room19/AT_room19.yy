@@ -163,7 +163,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Floor 2",
-    "path": "folders/Rooms/Levels/Old Levels/Scrapped/Ancient Tower/Floor 2.yy",
+    "name": "Ancient Tower",
+    "path": "folders/Rooms/Levels/Old Levels/Scrapped/Ancient Tower.yy",
   },
 }

@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_player_machslide",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "States",
-    "path": "folders/Scripts/Player/States.yy",
+    "path": "folders/Objects/Game settings/Scripts/Player/States.yy",
   },
 }

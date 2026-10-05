@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_pizzaball_normal",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Pizzaball States",
-    "path": "folders/Scripts/Pizzaball States.yy",
+    "path": "folders/Objects/Game settings/Scripts/Pizzaball States.yy",
   },
 }

@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "nsp_dsm_get",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "DSM",
-    "path": "folders/Scripts/N String Parser v2_6_6/Setters and Getters/DSM.yy",
+    "path": "folders/Objects/Game settings/Scripts/N String Parser v2_6_6/Setters and Getters/DSM.yy",
   },
 }

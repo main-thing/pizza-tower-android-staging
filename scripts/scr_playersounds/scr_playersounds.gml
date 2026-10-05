@@ -85,6 +85,8 @@ function scr_playersounds()
 			audio_stop_sound(tumble2snd)
 			audio_stop_sound(tumble3snd)
 		}
+		if (audio_is_playing(suplexdashsnd) && state != states.handstandjump)
+			audio_stop_sound(suplexdashsnd);
 		if(finalmoveset)
 		{
 			if (audio_is_playing(longjumpsnd) && state != states.mach2)

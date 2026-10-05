@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "nsp_string_crop_ext",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "String Format",
-    "path": "folders/Scripts/N String Parser v2_6_6/String Format.yy",
+    "path": "folders/Objects/Game settings/Scripts/N String Parser v2_6_6/String Format.yy",
   },
 }

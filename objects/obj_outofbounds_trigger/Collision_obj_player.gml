@@ -1,4 +1,4 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-with(other){
+with(other) {
 	scr_outofbounds()
 }

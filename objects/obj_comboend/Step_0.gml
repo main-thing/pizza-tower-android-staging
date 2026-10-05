@@ -11,8 +11,7 @@ else
 		comboscore -= round(combominus)
 		if (comboscore < 0)
 			comboscore = 0
-		if (!global.oldhud)
-			create_collect(obj_player1.x, (obj_player1.y - 100), choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect))
+		create_collect(obj_player1.x, (obj_player1.y - 100), choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect))
 	}
 	else if (alarm[1] == -1)
 		alarm[1] = 50

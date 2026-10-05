@@ -10,7 +10,6 @@ with(obj_player)
 {
 	hud_y = -100;
 	tv_hud_y = -100;
-	fake_tv_hud_y = -100;
 	x = obj_doorA.x
 	y = obj_doorA.y
 }

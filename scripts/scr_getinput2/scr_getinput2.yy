@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "scr_getinput2",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
     "name": "Input",
-    "path": "folders/Scripts/Input.yy",
+    "path": "folders/Objects/Game settings/Scripts/Input.yy",
   },
 }

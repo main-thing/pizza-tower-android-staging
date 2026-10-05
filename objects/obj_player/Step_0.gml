@@ -872,7 +872,7 @@ if (object_index == obj_player1)
 }
 if (key_jump && (!grounded) && (state == states.mach2 or state == states.mach3) && (state != (states.climbwall & walljumpbuffer)) <= 0)
 	input_buffer_walljump = 24
-if(!finalmoveset){
+if(!finalmoveset) {
 	if (input_buffer_jump < 8)
 		input_buffer_jump++
 	if (input_buffer_slap < 8)
@@ -903,7 +903,7 @@ if (input_buffer_walljump > 0)
 	input_buffer_walljump--
 if (key_particles == 1)
 	create_particle((x + random_range(-25, 25)), (y + random_range(-35, 25)), particle.keyparticles, 0)
-if(finalmoveset){
+if(finalmoveset) {
 	if ((state != states.ratmount) && (state != states.ratmountjump) && (state != states.chainsaw))
 	{
 	    gustavodash = 0
@@ -959,7 +959,7 @@ if (ladderbuffer > 0)
 	ladderbuffer--
 if (state != states.jump)
 	stompAnim = 0
-if(!finalmoveset){
+if(!finalmoveset) {
 	if (state == states.mach3 or state == states.mach2 or ratmount_movespeed == 12)
 	{
 		if (macheffect == 0)

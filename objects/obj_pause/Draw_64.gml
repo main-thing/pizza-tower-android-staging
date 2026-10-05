@@ -19,7 +19,7 @@ if pause
 	}
 	xx = 256
 	yy = 192
-	if(global.usepaletteshaders){
+	if(global.usepaletteshaders) {
 		shader_set(global.Pal_Shader)
 		pal_swap_set(spr_palette, paletteselect, 0)
 		draw_sprite(peppino_sprite, peppino_index, xx, yy)
