@@ -14,7 +14,7 @@ if place_meeting(x, (y + 1), obj_railparent)
 if (vsp < 12)
 	vsp += grav
 if (countdown < 50)
-	sprite_index = spr_bomblit
+	sprite_index = bomblit_spr
 if (countdown == 0)
 	instance_destroy()
 if scr_solid((x + floor(hsp)), y)

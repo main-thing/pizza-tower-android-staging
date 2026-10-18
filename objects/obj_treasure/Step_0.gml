@@ -23,7 +23,7 @@ if (player == 0 && place_meeting(x, y, obj_player))
 				treasure_y = y
 				treasure_room = room
 				global.combotime = 60
-				if(grounded || !global.oldsprites)
+				if (grounded || !global.oldsprites)
 				{
 					ds_list_add(global.saveroom, other.id)
 					global.treasure = 1

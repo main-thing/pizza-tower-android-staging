@@ -3,6 +3,11 @@ if (floor(image_index) == 2 && canthrowbomb == 1)
 {
 	with (instance_create((x + (image_xscale * 10)), (y - 20), obj_pizzagoblinbomb))
 	{
+		old = 1
+		countdown = 120
+		bomblit_spr = spr_bomblit1
+		sprite_index = spr_bomb1
+		mask_index = spr_bomb1
 		hsp = (other.image_xscale * 4)
 		vsp = -5
 	}

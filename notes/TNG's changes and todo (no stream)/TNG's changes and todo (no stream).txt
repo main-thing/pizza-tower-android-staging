@@ -91,6 +91,17 @@ fix piraneapples
 fix at hallways
 fix it
 - read the changelogs and see what you didnt do
-
+- snckexe
+- ancient tower noise shit
+-finish old hud like bnf code and stuff
+- make times up change a global variable
+-split oldassets add more options
+- try to clean up code and such and organize folders and more and clean up sprites and yeah and remove custom stuff also theres 2 noises PLEASE FIX ETB rganize off western source code
+gustavoswitch scirpt shit
+remove pizzahead supergrab all boss leftovers
+flip enemy optionbut probably not getting added lmao
+ask main if we can just get rid of turning shaders off because why
+- war secrets? clock times? ewhatever?
+- consider old level
 potentially:
 - offsets for noise's parry sprites? consider

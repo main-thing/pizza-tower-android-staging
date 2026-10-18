@@ -16,7 +16,7 @@ if (hitbox == 0)
 		visible = false
 		mask_index = spr_ratmountgroundpound
 		image_index = other.image_index
-		brickid = other.id
+		brickid = other
 		other.hitbox = 1
 	}
 }

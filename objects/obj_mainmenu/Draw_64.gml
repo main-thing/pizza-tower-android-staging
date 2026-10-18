@@ -97,7 +97,7 @@ if(newstuff) {
 	draw_text_ext(80, 90 + stringoffset, textstring, 36, 1600)
 	draw_sprite_ext(spr_virtual_controller, 0, 38, 432, 1, 1, 0, c_white, 0.5)
 	draw_sprite_ext(spr_virtual_controller, 0, 38, 498, 1, 1, 180, c_white, 0.5)
-	draw_sprite_ext(spr_button_escape, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5)
+	draw_sprite_ext(spr_button_escape_big, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5)
 	exit;
 }
 // TODO: replace with new credits
@@ -121,7 +121,7 @@ if(credits) {
 	//draw_sprite(spr_emptyicon, 0, 2356 * 0.25, 1080 * 0.37)
 	//draw_sprite(spr_treasure_eggplant, 0, 2356 * 0.27 - 66, 1080 * 0.37 + 6)
 	//draw_sprite(spr_roomnamebg, 0, 2356 * 0.21, 1080 * 0.45)
-	draw_sprite_ext(spr_button_escape, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5)
+	draw_sprite_ext(spr_button_escape_big, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5)
 		
 	//draw_set_font(global.bigfont)
 	//draw_text(2356 * 0.21, 1080 * 0.458, "CREDITS")

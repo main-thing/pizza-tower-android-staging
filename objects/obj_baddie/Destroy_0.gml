@@ -45,6 +45,11 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && ((!elite) or elitehit <= 
 	}
 	if (object_index == obj_noisesatellite)
 	{
+		if (play_music)
+		{
+			audio_stop_all()
+			scr_soundeffect(mu_transition)
+		}
 		repeat (3)
 			instance_create(x, y, obj_slapstar)
 		instance_create(x, y, obj_bossdefeatflash)
@@ -58,8 +63,16 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && ((!elite) or elitehit <= 
 		}
 		with (obj_player1)
 		{
-			//x = 608
-			//y = 498
+			var noise_x = (x + xscale * 662)
+			var noise_y = y
+			if (room == AT_roomboss)
+			{
+				x = 608
+				y = 498
+				noise_y += 71
+			}
+			instance_destroy(obj_wave)
+			instance_create(noise_x, noise_y, obj_noise_pushbutton)
 			hsp = 0
 			image_index = 0
 			sprite_index = spr_levelcomplete

@@ -29,17 +29,20 @@ if (!global.panic)
 		audio_sound_gain(pillarmusicID, 0, 0)
 	}
 }
-if secret
+if (!instance_exists(obj_randomsecret))
 {
-	secretmusicID = scr_music(secretmusic)
-	audio_sound_set_track_position(secretmusicID, audio_sound_get_track_position(musicID))
-	audio_pause_sound(musicID)
-}
-else if secretend
-{
-	secretend = 0
-	audio_resume_sound(musicID)
-	audio_stop_sound(secretmusicID)
+	if secret
+	{
+		secretmusicID = scr_music(secretmusic)
+		audio_sound_set_track_position(secretmusicID, audio_sound_get_track_position(musicID))
+		audio_pause_sound(musicID)
+	}
+	else if secretend
+	{
+		secretend = 0
+		audio_resume_sound(musicID)
+		audio_stop_sound(secretmusicID)
+	}
 }
 if (room == rank_room)
 {

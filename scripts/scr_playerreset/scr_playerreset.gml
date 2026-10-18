@@ -25,6 +25,7 @@ function scr_playerreset()
 		alarm[4] = -1
 	if (!global.levelreset)
 	{
+		instance_destroy(obj_randomsecret)
 		instance_destroy(obj_deliverytimer)
 		instance_destroy(obj_wartimer)
 		with (obj_cutscene_handler)

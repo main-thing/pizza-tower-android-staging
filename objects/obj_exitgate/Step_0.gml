@@ -1,5 +1,5 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-if (global.panic == true)
+if (global.panic == true or random_secret)
 	image_index = 1
 if (drop && global.panic)
 {

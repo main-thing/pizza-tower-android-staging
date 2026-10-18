@@ -1,2 +1,1 @@
-ADD_OBJECT_EVENT_GML_HOOK;
 live_async_http();

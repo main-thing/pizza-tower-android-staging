@@ -10,7 +10,7 @@ world_array[1] = "WORLD 2"
 world_array[2] = "WORLD 3"
 world_array[3] = "WORLD 4"
 world_array[4] = "WORLD 5"
-world_array[5] = "SPECIAL"
+world_array[5] = "EXTRAS"
 world_array[6] = "APRIL 2021"
 world_array[7] = "SCRAPPED"
 
@@ -34,7 +34,7 @@ level_array[4][0] = ["PIZZASCARE", chateau_1, "chateau"]
 level_array[4][1] = ["KIDS PARTY", kidsparty_1, "kidsparty"]
 level_array[4][2] = ["WAR", war_1, "war"]
 
-level_array[5][0] = ["CHARACTER SELECT", characterselect, "characterselect"]
+level_array[5][0] = ["SECRETS OF THE WORLD", secret_entrance, "secretworld"]
 level_array[5][1] = ["ENEMY TEST", rm_swedish, "rm_swedish"]
 level_array[5][2] = ["EDITOR", rm_editor_new, "rm_editor_new"]
 level_array[5][3] = ["LEGACY EDITOR", rm_editor_big, "rm_editor_big"]

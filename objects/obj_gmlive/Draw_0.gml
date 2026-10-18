@@ -1,4 +1,3 @@
-ADD_OBJECT_EVENT_GML_HOOK;
 /// @description An example
 if (live_call()) return live_result;
 /*

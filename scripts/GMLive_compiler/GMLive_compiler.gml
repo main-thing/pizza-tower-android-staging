@@ -6,17 +6,17 @@
 
 // converts AST to "instructions"!
 if(live_enabled)
-function gml_compile_error(l_text,l_pos) {
+function gml_compile_error(l_text,l_pos){
 	gml_compile_error_text=gml_pos_to_string(l_pos,gml_compile_curr_program)+" "+l_text;
 	gml_compile_error_pos=l_pos;
 	return true;
 }
 
 if(live_enabled)
-function gml_compile_const_val_of(l_q) {
+function gml_compile_const_val_of(l_q){
 	var l__g=l_q;
 	var l_tmp;
-	switch(l__g.__enumIndex__) {
+	switch(l__g.__enumIndex__){
 		case 0:l_tmp=undefined;break;
 		case 2:l_tmp=l__g.h_value;break;
 		case 3:l_tmp=l__g.h_value;break;
@@ -29,9 +29,9 @@ function gml_compile_const_val_of(l_q) {
 }
 
 if(live_enabled)
-function gml_compile_set_handlers(l_fn,l_defNames) {
+function gml_compile_set_handlers(l_fn,l_defNames){
 	var l__g=0;
-	while(l__g<array_length(l_defNames)) {
+	while(l__g<array_length(l_defNames)){
 		var l_defName=l_defNames[l__g];
 		l__g++;
 		var l_i=gml_compile_def_indexes.h_obj[$ l_defName];
@@ -42,12 +42,12 @@ function gml_compile_set_handlers(l_fn,l_defNames) {
 }
 
 if(live_enabled)
-function gml_compile_init() {
+function gml_compile_init(){
 	gml_compile_def_indexes=new haxe_ds_string_map();
 	var l_names=gml_std_Type_getEnumConstructs(mt_gml_node);
 	var l__g_current=0;
 	var l__g_array=l_names;
-	while(l__g_current<array_length(l__g_array)) {
+	while(l__g_current<array_length(l__g_array)){
 		var l_name=l__g_array[l__g_current];
 		var l_i=l__g_current++;
 		if(gml_std_StringTools_endsWith(l_name,"_hx"))l_name=gml_std_string_substring(l_name,0,string_length(l_name)-3);
@@ -63,15 +63,15 @@ function gml_compile_init() {
 }
 
 if(live_enabled)
-function gml_compile_node(l_q,l_actions,l_out) {
+function gml_compile_node(l_q,l_actions,l_out){
 	var l_h=gml_compile_handlers[l_q.__enumIndex__];
-	if(l_h!=undefined) {
+	if(l_h!=undefined){
 		var l_z=l_h(l_q,l_actions,l_out);
 		if(l_z!=undefined)return l_z;
 	}
 	var l_x,l_x2,l_w,l_i,l_k,l_z,l_n,l_p0,l_p1,l_p2,l_p3,l_pc,l_pb,l_s,l_v,l_d,l_o,l_fn,l_fn2;
 	var l__g=l_q;
-	switch(l__g.__enumIndex__) {
+	switch(l__g.__enumIndex__){
 		case 8:ds_list_add(l_actions,gml_action_ensure_array_for_local(l__g.h_d,gml_compile_curr_script.h_local_map[$ l__g.h_name]));break;
 		case 9:ds_list_add(l_actions,gml_action_ensure_array_for_global(l__g.h_d,l__g.h_name));break;
 		case 10:
@@ -89,7 +89,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 		case 42:
 			var l__field=l__g.h_fd;
 			var l__g1=l__field;
-			if(l__g1.__enumIndex__==3) {
+			if(l__g1.__enumIndex__==3){
 				if(gml_compile_node(l__g.h_obj,l_actions,true))return true;
 				ds_list_add(l_actions,gml_action_in_const(l__g.h_d,l__g1.h_value,l__g.h_not));
 			} else {
@@ -111,7 +111,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			var l_s=l__g.h_field;
 			var l_fastGetter=gml_compile_curr_program.h_get_fast_getter(l_s);
 			var l__g1=l_x1;
-			switch(l__g1.__enumIndex__) {
+			switch(l__g1.__enumIndex__){
 				case 14:if(l_fastGetter!=undefined)ds_list_add(l_actions,gml_action_fast_self_field(l__g.h_d,l_fastGetter)); else ds_list_add(l_actions,gml_action_self_field(l__g.h_d,l_s));break;
 				case 43:
 					var l_i1=gml_compile_curr_script.h_local_map[$ l__g1.h_name];
@@ -127,7 +127,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			var l_s=l__g.h_field;
 			var l_fastSetter=gml_compile_curr_program.h_get_fast_setter(l_s);
 			var l__g1=l_x1;
-			switch(l__g1.__enumIndex__) {
+			switch(l__g1.__enumIndex__){
 				case 14:
 					if(gml_compile_node(l__g.h_val,l_actions,true))return true;
 					if(l_fastSetter!=undefined)ds_list_add(l_actions,gml_action_fast_self_field_set(l__g.h_d,l_fastSetter)); else ds_list_add(l_actions,gml_action_self_field_set(l__g.h_d,l_s));
@@ -148,7 +148,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			var l_fastGetter=gml_compile_curr_program.h_get_fast_getter(l_s);
 			var l_fastSetter=gml_compile_curr_program.h_get_fast_setter_after_getter(l_s);
 			var l__g1=l_x1;
-			switch(l__g1.__enumIndex__) {
+			switch(l__g1.__enumIndex__){
 				case 14:
 					if(gml_compile_node(l__g.h_val,l_actions,true))return true;
 					if(l_fastGetter!=undefined&&l_fastSetter!=undefined)ds_list_add(l_actions,gml_action_fast_self_field_aop(l__g.h_d,l__g.h_op,l_fastGetter,l_fastSetter)); else ds_list_add(l_actions,gml_action_self_field_aop(l__g.h_d,l__g.h_op,l_s));
@@ -210,7 +210,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			l_x=l__g.h_a;
 			l_x2=l__g.h_b;
 			var l__g1=l_x;
-			switch(l__g1.__enumIndex__) {
+			switch(l__g1.__enumIndex__){
 				case 20:
 					l_i=l__g1.h_index;
 					if(gml_compile_node(l_x2,l_actions,true))return true;
@@ -235,7 +235,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			l_d=l__g.h_d;
 			l_w=l__g.h_args;
 			l_n=array_length(l_w);
-			for(l_i=0;l_i<l_n;l_i++) {
+			for(l_i=0;l_i<l_n;l_i++){
 				if(gml_compile_node(l_w[l_i],l_actions,true))return true;
 			}
 			ds_list_add(l_actions,gml_action_call_script(l_d,gml_compile_curr_program.h_script_map[$ l__g.h_name],l_n));
@@ -246,7 +246,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			l_w=l__g.h_args;
 			l_n=array_length(l_w);
 			if(gml_compile_node(l__g.h_index,l_actions,true))return true;
-			for(l_i=0;l_i<l_n;l_i++) {
+			for(l_i=0;l_i<l_n;l_i++){
 				if(gml_compile_node(l_w[l_i],l_actions,true))return true;
 			}
 			ds_list_add(l_actions,gml_action_call_script_id(l_d,l_n));
@@ -257,7 +257,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			if(gml_compile_node(l__g.h_obj,l_actions,true))return true;
 			l_w=l__g.h_args;
 			l_n=array_length(l_w);
-			for(l_i=0;l_i<l_n;l_i++) {
+			for(l_i=0;l_i<l_n;l_i++){
 				gml_compile_node(l_w[l_i],l_actions,true);
 			}
 			ds_list_add(l_actions,gml_action_call_field(l_d,l__g.h_field,l_n));
@@ -268,7 +268,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			if(gml_compile_node(l__g.h_expr,l_actions,true))return true;
 			l_w=l__g.h_args;
 			l_n=array_length(l_w);
-			for(l_i=0;l_i<l_n;l_i++) {
+			for(l_i=0;l_i<l_n;l_i++){
 				gml_compile_node(l_w[l_i],l_actions,true);
 			}
 			ds_list_add(l_actions,gml_action_call_field(l_d,l__g.h_fname,l_n));
@@ -279,7 +279,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			l_w=l__g.h_args;
 			l_n=array_length(l_w);
 			if(gml_compile_node(l__g.h_ctr,l_actions,true))return true;
-			for(l_i=0;l_i<l_n;l_i++) {
+			for(l_i=0;l_i<l_n;l_i++){
 				if(gml_compile_node(l_w[l_i],l_actions,true))return true;
 			}
 			ds_list_add(l_actions,gml_action_construct(l_d,l_n));
@@ -300,9 +300,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 		case 95:
 			l_w=l__g.h_nodes;
 			l_n=array_length(l_w);
-			if(l_n>0) {
+			if(l_n>0){
 				l_n--;
-				for(l_i=0;l_i<l_n;l_i++) {
+				for(l_i=0;l_i<l_n;l_i++){
 					if(gml_compile_node(l_w[l_i],l_actions,false))return true;
 				}
 				if(gml_compile_node(l_w[l_i],l_actions,l_out))return true;
@@ -315,7 +315,7 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			l_i=ds_list_size(l_actions);
 			ds_list_add(l_actions,gml_action_jump_unless(l_d,0));
 			if(gml_compile_node(l__g.h_then,l_actions,false))return true;
-			if(l_x!=undefined) {
+			if(l_x!=undefined){
 				l_n=ds_list_size(l_actions);
 				ds_list_add(l_actions,gml_action_jump(l_d,0));
 				ds_list_set(l_actions,l_i,gml_action_jump_unless(l_d,ds_list_size(l_actions)));
@@ -361,9 +361,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			ds_list_add(l_actions,gml_action_repeat_jump(l_d,l_p0));
 			l_p2=ds_list_size(l_actions);
 			ds_list_add(l_actions,gml_action_discard(l_d));
-			for(l_k=l_p0;l_k<l_p2;l_k++) {
+			for(l_k=l_p0;l_k<l_p2;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				switch(l__g1.__enumIndex__) {
+				switch(l__g1.__enumIndex__){
 					case 105:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p1));break;
 					case 104:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p2));break;
 				}
@@ -386,9 +386,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			ds_list_add(l_actions,gml_action_jump(l_d,l_p0));
 			l_p2=ds_list_size(l_actions);
 			ds_list_set(l_actions,l_p1,gml_action_jump_unless(l_d,l_p2));
-			for(l_k=l_p1;l_k<l_p2;l_k++) {
+			for(l_k=l_p1;l_k<l_p2;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				switch(l__g1.__enumIndex__) {
+				switch(l__g1.__enumIndex__){
 					case 105:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p0));break;
 					case 104:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p2));break;
 				}
@@ -409,9 +409,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			var l__g1=l_q;
 			if((l__g1.__enumIndex__==102))ds_list_add(l_actions,gml_action_jump_unless(l_d,l_p0)); else ds_list_add(l_actions,gml_action_jump_if(l_d,l_p0));
 			l_p2=ds_list_size(l_actions);
-			for(l_k=l_p0;l_k<l_p1;l_k++) {
+			for(l_k=l_p0;l_k<l_p1;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				switch(l__g1.__enumIndex__) {
+				switch(l__g1.__enumIndex__){
 					case 105:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p1));break;
 					case 104:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p2));break;
 				}
@@ -432,9 +432,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			var l__g1=l_q;
 			if((l__g1.__enumIndex__==102))ds_list_add(l_actions,gml_action_jump_unless(l_d,l_p0)); else ds_list_add(l_actions,gml_action_jump_if(l_d,l_p0));
 			l_p2=ds_list_size(l_actions);
-			for(l_k=l_p0;l_k<l_p1;l_k++) {
+			for(l_k=l_p0;l_k<l_p1;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				switch(l__g1.__enumIndex__) {
+				switch(l__g1.__enumIndex__){
 					case 105:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p1));break;
 					case 104:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p2));break;
 				}
@@ -462,9 +462,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			ds_list_add(l_actions,gml_action_jump(l_d,l_p0));
 			l_p3=ds_list_size(l_actions);
 			ds_list_set(l_actions,l_p1,gml_action_jump_unless(l_d,l_p3));
-			for(l_k=l_p1;l_k<l_p3;l_k++) {
+			for(l_k=l_p1;l_k<l_p3;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				switch(l__g1.__enumIndex__) {
+				switch(l__g1.__enumIndex__){
 					case 105:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p2));break;
 					case 104:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p3));break;
 				}
@@ -477,23 +477,23 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			if(gml_compile_node(l__g.h_expr,l_actions,true))return true;
 			l_p0=ds_list_size(l_actions);
 			l_n=array_length(l__cc);
-			for(l_i=0;l_i<l_n;l_i++) {
+			for(l_i=0;l_i<l_n;l_i++){
 				var l__cv=l__cc[l_i].values;
 				l_z=array_length(l__cv);
-				for(l_k=0;l_k<l_z;l_k++) {
+				for(l_k=0;l_k<l_z;l_k++){
 					if(gml_node_tools_to_case_value(l__cv[l_k])==undefined)break;
 				}
 				if(l_k<l_z)break;
 			}
-			if(l_i<l_n) {
+			if(l_i<l_n){
 				var l_caseLabels=[];
 				l_pb=gml_compile_curr_break;
 				gml_compile_curr_break=l_p0;
-				for(l_i=0;l_i<l_n;l_i++) {
+				for(l_i=0;l_i<l_n;l_i++){
 					var l__cv=l__cc[l_i].values;
 					l_z=array_length(l__cv);
 					var l_cl1=[];
-					for(l_k=0;l_k<l_z;l_k++) {
+					for(l_k=0;l_k<l_z;l_k++){
 						if(gml_compile_node(l__cv[l_k],l_actions,true))return true;
 						l_cl1[@l_k]=ds_list_size(l_actions);
 						ds_list_add(l_actions,gml_action_switch_case(l_d,0));
@@ -503,17 +503,17 @@ function gml_compile_node(l_q,l_actions,l_out) {
 				ds_list_add(l_actions,gml_action_discard(l_d));
 				var l_defCasePos=ds_list_size(l_actions);
 				ds_list_add(l_actions,gml_action_jump(l_d,0));
-				for(l_i=0;l_i<l_n;l_i++) {
+				for(l_i=0;l_i<l_n;l_i++){
 					var l_cl1=l_caseLabels[l_i];
 					l_z=array_length(l_cl1);
-					for(l_k=0;l_k<l_z;l_k++) {
+					for(l_k=0;l_k<l_z;l_k++){
 						ds_list_set(l_actions,l_cl1[l_k],gml_action_switch_case(l_d,ds_list_size(l_actions)));
 					}
 					if(gml_compile_node(l__cc[l_i].expr,l_actions,false))return true;
 				}
 				ds_list_set(l_actions,l_defCasePos,gml_action_jump(l_d,ds_list_size(l_actions)));
 				l_x=l__g.h_def;
-				if(l_x!=undefined) {
+				if(l_x!=undefined){
 					if(gml_compile_node(l_x,l_actions,false))return true;
 				}
 				gml_compile_curr_break=l_pb;
@@ -522,26 +522,26 @@ function gml_compile_node(l_q,l_actions,l_out) {
 				l_pb=gml_compile_curr_break;
 				gml_compile_curr_break=l_p0;
 				l_n=array_length(l__cc);
-				for(l_i=0;l_i<l_n;l_i++) {
+				for(l_i=0;l_i<l_n;l_i++){
 					var l__cv=l__cc[l_i].values;
 					l_z=array_length(l__cv);
-					for(l_k=0;l_k<l_z;l_k++) {
+					for(l_k=0;l_k<l_z;l_k++){
 						ds_map_set(l_jt,gml_node_tools_to_case_value(l__cv[l_k]),ds_list_size(l_actions));
 					}
 					if(gml_compile_node(l__cc[l_i].expr,l_actions,false))return true;
 				}
 				l_p1=ds_list_size(l_actions);
 				l_x=l__g.h_def;
-				if(l_x!=undefined) {
+				if(l_x!=undefined){
 					if(gml_compile_node(l_x,l_actions,false))return true;
 				}
 				gml_compile_curr_break=l_pb;
 				ds_list_set(l_actions,l_p0,gml_action_switch_hx(l_d,l_jt,l_p1));
 			}
 			l_p2=ds_list_size(l_actions);
-			for(l_k=l_p0;l_k<l_p2;l_k++) {
+			for(l_k=l_p0;l_k<l_p2;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				if(l__g1.__enumIndex__==104) {
+				if(l__g1.__enumIndex__==104){
 					var l_d1=l__g1.h_d;
 					if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l_d1,l_p2));
 				}
@@ -564,9 +564,9 @@ function gml_compile_node(l_q,l_actions,l_out) {
 			l_p1=ds_list_size(l_actions);
 			ds_list_add(l_actions,gml_action_with_post(l_d));
 			ds_list_set(l_actions,l_p0,gml_action_with_next(l_d,l_p1));
-			for(l_k=l_p0;l_k<l_p1;l_k++) {
+			for(l_k=l_p0;l_k<l_p1;l_k++){
 				var l__g1=ds_list_find_value(l_actions,l_k);
-				switch(l__g1.__enumIndex__) {
+				switch(l__g1.__enumIndex__){
 					case 105:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p0));break;
 					case 104:if(l__g1.h_lp==l_p0)ds_list_set(l_actions,l_k,gml_action_jump(l__g1.h_d,l_p1));break;
 				}
@@ -618,12 +618,12 @@ function gml_compile_node(l_q,l_actions,l_out) {
 }
 
 if(live_enabled)
-function gml_compile_add_exit(l_actions) {
+function gml_compile_add_exit(l_actions){
 	gml_compile_node(gml_node_exit_hx(gml_compile_curr_script.h_pos),l_actions,false);
 }
 
 if(live_enabled)
-function gml_compile_script(l_q) {
+function gml_compile_script(l_q){
 	var l_actions=ds_list_create();
 	l_q.h_actions=l_actions;
 	gml_compile_curr_script=l_q;
@@ -633,9 +633,9 @@ function gml_compile_script(l_q) {
 	l_trouble=compile_groups_gml_compile_group_static_proc_static_init(l_actions);
 	if(!l_trouble)l_trouble=gml_compile_node(l_q.h_node,l_actions,false);
 	if(!l_trouble)gml_compile_add_exit(l_actions);
-	if(!l_trouble) {
+	if(!l_trouble){
 		var l_i=0;
-		for(var l__g1=ds_list_size(l_actions);l_i<l__g1;l_i++) {
+		for(var l__g1=ds_list_size(l_actions);l_i<l__g1;l_i++){
 			var l_a=ds_list_find_value(l_actions,l_i);
 			if(l_a.__enumIndex__==123)l_a.__func__=l_a.h_fn; else l_a.__func__=vm_v2_gml_thread_v2_handlers[l_a.__enumIndex__];
 		}
@@ -645,12 +645,12 @@ function gml_compile_script(l_q) {
 }
 
 if(live_enabled)
-function gml_compile_program(l_p) {
+function gml_compile_program(l_p){
 	gml_compile_curr_program=l_p;
 	var l_arr=l_p.h_script_array;
 	var l_i;
 	var l_num=array_length(l_arr);
-	for(l_i=0;l_i<l_num;l_i++) {
+	for(l_i=0;l_i<l_num;l_i++){
 		if(gml_compile_script(l_arr[l_i]))break;
 	}
 	gml_compile_curr_program=undefined;

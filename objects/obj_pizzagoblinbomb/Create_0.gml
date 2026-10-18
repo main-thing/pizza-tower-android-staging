@@ -18,3 +18,4 @@ defused = 0
 destroy = 1
 grabbable = 1
 bomblit_spr = spr_bomblit
+old = 0

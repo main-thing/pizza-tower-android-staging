@@ -1,10 +1,4 @@
 ADD_OBJECT_EVENT_GML_HOOK;
-sprite_index = noise_button_sprite
-image_speed = 0.35
+sprite_index = spr_noise_button
 image_index = 0
 hspeed = 0
-
-//demo2
-sprite_index = spr_noise_button;
-image_index = 0;
-hspeed = 0;

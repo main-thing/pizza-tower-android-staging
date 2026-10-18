@@ -8,25 +8,13 @@ if(USE_ASSETS_FOR_DEFAULT_LAYOUT)
 		{
 			// Base buttons
 			spr_button_joystick_base : { keycodes : [VKEYUI_KEY_TYPES.JOYSTICK, vk_up, vk_down, vk_left, vk_right], spr_joystick : spr_button_joystick, radius : sprite_get_width(_spr) / 2},
-		
 			spr_button_z_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, ord("Z")] },
-		
 			spr_button_x_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, ord("X")] },
-		
 			spr_button_c_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, ord("C")] },
-		
-			spr_button_a_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, ord("A")] },
-			spr_button_a : { keycodes : [VKEYUI_KEY_TYPES.NONE, ord("A")] },
-		
 			spr_button_shoot_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, ord("A")] },
-			
 			spr_button_shift_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, vk_lshift], spr_pressed : spr_button_shift_big },
-		
 			spr_button_escape_big : { keycodes : [VKEYUI_KEY_TYPES.NONE, vk_escape] },
-			spr_button_escape : { keycodes : [VKEYUI_KEY_TYPES.NONE, vk_escape] },
-		
 			spr_button_cog_big : { keycodes : [VKEYUI_KEY_TYPES.EDIT] },
-			spr_button_cog : { keycodes : [VKEYUI_KEY_TYPES.EDIT] },
 		}
 	
 		var _vars = _vkey_vars[$ sprite_get_name(_spr)];

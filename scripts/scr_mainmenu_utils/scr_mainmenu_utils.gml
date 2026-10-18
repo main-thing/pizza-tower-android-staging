@@ -109,7 +109,7 @@ function port_mainmenu_newstuff_draw()
 		draw_text_ext(80, 90 + stringoffset, textstring, 36, 1600);
 		//draw_sprite_ext(spr_virtual_controller, 0, 38, 432, 1, 1, 0, c_white, 0.5);
 		//draw_sprite_ext(spr_virtual_controller, 0, 38, 498, 1, 1, 180, c_white, 0.5);
-		draw_sprite_ext(spr_button_escape, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5);
+		draw_sprite_ext(spr_button_escape_big, 0, 2356 * 0.01, 1080 * 0.02, 1, 1, 0, c_white, 0.5);
 	}
 }
 

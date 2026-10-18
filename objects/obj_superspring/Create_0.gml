@@ -9,3 +9,5 @@ vsp_carry = 0
 platformid = -4
 grounded = false
 grav = 0.5
+spr_idle = spr_presentbox_idle
+spr_activate = spr_presentbox_activate

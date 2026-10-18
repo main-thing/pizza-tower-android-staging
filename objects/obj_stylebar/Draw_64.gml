@@ -34,3 +34,16 @@ if(0)
 	    draw_sprite_part_ext(spr_stylepizzadown, 0, 0, 0, sprite_get_width(spr_stylepizzadown), sprite_get_height(spr_stylepizzadown) - global.style, 750, -14, image_xscale, image_yscale, c_white, alpha);
 	}
 }
+
+if (global.oldhud)
+{
+	draw_sprite(sprite, index, 230, 75)
+	var barxx = 204
+	var baryy = 80
+	draw_sprite(spr_barpop, 0, barxx, baryy)
+	var sw = sprite_get_width(spr_barpop)
+	var sh = sprite_get_height(spr_barpop)
+	var b = global.combotime / 61
+	if (global.combo)
+		draw_sprite_part(spr_barpop, 1, 0, 0, (sw * b), sh, barxx, baryy)
+}

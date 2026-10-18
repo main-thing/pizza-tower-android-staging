@@ -25,3 +25,4 @@ grabbedby = 0
 heavy = 0
 depth = 0
 stuntouchbuffer = 0
+play_music = 1
